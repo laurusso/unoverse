@@ -1,8 +1,7 @@
         <!-- CHAMADA DA DIV FIXED -->
         @extends('layout._menu')
 
-        <!-- <div class="body"> -->
-                <!-- Slideshow container -->
+            <!-- Slideshow container -->
             <div class="container-slide">
                 <div class="slides">
                     <input type="radio"  name="slide" id="slide1">
@@ -28,9 +27,9 @@
                     <label class="dot" for="slide2"></label>
                     <label class="dot" for="slide3"></label>
 
-            </div>
-    </div>
+            </div> <!--acaba slider-->
 
+        
         </div>
         
         <!-- CHAMADA DA DIV FOOTER -->

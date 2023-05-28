@@ -1,9 +1,9 @@
 /* definicao geral de todas as paginas */
 *{
     scroll-behavior: smooth;
-    margin-left: 0%;
-    margin-right: 0%;
-    margin-bottom: 0%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 /* div mae */
@@ -13,8 +13,8 @@
     color: #fff;
     width: auto;
     height: auto;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 /* div do topo fixo */
@@ -63,6 +63,7 @@
 
 /* definicao links do topo */
 .linkagem{
+    font-family: Consolas;
     color: #FFFFFF;
     text-decoration: none;
     /* text-align: center; */
@@ -133,28 +134,62 @@
 
 /* body para pagina */
 .body{
-    margin-top: 15vh;
+    display: flex;
+    margin-top: 300vh;
     color: #000000;
+    position: relative ;
 }
 
 /* footer */
 .fixed-bottom{
-    position: fixed;
+    /* position: fixed; */
+    position:absolute;
     left: 0;
     bottom: 0;
-    height: 18vh;
+    height: 25vh;
     width: 100vw;
     background-color: #003F64;
     color: #FFFFFF;
     text-align: center;
 }
 
-/* footer parte 1 */
-.primeira{
-    color: #FFFFFF;
+/* envolve a primeira parte do footer */
+.envolve-parte1{
     width: 25vw;
+}
+
+/* envolve a logo no footer */
+.envolve-logo{
+    color: #FFFFFF;
+    /* width: 25vw; */
     text-align: center;
+}
+
+/* envolve os links */
+.envolve-links{
+   padding: 1vw 1vh;
+}
+
+.lacuna{
+    margin-top:10vh;
+}
+
+/* links do footer */
+.linkagem-footer{
+    text-align: left;
+    padding-left: 1.5vw;
+    font-family: Consolas;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 0.1s;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.linkagem-footer:hover{
+    text-decoration: underline;
+    transition: 0.1s;
+    font-weight: bold;
 }
 
 /********************************************** SLIDER **********************************************/
