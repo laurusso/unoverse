@@ -1,5 +1,5 @@
         <!-- CHAMADA DA DIV FIXED -->
-        @extends('layout._menu')
+        @include('layout._menu')
 
             <!-- Slideshow container -->
             <div class="container-slide">
@@ -25,15 +25,15 @@
                 <div class="navigation">
                     <label class="dot" for="slide1"></label>
                     <label class="dot" for="slide2"></label>
-                    <label class="dot" for="slide3"></label>
+                    <label class="dot" for="slide3"></label>    
+                </div> 
 
-            </div> <!--acaba slider-->
-
-        
+            </div><!--acaba slider -->
+        <div class="conteudo-home">
+            AAAAAAAAAAA
         </div>
-        
         <!-- CHAMADA DA DIV FOOTER -->
-        @extends('layout._footer')
+        @include('layout._footer')
 
     </div> <!--FIM MAE-->
 </body>

@@ -15,6 +15,7 @@
     height: auto;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* div do topo fixo */
@@ -135,15 +136,15 @@
 /* body para pagina */
 .body{
     display: flex;
-    margin-top: 300vh;
+    margin-top: 30vh;
     color: #000000;
     position: relative ;
 }
 
 /* footer */
 .fixed-bottom{
-    /* position: fixed; */
-    position:absolute;
+    position:relative;
+    /* display: flex; */
     left: 0;
     bottom: 0;
     height: 25vh;
@@ -151,6 +152,7 @@
     background-color: #003F64;
     color: #FFFFFF;
     text-align: center;
+    margin-top: 10vh;
 }
 
 /* envolve a primeira parte do footer */
@@ -167,7 +169,8 @@
 
 /* envolve os links */
 .envolve-links{
-   padding: 1vw 1vh;
+    border: 0;
+    padding: 1vw 1vh;
 }
 
 .lacuna{
@@ -192,16 +195,21 @@
     font-weight: bold;
 }
 
+.conteudo-home{
+    color: #000000;
+}
+
 /********************************************** SLIDER **********************************************/
 .container-slide{
     height: 75vh;
     width: 100vw;
-   /* border-radius: 20px;*/
+    /* border-radius: 20px; */
     overflow: hidden;
     position: relative;
-     top: 37.4vh;
+    top: 37.4vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+    margin-bottom: 5vh;
  }
 
  .navigation{
@@ -240,7 +248,7 @@
  }
 
  .slide img{
-    width: 100%;
+    width: 99vw;
     height: 100%;
  }
 
