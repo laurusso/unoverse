@@ -1,3 +1,20 @@
+.topo{
+    background-color: #003F64;
+    height: 10vh;
+}
+
+.cor{
+    background-color: #003F64;
+    color: #FFFFFF;
+}
+.cor:hover{
+    background-color: #003F64;
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+
+
 /* definicao geral de todas as paginas */
 *{
     scroll-behavior: smooth;
@@ -143,7 +160,7 @@
 
 /* footer */
 .fixed-bottom{
-    position:relative;
+    position:absolute;
     /* display: flex; */
     left: 0;
     bottom: 0;
