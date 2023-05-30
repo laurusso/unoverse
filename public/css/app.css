@@ -1,3 +1,4 @@
+/* um teste que ta dando errado aka aadha */
 .topo{
     background-color: #003F64;
     height: 10vh;
@@ -152,8 +153,9 @@
 
 /* body para pagina */
 .body{
-    display: flex;
-    margin-top: 30vh;
+    font-family: Consolas;
+    /* display: flex; */
+    margin-top: 10vh;
     color: #000000;
     position: relative ;
 }
@@ -216,6 +218,45 @@
     color: #000000;
 }
 
+/* texto de apresentacao dos devs */
+.texto-devs{
+    width: 50vw;
+    height: 10vh;
+}
+.texto-devs h1{
+    font-weight: bold;
+}
+.engloba-texto{
+    display: flex;
+}
+.engloba-pessoas{
+    /* display: grid; */
+    /* margin-top: 50vh; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    display:grid; 
+    grid-template-columns: repeat(3,22vw); 
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vh;
+    width:10vw;
+    padding-left: 11vw;
+    margin-top: 3vh;
+    font-family: Consolas;
+    position: relative;
+    align-content: center;
+    
+}
+.card-roxo{
+    width: 50vw;
+    height: 10vh;
+    background-color: purple;
+}
+.card-azul{
+    background-color: blue;
+}
+.card-amarelo{
+    background-color: yellow;
+}
 /********************************************** SLIDER **********************************************/
 .container-slide{
     height: 75vh;
