@@ -1,4 +1,5 @@
-<div class="fixed-bottom">
+</div>
+<footer class="bottom">
     <div class=envolve-parte1>
         <div class="envolve-logo">
             <img src="{!! asset('img/logo.png') !!}" class="logomarca">
@@ -10,5 +11,8 @@
             <a class="linkagem-footer" href="{{route('menu.devs')}}">Devs</a>
         </div>
     </div>
-    
-</div>
+</footer>
+
+</div> <!--FIM MAE-->
+</body>
+</html>

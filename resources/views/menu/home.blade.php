@@ -28,12 +28,12 @@
                     <label class="dot" for="slide3"></label>    
                 </div> 
 
-            </div><!--acaba slider -->
-        <div class="conteudo-home">
+             </div><!--acaba slider -->
+
             AAAAAAAAAAA
-        </div>
+
         <!-- CHAMADA DA DIV FOOTER -->
-        <!-- @include('layout._footer') -->
+        @include('layout._footer')
 
     </div> <!--FIM MAE-->
 </body>
