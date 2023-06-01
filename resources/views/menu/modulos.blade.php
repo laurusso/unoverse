@@ -5,7 +5,7 @@
 </div>
 
 <!-- CHAMADA DA DIV FOOTER -->
-@include('layout._footer')
+<!-- @include('layout._footer') -->
 
 </div> <!--FIM MAE-->
 </body>

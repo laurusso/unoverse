@@ -162,7 +162,7 @@
 
 /* footer */
 .fixed-bottom{
-    position:absolute;
+    position:relative;
     /* display: flex; */
     left: 0;
     bottom: 0;
@@ -171,7 +171,7 @@
     background-color: #003F64;
     color: #FFFFFF;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 100vh;
 }
 
 /* envolve a primeira parte do footer */
@@ -222,6 +222,10 @@
 .texto-devs{
     width: 50vw;
     height: 10vh;
+    padding: 3vh;
+    text-align: justify;
+    margin: auto;
+    
 }
 .texto-devs h1{
     font-weight: bold;
@@ -247,15 +251,73 @@
     
 }
 .card-roxo{
+    margin-right: 1vw;
     width: 50vw;
-    height: 10vh;
-    background-color: purple;
+    height: 35vh;
+    background-color: #9747FF;
+    border-radius: 3Vw;
+    text-align: right;
+    padding: 1vh;
+    box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
 }
+.card-roxo img{
+    width:15vw;
+    clip-path: circle();
+   
+}
+.card-roxo:hover{
+    transform: translateY(-1vw); 
+	box-shadow: 0 1vw 1vw rgba(255,170,202); 
+}
+/* card azul */
 .card-azul{
-    background-color: blue;
+    align-items: center;
+    text-align: center;
+    background-color: #379BFF;
+    border-radius: 3Vw;
+    box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
 }
+.card-azul:hover{
+    transform: translateY(-1vw); 
+	box-shadow: 0 1vw 1vw rgba(255,213,113); 
+}
+.card-azul img{
+    width:15vw;
+    clip-path: circle();
+    margin: 3vw;
+}
+.card-azul h2{
+    padding: 1vw;
+    width: 15vw;
+    font-family: Consolas;
+    color:#FFFFFF;
+    text-align: center;
+    background-color: #92C8FF;
+    border-radius: 3vw;
+}
+/* card amarelo */
 .card-amarelo{
-    background-color: yellow;
+    background-color: #FFAD5A;
+    border-radius: 3vw;
+    box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
+}
+.card-amarelo img{
+    width:15vw;
+    clip-path: circle();
+    margin: 3vw;
+}
+.card-amarelo h2{
+    padding: 1vw;
+    width: 15vw;
+    font-family: Consolas;
+    color:#FFFFFF;
+    text-align: center;
+    background-color: #FFD571;
+    border-radius: 3vw;
+}
+.card-amarelo:hover{
+    transform: translateY(-1vw); 
+	box-shadow: 0 1vw 1vw rgba(146,200,255); 
 }
 /********************************************** SLIDER **********************************************/
 .container-slide{
