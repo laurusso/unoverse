@@ -1,5 +1,5 @@
 </div>
-<footer class="bottom">
+<footer class="bottom-claro" id="footer">
     <div class=envolve-parte1>
         <div class="envolve-logo">
             <img src="{!! asset('img/logo.png') !!}" class="logomarca">

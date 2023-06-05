@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <!-- INSERCAO CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css"> 
-    <!-- ICONE USER -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- ICONE SOL -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- ICONE LUA -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css">
     <title>Unoverse</title>
+    <!-- ICONES -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
     <!--MAE-->
-     <div class="mae">
+     <div class="mae-claro" id="colorir">
         <!-- TOPO FIXO -->
-        <div class="fixed">
+        <div class="fixed-claro" id="temaFixed">
             <!-- INSERCAO LOGOMARCA NO TOPO -->
             <div class="logo-div">
                 <img src="{!! asset('img/logo.png') !!}" class="logomarca">
@@ -31,9 +26,9 @@
             </div>
             <div class="logar-cad-topo">
                 <a class="linkagem">Entrar</a> 
-                <a class="sol"href=""><i class="bi bi-person"></i></a> <!--User-->
+                <a class="sol" href=""><i class="bi bi-person"></i></a> <!--User-->
                 <a id="btnCadastro">Cadastrar</a>
-                <a class="sol" id="troca"><i id="icone-tema" class="bi bi-sun-fill"></i></a> <!--Sol-->
+                <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill" onclick="trocarCores()"></i></a> <!--Sol-->
             </div>
         </div> <!--FIM FIXED--> 
 
