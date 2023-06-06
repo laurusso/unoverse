@@ -1,22 +1,16 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-/* um teste que ta dando errado aka aadha */
-/* .topo{
-    background-color: #003F64;
-    height: 10vh;
-    color:#FFFFFF;
+.navbar{
+    background-color: #003F64 !important;
+    
 }
-
-.cor{
-    background-color: #003F64;
-    color: #FFFFFF;
+.nav-link{
+    font-family: 'Consolas';
+    color: #FFFFFF !important;
 }
-.cor:hover{
-    background-color: #003F64;
-    text-decoration: underline;
-    color: #FFFFFF;
-} */
-
+.nav-link:hover{
+    color: #FFAD5A!important;
+}
 
 
 /* definicao geral de todas as paginas */

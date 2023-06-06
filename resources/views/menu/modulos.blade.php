@@ -1,5 +1,5 @@
 <!-- CHAMADA DA DIV FIXED -->
-@extends('layout._menu');
+@include('layout._menu');
 <!-- <div class="mae_modo"> -->
         <div class="line_modo">
             <div class="caixa">
@@ -60,7 +60,7 @@
 <!-- </div> -->
 
 <!-- CHAMADA DA DIV FOOTER -->
-@extends('layout._footer')
+@include('layout._footer')
 
 
 </body>
