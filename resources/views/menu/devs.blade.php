@@ -1,8 +1,5 @@
 <!-- CHAMADA DA DIV FIXED -->
 @include('layout._menu')
-
-
-
     <div class="engloba-texto">
         <div class="texto-devs">
             <h1>desenvolvedores</h1>

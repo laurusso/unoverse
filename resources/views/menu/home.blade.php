@@ -35,6 +35,6 @@
         <!-- CHAMADA DA DIV FOOTER -->
         @include('layout._footer')
 
-    </div> <!--FIM MAE-->
+
 </body>
 </html>

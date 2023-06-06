@@ -181,48 +181,59 @@ body{
     position: relative ;
 }
 
-/* footer */
+/* footer claro e escuro*/
 .bottom-claro{
     left: 0;
     bottom: 0;
     height: auto;
-    width: 100%;
+    width: 99.99vw;
     background-color: #003F64;
     color: #FFFFFF;
     text-align: center;
     margin-top: 5vh;
+    display: flex;
 }
 .bottom-escuro{
     left: 0;
     bottom: 0;
     height: auto;
-    width: 100%;
+    width: 99.99vw;
     background-color: #001F32;
     color: #FFFFFF;
     text-align: center;
     margin-top: 5vh;
+    display: flex;
 }
 
-/* envolve a primeira parte do footer */
-.envolve-parte1{
+/* envolve elementos do footer */
+.envolve{
     width: 25vw;
+}
+
+.envolve h4{
+    margin-top: 2vh;
+}
+
+.envolve h5{
+    margin-top: 5vh;
 }
 
 /* envolve a logo no footer */
 .envolve-logo{
     color: #FFFFFF;
-    /* width: 25vw; */
-    /* text-align: center; */
+    /* margin: 2vh; */
 }
 
 /* envolve os links */
 .envolve-links{
-    border: 0;
+    /* border: 0; */
+    margin-top: 2vh;
     padding: 1vw 1vh;
 }
 
+/* espaço entre logo e links footer */
 .lacuna{
-    margin-top:10vh;
+    margin-top:1vh;
 }
 
 /* links do footer */
@@ -266,6 +277,7 @@ body{
     grid-column-gap: 1vw;
     grid-row-gap: 5vh;
     margin-top: 3vh;
+    margin-left: 15vw;
     font-family: Consolas;
     position: relative;
     align-content: center;
@@ -409,3 +421,38 @@ body{
  #slide3:checked ~ .s1{/*Testa para saber se o slide3 está check, caso esteja a class .s1 assume a propriedade definida*/
     margin-left: -40%;
  }
+
+
+ 
+/*MODO*/
+ 
+.titulo{
+    color:#FFAD5A;
+    font-family: 'Consolas';
+    font-size: 3vw;
+    /* margin-left: 5vw; */
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+ }
+ 
+ .line_modo{
+    height: 60vh;
+    margin-top: 20vh;
+    width: auto;
+ 
+ }
+ 
+ .imagemmodu{
+     width: 30vw;
+ }
+ 
+ 
+ .caixa{
+    width: 30vw;
+    float: left;
+    margin-left: 13vw;
+    font-family: 'Consolas';
+    font-size: 1.5vw;
+    text-align: justify;
+ }
+
