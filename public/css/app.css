@@ -25,6 +25,7 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* div mae tema claro e tema escuro*/
@@ -449,4 +450,56 @@ body{
     font-size: 1.5vw;
     text-align: justify;
  }
+ /*ENTRAR*/
+ .form_entrar{
+    width:60vw;
+    height:70vh;
+    margin-top: 5vh;
+    margin-left: 17vw;
+    margin-right: 20vw;
+    background: linear-gradient(150.96deg, #FFAD5A 6.47%, #FFD571 101.21%);
+    border-radius: 4vh;
+    color: #FFFFFF;
+    font-family: 'Consolas';
+ }
+ .form_entrar h1{
+    font-size: 6vh;
+    padding-left: 5vw;
+    padding-top: 2vw;
+ }
+ .form_entrar label{
+    font-size: 4vh;
+    padding-left: 5vw;
+    padding-top: 2vw;
+ }
+ .form_entrar input{
+    /* background-color:none; */
+    border-color: #FFFFFF;
+    z-index: -1;
+ }
+ /* elementos */
+ .linha_titulo{
+    display:flex;
+    padding-left: 5vw;
+ }
+ .retangulo{
+    width: 12vw;
+    height: 1vh;
+    left: 21vw;
+    top: 34vh;
+    background: #FFFFFF;
+    border-radius: 5vh;
+ }
+ .bola{
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 100%;
+    background: #FFFFFF;
+    margin-left:1vw;
+ }
+ .form-items{
+    width: 40vw;
+    height: 10vh;
+ }
+
 

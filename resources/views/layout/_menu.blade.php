@@ -55,7 +55,7 @@
             <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Entrar</a>
+            <a class="nav-link" href="{{route('menu.entrar')}}">Entrar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Cadastrar </a>
