@@ -252,6 +252,7 @@ body{
 
 /* texto de apresentacao dos devs */
 .texto-devs{
+    margin-left: 5vw;
     width: 50%;
     height: 10vh;
     padding: 3vh;
@@ -279,6 +280,7 @@ body{
     
 }
 .card-roxo{
+    float: left;
     transition: 0.2s;
     margin-right: 1vw;
     width: 50%;
@@ -450,6 +452,23 @@ body{
     font-size: 1.5vw;
     text-align: justify;
  }
+
+
+ /*entrar*/
+
+ .container{
+    background-color: yellow;
+    width: 70vw;
+    height: 120vh;
+    /* z-index: 2; */
+ }
+.input-field{
+    background-color: #9747FF;
+    width: 30vw;
+    height: 40vh;
+    /* z-index: 1; */
+ }
+
  /*ENTRAR*/
  .form_entrar{
     width:60vw;
@@ -472,11 +491,11 @@ body{
     padding-left: 5vw;
     padding-top: 2vw;
  }
- .form_entrar input{
-    /* background-color:none; */
+ /* .form_entrar input{
+    /* background-color:none; 
     border-color: #FFFFFF;
     z-index: -1;
- }
+ } */
  /* elementos */
  .linha_titulo{
     display:flex;
@@ -498,8 +517,10 @@ body{
     margin-left:1vw;
  }
  .form-items{
+    margin-top: 1vh;
+    background-color: yellow;
     width: 40vw;
-    height: 10vh;
+    height: 8vh;
  }
 
 

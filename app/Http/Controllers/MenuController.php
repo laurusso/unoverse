@@ -32,8 +32,14 @@ class MenuController extends Controller
         return view("menu.devs");
         
     }
+    //acesso a entrar
     public function entrar() {
         return view("menu.entrar");
+        
+    }
+    //acesso a nada teste 
+    public function teste() {
+        return view("menu.teste");
         
     }
 }
