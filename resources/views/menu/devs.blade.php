@@ -1,5 +1,11 @@
 <!-- CHAMADA DA DIV FIXED -->
 @include('layout._menu')
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" title="dev Laura" alt="Essa imagem não foi enontrada :/ Mas é a dev Laura!!" src="{!! asset('img/devs/laura.jpg') !!}">
+  <div class="card-body">
+    <p class="card-text">Laura Russo</p>
+  </div>
+</div>
     <div class="engloba-texto">
         <div class="texto-devs">
             <h1>desenvolvedores</h1>

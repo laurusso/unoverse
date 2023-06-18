@@ -33,42 +33,51 @@
         </div> FIM FIXED--> 
 
  <div class="mae-claro" id="colorir">
-      <nav class="navbar navbar-expand-lg --bs-warning --bs-warning-rgb" >
-          <div class="container-fluid --bs-warning --bs-warning-rgb">
-          <img src="{!! asset('img/logo.png') !!}" class="logomarca"> 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="{{route('menu.home')}}">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('menu.modulos')}}">Módulos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('menu.parcerias')}}">Parcerias</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('menu.entrar')}}">Entrar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('menu.teste')}}">Cadastrar </a>
-                </li>
-                <li>
-                  <a class="sol" href=""><i class="bi bi-person"></i></a> <!--User-->
-                </li>
-                <li>
-                  <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!--Sol-->
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+ <nav class="navbar navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="{!! asset('img/logo.png') !!}" class="logomarca"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Unoverse Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li>
+          <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!-- Sol -->
+        </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('menu.home')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('menu.modulos')}}">Módulos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('menu.parcerias')}}">Parcerias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Logar
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Primeira vez</a></li>
+              <li><a class="dropdown-item" href="{{route('menu.entrar')}}">Acessar sua conta</a></li>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
         <script src="{{ asset('js/script.js') }}"></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <div class="body">

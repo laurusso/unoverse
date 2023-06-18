@@ -2,7 +2,7 @@
 
 .navbar{
     background-color: #003F64 !important;
-    
+    box-shadow: 0 10px 40px 0 rgba(206, 232, 255);
 }
 .nav-link{
     font-family: 'Consolas';
@@ -11,7 +11,32 @@
 .nav-link:hover{
     color: #FFAD5A!important;
 }
-
+.offcanvas-header{
+    background-color: #003F64 !important;
+}
+.offcanvas-body{
+    background-color: #003F64 !important;
+}
+.dropdown-menu{
+    background-color: #003F64 !important;   
+}
+.card-img-top{
+    clip-path: circle() !important;
+}
+.card{
+    background-color: #9747FF !important;
+}
+.card-text{
+    border-radius: 2vw;
+    padding: 1vh;
+    background-color: #C496FF !important;
+    color: #FFFFFF !important;
+}
+.card:hover{
+    transition: 0.2s;
+    transform: translateY(-1vw); 
+	box-shadow: 0 1vw 1vw rgba(255,170,202); 
+}
 
 /* definicao geral de todas as paginas */
 *{
@@ -272,7 +297,7 @@ body{
     grid-template-columns: repeat(3,22vw);
     grid-column-gap: 1vw;
     grid-row-gap: 5vh;
-    margin-top: 3vh;
+    margin-top: 20vh;
     margin-left: 15vw;
     font-family: Consolas;
     position: relative;
@@ -292,7 +317,6 @@ body{
     box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
 }
 .card-roxo img{
-
     width:15vw;
     clip-path: circle();
    
