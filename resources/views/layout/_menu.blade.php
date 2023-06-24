@@ -33,7 +33,7 @@
             </div>
         </div> FIM FIXED--> 
 <!-- ABERTURA DA DIV MAE -->
- <div class="mae-claro" id="colorir">
+ <div class="mae-claro">
   <!-- INICIO DO TOPO FIXO LATERAL (OFFCANVAS EXTRAIDO DO BOOTSTRAP) -->
  <nav class="navbar navbar-dark fixed-top fixada">
   <div class="container-fluid">
@@ -49,7 +49,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li>
-          <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!-- ICONE TEMA -->
+          <a class="sol"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!-- ICONE TEMA -->
         </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('menu.home')}}">Home</a>

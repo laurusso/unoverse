@@ -1,24 +1,32 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
+:root{
+    --cor-primaria: #003F64;
+    --cor-secundaria: #FFFFFF; 
+    --cor-terciaria: #001F32; 
+    --cor-quaternaria: #000000;
+    --cor-quinta: #003F64;
+}
+
 .fixada{
-    background-color: #003F64 !important;
+    background-color: var(--cor-primaria) !important;
     box-shadow: 0 10px 40px 0 rgba(206, 232, 255);
 }
 .nav-link{
     font-family: 'Consolas';
-    color: #FFFFFF !important;
+    color: var(--cor-secundaria) !important;
 }
 .nav-link:hover{
     color: #FFAD5A!important;
 }
 .offcanvas-header{
-    background-color: #003F64 !important;
+    background-color: var(--cor-primaria) !important;
 }
 .offcanvas-body{
-    background-color: #003F64 !important;
+    background-color: var(--cor-primaria) !important;
 }
 .dropdown-menu{
-    background-color: #003F64 !important;   
+    background-color: var(--cor-primaria) !important;   
 }
 .card-img-top{
     clip-path: circle() !important;
@@ -30,7 +38,7 @@
     border-radius: 2vw;
     padding: 1vh;
     background-color: #C496FF !important;
-    color: #FFFFFF !important;
+    color: var(--cor-secundaria) !important;
 }
 .card:hover{
     transition: 0.2s;
@@ -56,8 +64,8 @@ body{
 /* div mae tema claro e tema escuro*/
 .mae-claro{
     margin-top: 15vh;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quaternaria);
     width: auto;
     height: auto;
     margin: 0;
@@ -66,8 +74,8 @@ body{
 }
 .mae-escuro{
     margin-top: 15vh;
-    background-color: #003F64;
-    color: #FFFFFF;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     width: auto;
     height: auto;
     margin: 0;
@@ -80,7 +88,7 @@ body{
     z-index: 1;
     margin: 0;
     padding: 0;
-    background-color: #003F64;
+    background-color: var(--cor-primaria);
     position: fixed;
     width: 99.99vw;
     height: 10vh;
@@ -96,7 +104,7 @@ body{
     z-index: 1;
     margin: 0;
     padding: 0;
-    background-color: #001F32;
+    background-color: var(--cor-terciaria);
     position: fixed;
     width: 99.99vw;
     height: 10vh;
@@ -138,7 +146,7 @@ body{
 /* definicao links do topo */
 .linkagem{
     font-family: Consolas;
-    color: #FFFFFF;
+    color: var(--cor-secundaria);
     text-decoration: none;
     /* text-align: center; */
     transition: 0.1s;
@@ -161,7 +169,7 @@ body{
 
 /* icone entrar/login */
 .sol{
-    color: #FFFFFF  ;
+    color: var(--cor-secundaria)  ;
     padding: 0.7vh;
     padding-right: 0vh;
     height: 6vh;
@@ -177,7 +185,7 @@ body{
 /* cadastrar */
 #btnCadastro
 {
-    color: #003F64;
+    color: var(--cor-primaria);
     background: #EFEFEF;
     padding: 1vh;
     border-radius: 2.7vh;
@@ -187,7 +195,7 @@ body{
 #btnCadastro:hover{
     transition: 0.1s;
     background-color: #136e6c;
-    color: #FFFFFF;
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
@@ -197,7 +205,7 @@ body{
     font-family: Consolas;
     /* display: flex; */
     margin-top: 16vh;
-    /* color: #000000;sw */
+    /* color: var(--cor-quaternaria);sw */
     position: relative ;
 }
 
@@ -207,8 +215,8 @@ body{
     bottom: 0;
     height: auto;
     width: 99.99vw;
-    background-color: #003F64;
-    color: #FFFFFF;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     text-align: center;
     margin-top: 5vh;
     display: flex;
@@ -218,8 +226,8 @@ body{
     bottom: 0;
     height: auto;
     width: 99.99vw;
-    background-color: #001F32;
-    color: #FFFFFF;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
     text-align: center;
     margin-top: 5vh;
     display: flex;
@@ -240,7 +248,7 @@ body{
 
 /* envolve a logo no footer */
 .envolve-logo{
-    color: #FFFFFF;
+    color: var(--cor-secundaria);
     /* margin: 2vh; */
 }
 
@@ -261,7 +269,7 @@ body{
     text-align: left;
     padding-left: 6vw;
     font-family: Consolas;
-    color: #FFFFFF;
+    color: var(--cor-secundaria);
     text-decoration: none;
     transition: 0.1s;
     display: flex;
@@ -349,7 +357,7 @@ body{
     padding: 1vw;
     width: 15vw;
     font-family: Consolas;
-    color:#FFFFFF;
+    color:var(--cor-secundaria);
     text-align: center;
     background-color: #92C8FF;
     border-radius: 3vw;
@@ -370,7 +378,7 @@ body{
     padding: 1vw;
     width: 15vw;
     font-family: Consolas;
-    color:#FFFFFF;
+    color:var(--cor-secundaria);
     text-align: center;
     background-color: #FFD571;
     border-radius: 3vw;
@@ -403,14 +411,14 @@ body{
  .dot{
     width: 8px;
     height: 8px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid var(--cor-secundaria);
     margin: 6px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.6s;
  }
  .bar:hover{
-    background-color: #FFFFFF;
+    background-color: var(--cor-secundaria);
  }
 
  input{
@@ -502,7 +510,7 @@ body{
     margin-right: 20vw;
     background: linear-gradient(150.96deg, #FFAD5A 6.47%, #FFD571 101.21%);
     border-radius: 4vh;
-    color: #FFFFFF;
+    color: var(--cor-secundaria);
     font-family: 'Consolas';
  }
  .form_entrar h1{
@@ -517,7 +525,7 @@ body{
  }
  /* .form_entrar input{
     /* background-color:none; 
-    border-color: #FFFFFF;
+    border-color: var(--cor-secundaria);
     z-index: -1;
  } */
  /* elementos */
@@ -530,14 +538,14 @@ body{
     height: 1vh;
     left: 21vw;
     top: 34vh;
-    background: #FFFFFF;
+    background: var(--cor-secundaria);
     border-radius: 5vh;
  }
  .bola{
     width: 0.6vw;
     height: 0.6vw;
     border-radius: 100%;
-    background: #FFFFFF;
+    background: var(--cor-secundaria);
     margin-left:1vw;
  }
  .form-items{
