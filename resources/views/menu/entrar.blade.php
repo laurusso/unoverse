@@ -8,8 +8,8 @@
         <div class="bola"></div>
    </div>
 
-   
     <form action="#" method="post">
+        {{csrf_field() }}
         <div class="form-items">
             <label for="email">E-mail</label>
             <input type="text" name="email" id="email" autocomplete="off" required>

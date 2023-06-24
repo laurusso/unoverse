@@ -2,10 +2,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    @yield('titulo') <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
+                        @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css">
-    <title>Unoverse</title>
-    <!-- ICONES -->
+    <!-- ICONES EXTRAIDOS DO BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
@@ -31,11 +32,12 @@
                 <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill" onclick="trocarCores()"></i></a> Sol
             </div>
         </div> FIM FIXED--> 
-
+<!-- ABERTURA DA DIV MAE -->
  <div class="mae-claro" id="colorir">
- <nav class="navbar navbar-dark fixed-top">
+  <!-- INICIO DO TOPO FIXO LATERAL (OFFCANVAS EXTRAIDO DO BOOTSTRAP) -->
+ <nav class="navbar navbar-dark fixed-top fixada">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> <img src="{!! asset('img/logo.png') !!}" class="logomarca"></a>
+    <a class="navbar-brand" href="#"> <img src="{!! asset('img/logo.png') !!}" class="logomarca"></a> <!-- LOGO -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,7 +49,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li>
-          <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!-- Sol -->
+          <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!-- ICONE TEMA -->
         </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('menu.home')}}">Home</a>
@@ -62,14 +64,16 @@
             <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>
           </li>
           <li class="nav-item dropdown">
+            <!-- PARA LOGAR, PODE ESCOLHER ENTRE JA CADASTRADO OU NAO CADASTRADO (DROPDOWN EXTRAIDO DO BOOTSTRAP) -->
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Logar
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Primeira vez</a></li>
-              <li><a class="dropdown-item" href="{{route('menu.entrar')}}">Acessar sua conta</a></li>
+              <li><a class="dropdown-item" href="#">Primeira vez</a></li> <!-- NAO CADASTRADO -->
+              <li><a class="dropdown-item" href="{{route('menu.entrar')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
           </li>
         </ul>
+        <!-- UMA BARRA DE PESQUISA *********** NAO SEI SE USAREMOS SO DEIXEI AI -->
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-success" type="submit">Search</button>

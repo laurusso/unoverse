@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-.navbar{
+.fixada{
     background-color: #003F64 !important;
     box-shadow: 0 10px 40px 0 rgba(206, 232, 255);
 }
@@ -542,9 +542,12 @@ body{
  }
  .form-items{
     margin-top: 1vh;
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 40vw;
     height: 8vh;
+ }
+ .forms-itens input{
+    transform: 100%, 100%;
  }
 
 
