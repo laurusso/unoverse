@@ -22,7 +22,7 @@
             <div class="link-topo">
                 <a class="linkagem" href="{{route('menu.home')}}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="linkagem" href="{{route('menu.modulos')}}">Módulos</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <a class="linkagem" href="{{route('menu.parcerias')}}">Parcerias</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="linkagem" href="{{route('menu.acoes')}}">Parcerias</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="linkagem" href="{{route('menu.devs')}}">Devs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div class="logar-cad-topo">
@@ -58,7 +58,7 @@
             <a class="nav-link" href="{{route('menu.modulos')}}">Módulos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('menu.parcerias')}}">Parcerias</a>
+            <a class="nav-link" href="{{route('menu.acoes')}}">Ações</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>

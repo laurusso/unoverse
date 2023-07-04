@@ -22,8 +22,8 @@ class MenuController extends Controller
     }
 
     // acesso a parcerias
-    public function parcerias() {
-        return view("menu.parcerias");
+    public function acoes() {
+        return view("menu.acoes");
         
     }
 

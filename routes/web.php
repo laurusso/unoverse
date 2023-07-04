@@ -35,7 +35,7 @@ Route::get('/menu/home',['as'=>'menu.home','uses'=>'App\Http\Controllers\MenuCon
 Route::get('/menu/modulos',['as'=>'menu.modulos','uses'=>'App\Http\Controllers\MenuController@modulos']);
 
 // rota parcerias
-Route::get('/menu/parcerias',['as'=>'menu.parcerias','uses'=>'App\Http\Controllers\MenuController@parcerias']);
+Route::get('/menu/acoes',['as'=>'menu.acoes','uses'=>'App\Http\Controllers\MenuController@acoes']);
 
 // rota devs
 Route::get('/menu/devs',['as'=>'menu.devs','uses'=>'App\Http\Controllers\MenuController@devs']);

@@ -6,27 +6,44 @@
     --cor-terciaria: #001F32; 
     --cor-quaternaria: #000000;
     --cor-quinta: #003F64;
+    --cor-sexta: #FFFFFF;
+    --cor-setima: #CEE8FF;
+    --cor-oitava: #00468D;
+    /* transição */
+    --transicao1: background-color;
+    --transicao2: color;
+    --transicaoDuracao: 0.4s;
+    --transicaoTempo: ease;
+    --transicao: var(--transicao1) var(--transicaoDuracao)
+            var(--transicaoTempo),
+        var(--transicao2) var(--transicaoDuracao)
+            var(--transicaoTempo);
 }
 
 .fixada{
     background-color: var(--cor-primaria) !important;
-    box-shadow: 0 10px 40px 0 rgba(206, 232, 255);
+    box-shadow: 0 10px 40px 0 var(--cor-setima);
+    transition: var(--transicao);
 }
 .nav-link{
     font-family: 'Consolas';
     color: var(--cor-secundaria) !important;
+    transition: var(--transicao);
 }
 .nav-link:hover{
     color: #FFAD5A!important;
 }
 .offcanvas-header{
     background-color: var(--cor-primaria) !important;
+    transition: var(--transicao);
 }
 .offcanvas-body{
     background-color: var(--cor-primaria) !important;
+    transition: var(--transicao);
 }
 .dropdown-menu{
     background-color: var(--cor-primaria) !important;   
+    transition: var(--transicao);
 }
 .card-img-top{
     clip-path: circle() !important;
@@ -39,6 +56,7 @@
     padding: 1vh;
     background-color: #C496FF !important;
     color: var(--cor-secundaria) !important;
+    transition: var(--transicao);
 }
 .card:hover{
     transition: 0.2s;
@@ -64,23 +82,14 @@ body{
 /* div mae tema claro e tema escuro*/
 .mae-claro{
     margin-top: 15vh;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-sexta);
     color: var(--cor-quaternaria);
     width: auto;
     height: auto;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
-.mae-escuro{
-    margin-top: 15vh;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    transition: var(--transicao);
 }
 
 /* div do topo fixo */
@@ -99,22 +108,7 @@ body{
     box-shadow: 0 10px 40px 0 rgba(206, 232, 255);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-}
-.fixed-escuro{
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    background-color: var(--cor-terciaria);
-    position: fixed;
-    width: 99.99vw;
-    height: 10vh;
-    top: 0%;   
-    display: flex; 
-    z-index: 1;
-    font-family: Consolas;
-    box-shadow: 0 10px 40px 0 rgba(65,105,225,60%);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    transition: var(--transicao);
 }
 
 /* div logomarca */
@@ -151,6 +145,7 @@ body{
     /* text-align: center; */
     transition: 0.1s;
     font-size: 1vw;
+    transition: var(--transicao);
 }
 
 .linkagem:hover{
@@ -176,7 +171,7 @@ body{
     /* background-image: url(../img/user.png);
     background-repeat: no-repeat;
     background-position: 57px; */
-    transition: 0.1s;
+    transition: var(--transicao);
 }
 .sol:hover{
     color: #FFAD5A;
@@ -189,7 +184,7 @@ body{
     background: #EFEFEF;
     padding: 1vh;
     border-radius: 2.7vh;
-    transition:0.1s;
+    transition: var(--transicao);
    
 }
 #btnCadastro:hover{
@@ -220,18 +215,9 @@ body{
     text-align: center;
     margin-top: 5vh;
     display: flex;
+    transition: var(--transicao);
 }
-.bottom-escuro{
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 99.99vw;
-    background-color: var(--cor-terciaria);
-    color: var(--cor-secundaria);
-    text-align: center;
-    margin-top: 5vh;
-    display: flex;
-}
+
 
 /* envolve elementos do footer */
 .envolve{
@@ -250,6 +236,7 @@ body{
 .envolve-logo{
     color: var(--cor-secundaria);
     /* margin: 2vh; */
+    transition: var(--transicao);
 }
 
 /* envolve os links */
@@ -275,6 +262,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: var(--transicao);
 }
 .linkagem-footer:hover{
     text-decoration: underline;
@@ -361,6 +349,7 @@ body{
     text-align: center;
     background-color: #92C8FF;
     border-radius: 3vw;
+    transition: var(--transicao);
 }
 /* card amarelo */
 .card-amarelo{
@@ -382,6 +371,7 @@ body{
     text-align: center;
     background-color: #FFD571;
     border-radius: 3vw;
+    transition: var(--transicao);
 }
 .card-amarelo:hover{
     transition: 0.2s;
@@ -510,7 +500,7 @@ body{
     margin-right: 20vw;
     background: linear-gradient(150.96deg, #FFAD5A 6.47%, #FFD571 101.21%);
     border-radius: 4vh;
-    color: var(--cor-secundaria);
+    color: #FFFFFF;
     font-family: 'Consolas';
  }
  .form_entrar h1{
@@ -538,14 +528,14 @@ body{
     height: 1vh;
     left: 21vw;
     top: 34vh;
-    background: var(--cor-secundaria);
+    background:#FFFFFF;
     border-radius: 5vh;
  }
  .bola{
     width: 0.6vw;
     height: 0.6vw;
     border-radius: 100%;
-    background: var(--cor-secundaria);
+    background: #FFFFFF;
     margin-left:1vw;
  }
  .form-items{

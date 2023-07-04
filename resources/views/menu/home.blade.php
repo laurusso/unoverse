@@ -29,6 +29,8 @@
                 </div> 
 
              </div><!--acaba slider -->
+             
+             <div id="carouselExampleCaptions" class="carousel slide">
 
             AAAAAAAAAAA
 
