@@ -111,6 +111,83 @@ body{
     transition: var(--transicao);
 }
 
+  .footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    /* position: fixed; */
+    width: 100%;
+  }
+  
+  .footer .heading {
+    color: var(--cor-secundaria);
+    max-width: 1010px;
+    width: 90%;
+    /* text-transform: uppercase; */
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: Consolas;
+  }
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+  }
+  
+  .footer .content a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+  }
+  
+
+  .footer .services a:hover {
+    border-bottom: 1px solid #FFAD5A;
+  }
+
+  .footer .social-media a:hover {
+    border-bottom: 1px solid #FFAD5A;
+  }
+
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+    color:#FFAD5A;
+  }
+  
+  footer {
+    text-align: center;
+    /* margin-bottom: 2rem; */
+  }
+
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
+
 /* div logomarca */
 .logo-div{
     width: 20vw;
@@ -475,6 +552,9 @@ body{
     text-align: justify;
  }
 
+ .modulos{
+    margin-bottom: 30rem;
+ }
 
  /*entrar*/
 

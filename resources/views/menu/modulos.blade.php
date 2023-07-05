@@ -1,6 +1,5 @@
 <!-- CHAMADA DA DIV FIXED -->
 @include('layout._menu')
-<!-- <div class="mae_modo"> -->
 <div class="line_modo">
     <div class="caixa">
         <h1 class="titulo">Estudante</h1>
@@ -44,11 +43,6 @@
 
 
 </div>
-
-
-
-
-<!-- </div> -->
 
 <!-- CHAMADA DA DIV FOOTER -->
 @include('layout._footer')
