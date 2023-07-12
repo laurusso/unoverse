@@ -43,7 +43,7 @@
         <div class="social-media">
           <h4>Social</h4>
           <p>
-            <a href="https://github.com/laurusso"
+            <a href="https://github.com/laurusso/unoverse" target="_blank"
               ><i class="fab fa-github"></i> Github</a
             >
           </p>

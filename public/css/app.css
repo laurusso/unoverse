@@ -1,5 +1,16 @@
+/* CSS DO SITE 'UNOVERSE' INTEIRO
+esse arquivo contem todas as configuracoes de CSS usadas na plataforma,
+estao explicadas ao maximo que pode, escolhemos nao utilizar mais de
+um arquivo css para evitar geracao de mais arquivos alem dos ja exis-
+tentes no laravel :) */
+
+
+/* importacao de icones */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
+/* a principal funçao dessas variaveis do css eh de trocar a cor de tema e suas transicoes. 
+algumas cores repetem porque tinha cor igual que trocava para cor diferente, por exemplo o 
+azul do fundo que virava branco, mas o mesmo azul fazia parte do topo */
 :root{
     --cor-primaria: #003F64;
     --cor-secundaria: #FFFFFF; 
@@ -19,49 +30,31 @@
         var(--transicao2) var(--transicaoDuracao)
             var(--transicaoTempo);
 }
-
-.fixada{
+/* alteracao de alguns aspectos de classes que sao do bootstrap */
+.fixada{ /*topo*/
     background-color: var(--cor-primaria) !important;
     box-shadow: 0 10px 40px 0 var(--cor-setima);
     transition: var(--transicao);
 }
-.nav-link{
+.nav-link{ /*topo*/
     font-family: 'Consolas';
     color: var(--cor-secundaria) !important;
     transition: var(--transicao);
 }
-.nav-link:hover{
+.nav-link:hover{ /*topo*/
     color: #FFAD5A!important;
 }
-.offcanvas-header{
+.offcanvas-header{ /*topo*/
     background-color: var(--cor-primaria) !important;
     transition: var(--transicao);
 }
-.offcanvas-body{
+.offcanvas-body{ /*topo*/
     background-color: var(--cor-primaria) !important;
     transition: var(--transicao);
 }
-.dropdown-menu{
+.dropdown-menu{ /*topo*/
     background-color: var(--cor-primaria) !important;   
     transition: var(--transicao);
-}
-.card-img-top{
-    clip-path: circle() !important;
-}
-.card{
-    background-color: #9747FF !important;
-}
-.card-text{
-    border-radius: 2vw;
-    padding: 1vh;
-    background-color: #C496FF !important;
-    color: var(--cor-secundaria) !important;
-    transition: var(--transicao);
-}
-.card:hover{
-    transition: 0.2s;
-    transform: translateY(-1vw); 
-	box-shadow: 0 1vw 1vw rgba(255,170,202); 
 }
 
 /* definicao geral de todas as paginas */
@@ -79,7 +72,7 @@ body{
     overflow-x: hidden;
 }
 
-/* div mae tema claro e tema escuro*/
+/* div mae*/
 .mae-claro{
     margin-top: 15vh;
     background-color: var(--cor-sexta);
@@ -92,25 +85,7 @@ body{
     transition: var(--transicao);
 }
 
-/* div do topo fixo */
-.fixed-claro{
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    background-color: var(--cor-primaria);
-    position: fixed;
-    width: 99.99vw;
-    height: 10vh;
-    top: 0%;   
-    display: flex; 
-    z-index: 1;
-    font-family: Consolas;
-    box-shadow: 0 10px 40px 0 rgba(206, 232, 255);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    transition: var(--transicao);
-}
-
+/* configurações do footer */
   .footer {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
@@ -123,7 +98,6 @@ body{
     color: var(--cor-secundaria);
     max-width: 1010px;
     width: 90%;
-    /* text-transform: uppercase; */
     margin: 0 auto;
     margin-bottom: 3rem;
     font-family: Consolas;
@@ -161,9 +135,9 @@ body{
   
   footer {
     text-align: center;
-    /* margin-bottom: 2rem; */
   }
 
+  /* parte que arruma para telas diferentes */
   @media (max-width: 767px) {
     .footer .content {
       display: flex;
@@ -198,12 +172,6 @@ body{
 /* tamanho logomarca */
 .logomarca{
     height: 8vh;
-    /* padding:1vh; */
-    /* text-align: left;
-    top: 0vh;
-    left: 0vh;
-    right: 0vh;
-    bottom: 0vh;*/  
 } 
 
 /* links do topo */
@@ -211,7 +179,6 @@ body{
     width: 60vw;
     align-items: center;
     text-align: center;
-    /* font-family: Consolas; */
     margin: auto;
 }
 
@@ -220,7 +187,6 @@ body{
     font-family: Consolas;
     color: var(--cor-secundaria);
     text-decoration: none;
-    /* text-align: center; */
     transition: 0.1s;
     font-size: 1vw;
     transition: var(--transicao);
@@ -246,9 +212,6 @@ body{
     padding: 0.7vh;
     padding-right: 0vh;
     height: 6vh;
-    /* background-image: url(../img/user.png);
-    background-repeat: no-repeat;
-    background-position: 57px; */
     transition: var(--transicao);
 }
 .sol:hover{
@@ -282,70 +245,11 @@ body{
     position: relative ;
 }
 
-/* footer claro e escuro*/
-.bottom-claro{
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 99.99vw;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    text-align: center;
-    margin-top: 5vh;
-    display: flex;
-    transition: var(--transicao);
-}
-
-
-/* envolve elementos do footer */
-.envolve{
-    width: 25vw;
-}
-
-.envolve h4{
-    margin-top: 2vh;
-}
-
-.envolve h5{
-    margin-top: 5vh;
-}
-
-/* envolve a logo no footer */
-.envolve-logo{
-    color: var(--cor-secundaria);
-    /* margin: 2vh; */
-    transition: var(--transicao);
-}
-
 /* envolve os links */
 .envolve-links{
     /* border: 0; */
     margin-top: 2vh;
     padding: 1vw 1vh;
-}
-
-/* espaço entre logo e links footer */
-.lacuna{
-    margin-top:1vh;
-}
-
-/* links do footer */
-.linkagem-footer{
-    text-align: left;
-    padding-left: 6vw;
-    font-family: Consolas;
-    color: var(--cor-secundaria);
-    text-decoration: none;
-    transition: 0.1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: var(--transicao);
-}
-.linkagem-footer:hover{
-    text-decoration: underline;
-    transition: 0.1s;
-    font-weight: bold;
 }
 
 
@@ -362,28 +266,35 @@ body{
 .texto-devs h1{
     font-weight: bold;
 }
+
+/*engloba apenas um dev e um texto de apresentacao*/
 .engloba-texto{
     width: 98%;
     display: flex;
 }
+
+/*engloba os outros 6 devs */
 .engloba-pessoas{
     display:grid; 
     grid-template-columns: repeat(3,22vw);
     grid-column-gap: 1vw;
     grid-row-gap: 5vh;
     margin-top: 20vh;
-    margin-left: 15vw;
     font-family: Consolas;
     position: relative;
     align-content: center;
+    justify-content: center;
+    align-items: center;
     
 }
+
+/* card de laura e configuracoes */
 .card-roxo{
     float: left;
     transition: 0.2s;
     margin-right: 1vw;
     width: 50%;
-    height: 35vh;
+    height: 40vh;
     background-color: #9747FF;
     border-radius: 3Vw;
     text-align: right;
@@ -393,17 +304,34 @@ body{
 .card-roxo img{
     width:15vw;
     clip-path: circle();
-   
+    margin-top: 5vh;
+}
+.card-roxo h2{
+    font-size: 2rem;
+    margin-left: 2vw;
+    margin-top: 5vh;
+    float: left;
+    padding: 1vw;
+    width: 25vw;
+    font-family: Consolas;
+    color:var(--cor-secundaria);
+    text-align: center;
+    background-color: #C496FF;
+    border-radius: 3vw;
+    transition: var(--transicao);
 }
 .card-roxo:hover{
     transition: 0.2s;
     transform: translateY(-1vw); 
 	box-shadow: 0 1vw 1vw rgba(255,170,202); 
 }
-/* card azul */
+
+/* card de nicole, paula e evellyn e suas configuracoes */
 .card-azul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #379BFF;
     border-radius: 3Vw;
     transition: 0.2s;
@@ -421,16 +349,21 @@ body{
 }
 .card-azul h2{
     padding: 1vw;
+    font-size: 1rem;
     width: 15vw;
     font-family: Consolas;
     color:var(--cor-secundaria);
-    text-align: center;
     background-color: #92C8FF;
     border-radius: 3vw;
     transition: var(--transicao);
 }
-/* card amarelo */
+
+/* card de pedro, eloisa e deborah e suasconfiguracoes */
 .card-amarelo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: 0.2s;
     background-color: #FFAD5A;
     border-radius: 3vw;
@@ -442,6 +375,7 @@ body{
     margin: 3vw;
 }
 .card-amarelo h2{
+    font-size: 1rem;
     padding: 1vw;
     width: 15vw;
     font-family: Consolas;
