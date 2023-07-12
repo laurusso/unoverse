@@ -1,6 +1,19 @@
+<!-- 
+    Esse codigo foi desenvolvido durante o ano de 2023 pela equipe de numero 3 do CTI do curso de informatica, que desenvolveu a plataforma Unoverse.
+    Os participantes da equipe sao: Laura Rodrigues Russo, Nicole Emilia, Paula Sofia Antunes, Evellyn Cipriano, Pedro Kazuki Mori Hirata, Eloisa Goncalves e Deborah Campos.
+    A plataforma tem objetivo basico de capacitacao de professores da rede publica de ensino, para que possam ensinar a robótica aos seus alunos.
+    A documentacao nao apresenta acentos ou caracteres especiais, pois nao ficam com boa leitura no Github ou ate mesmo no Google Drive; para acessar
+    o projeto, basta entrar nesse link <https://github.com/laurusso/unoverse>. MUDAR ESSE LINK DPS
+    As principais linguagens deste arquivo sao: Laravel, CSS, JavaScript, SQL (no banco de dados).
+    Agradecemos a atencao e esperamos que gostem do nosso projeto!
+ -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- 
+      Este primeiro arquivo representa apenas o menu, que é fixo em todas as paginas do site.
+   -->
     <meta charset="UTF-8">
     @yield('titulo') <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
@@ -34,7 +47,7 @@
             </div>
         </div> FIM FIXED--> 
 <!-- ABERTURA DA DIV MAE -->
- <div class="mae-claro">
+ <div class="mae">
   <!-- INICIO DO TOPO FIXO LATERAL (OFFCANVAS EXTRAIDO DO BOOTSTRAP) -->
  <nav class="navbar navbar-dark fixed-top fixada">
   <div class="container-fluid">
@@ -85,7 +98,7 @@
 </nav>
         <script src="{{ asset('js/script.js') }}"></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <div class="body">
+        <div class="body"> <!--ABERTURA DIV BODY QUE SERVE PARA TODAS AS PAGINAS-->
       
 
 

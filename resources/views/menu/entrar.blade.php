@@ -1,3 +1,7 @@
+<!-- 
+    Aquivo que contem as configuracoes para logar-se no site, caso ja tenha conta
+ -->
+
 @include('layout._menu')
 <div class="form_entrar">
     <h1>Entrar</h1>

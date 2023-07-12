@@ -1,3 +1,7 @@
+<!-- 
+    Pagina de apresentacao dos desenvolvedores de Unoverse
+ -->
+
 <!-- CHAMADA DA DIV FIXED -->
 @include('layout._menu')
     <div class="engloba-texto">

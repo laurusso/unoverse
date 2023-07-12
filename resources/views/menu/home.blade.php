@@ -1,3 +1,6 @@
+ <!--
+    Pagina inicial do site (a home)
+   -->
         <!-- CHAMADA DA DIV FIXED -->
         @include('layout._menu')
 

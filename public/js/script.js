@@ -1,3 +1,6 @@
+// javascript do site, contem configuracoes dinamicas e interativas do site
+
+
 //TROCA O SOL PELA LUA
 
 const trocando=document.getElementById('iconetema'); //const para icone sol e lua

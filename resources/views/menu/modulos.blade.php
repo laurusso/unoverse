@@ -1,3 +1,6 @@
+<!-- 
+    Visao que contem os modulos de cadastro que o site oferece: Estudante, Curioso e Professor. Estao explicados nessa propria pagina
+ -->
 <!-- CHAMADA DA DIV FIXED -->
 @include('layout._menu')
 <div class="line_modo">
