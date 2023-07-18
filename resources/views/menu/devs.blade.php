@@ -46,7 +46,7 @@
                 <img title="dev Deborah" alt="Essa imagem não foi enontrada :/ Mas é a dev Deborah!!"src="{!! asset('img/devs/deborah.jpg') !!}">
                 <h2>Deborah Campos - administrativa técnica</h2>
             </div>
-    </div>x
+    </div>
     
     
 

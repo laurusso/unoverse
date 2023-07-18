@@ -3,6 +3,7 @@
  -->
 
 @include('layout._menu')
+
 <div class="form_entrar">
     <h1>Entrar</h1>
 
@@ -31,6 +32,7 @@
         </div>
     </form>
 </div>
+
 
 
 @include('layout._footer')
