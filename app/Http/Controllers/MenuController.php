@@ -37,9 +37,17 @@ class MenuController extends Controller
         return view("menu.entrar");
         
     }
-    //acesso a nada teste 
-    public function teste() {
-        return view("menu.teste");
-        
-    }
+        //acesso a nada teste 
+        public function cadCurioso() {
+            return view("links.cadCurioso");
+            
+        }
+        public function cadEstudante() {
+            return view("links.cadEstudante");
+            
+        }
+        public function cadProfessor() {
+            return view("links.cadProfessor");
+            
+        }
 }

@@ -83,7 +83,7 @@
               Logar
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Primeira vez</a></li> <!-- NAO CADASTRADO -->
+              <li><a class="dropdown-item" href="#">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
               <li><a class="dropdown-item" href="{{route('menu.entrar')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
           </li>
         </ul>

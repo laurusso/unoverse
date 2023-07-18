@@ -458,61 +458,240 @@ body{
     /* z-index: 1; */
  }
 
+
  /*ENTRAR*/
  .form_entrar{
-    width:60vw;
-    height:70vh;
-    margin-top: 5vh;
-    margin-left: 17vw;
-    margin-right: 20vw;
-    background: linear-gradient(150.96deg, #FFAD5A 6.47%, #FFD571 101.21%);
-    border-radius: 4vh;
-    color: #FFFFFF;
-    font-family: 'Consolas';
- }
- .form_entrar h1{
-    font-size: 6vh;
-    padding-left: 5vw;
-    padding-top: 2vw;
- }
- .form_entrar label{
-    font-size: 4vh;
-    padding-left: 5vw;
-    padding-top: 2vw;
- }
- /* .form_entrar input{
-    /* background-color:none; 
-    border-color: var(--cor-secundaria);
-    z-index: -1;
- } */
- /* elementos */
- .linha_titulo{
-    display:flex;
-    padding-left: 5vw;
- }
- .retangulo{
-    width: 12vw;
-    height: 1vh;
-    left: 21vw;
-    top: 34vh;
-    background:#FFFFFF;
-    border-radius: 5vh;
- }
- .bola{
-    width: 0.6vw;
-    height: 0.6vw;
-    border-radius: 100%;
-    background: #FFFFFF;
-    margin-left:1vw;
- }
- .form-items{
-    margin-top: 1vh;
-    /* background-color: yellow; */
-    width: 40vw;
-    height: 8vh;
- }
- .forms-itens input{
-    transform: 100%, 100%;
- }
+  width: 60vw;
+  height: 80vh;
+  margin-top: 5vh;
+  margin-left: 17vw;
+  margin-right: 20vw;
+  background: linear-gradient(150.96deg, #FFAD5A 6.47%, #FFD571 101.21%);
+  border-radius: 4vh;
+  color: #FFFFFF;
+  font-family: 'Consolas';
+}
+.form_entrar h1{
+  font-size: 6vh;
+  padding-left: 5vw;
+  padding-top: 2vw;
+}
+.form_entrar label{
+  font-size: 4vh;
+  padding-left: 5vw;
+  padding-top: 2vw;
+}
+/* .form_entrar input{
+  /* background-color:none; 
+  border-color: var(--cor-secundaria);
+  z-index: -1;
+} */
+/* elementos */
+.linha_titulo{
+  display:flex;
+  padding-left: 5vw;
+}
+.retangulo{
+  width: 12vw;
+  height: 1vh;
+  left: 21vw;
+  top: 34vh;
+  background:#FFFFFF;
+  border-radius: 5vh;
+}
+.bola{
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 100%;
+  background: #FFFFFF;
+  margin-left:1vw;
+}
+.form-itens{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  float: left;
+  width: 40vw;height: 8vh;}
+.form-itens input{
+  display: flex;
+  width: 45vw;
+  height: 5vh;
+  background: linear-gradient(150.96deg, #FFAD5A 6.47%, #FFD571 101.21%);
+  border: 0.2vw solid #FFFFFF;
+  border-radius: 3.7vw;
+  margin-top: 1vh;
+  margin-left: 5vw;
+}
 
+.form-btn label{
+color: #FFAD5A;
+background-color: #FFFFFF;
+padding-left: 2vw;
+padding-top: 1vw;
+width: 10vw;
+height: 9vh;
+border-radius: 10vh;
+float: left;
+margin-left: -24vw;
+margin-top: 14vw;
+
+}
+.form-btn a{
+color: #FFAD5A;
+background-color: #FFFFFF;
+padding-left: 2vw;
+padding-top: 1vw;
+width: 13vw;
+height: 9vh;
+float: left;
+margin-left: -8vw;
+margin-top: 14vw;
+font-size: 4vh;
+text-decoration: none;
+border-radius: 15vh;
+}
+
+/*Form cadastro padrão entre os modos*/
+.form-cad{
+width: 60vw;
+height: 87vh;
+border-radius: 40px;
+margin-left: 5vw;
+}
+
+.form-cad h1 {
+font-size: 40px;
+color:#FFFFFF;
+margin-left: 5vw;
+padding-top: 2vh;
+}
+.form-cad label {
+font-size: 24px;
+color:#FFFFFF;
+}
+.form-cad input{
+font-size: 10px;
+color:#FFFFFF;
+display: block;
+border: 1px solid;
+border-radius: 4vh;
+width: 22vw;
+height: 3.7vh;
+margin-top: 2vh;
+}
+
+.cad-items-radio label{
+font-size: 18px;
+margin-right: 0vw;
+margin-top: 1vh;
+}
+.cad-items-radio input{
+width: 1vw;
+margin-right: 0.5vw;
+margin-top: 0;
+float: left;
+
+}
+
+.cad-items{
+float: left;
+margin-left: 3.5vw;
+margin-right: 2vw;
+margin-top: 6vh;
+}
+
+.cad-items select{
+width: 21vw;
+height: 4vh;
+border-radius: 2vw;
+display: block;
+margin-top: 2vh;
+}
+
+.cad-items-submit input{
+background: #FFFFFF;
+width: 9vw;
+height: 8vh;
+border-radius: 2vw;
+font-size: 20px;
+float: left;
+margin-left: 0vw;
+margin-top: 9vh;
+}
+
+
+/*Configurações especificas de curioso*/
+.cad-curioso img{
+float:right;
+margin-right: -28vw;
+margin-top: -35vh;
+width: 17vw;
+}
+
+.cad-curioso{
+background: linear-gradient(141deg, #9747FF 0%, #BE8BFF 100%);
+}
+.cad-curioso input{
+background: linear-gradient(141deg, #9747FF 0%, #BE8BFF 100%);
+
+}
+
+/*Configurações especificas de estudante*/
+.cad-estudante{
+background: linear-gradient(144deg, #1AB9BD 0%, #00FFD1 100%);
+height: 107vh;
+}
+.cad-estudante input{
+background: linear-gradient(144deg, #1AB9BD 0%, #00FFD1 100%); 
+}
+.cad-estudante img{
+  float: left;
+  margin-left: 65vw;
+  margin-top: -63vh;
+  width: 25vw;
+}
+.cad-estudante select{
+background: #00FFD1;
+}
+/*Configurações especificas de Professor*/
+.cad-professor{
+background: linear-gradient(141deg, #006CD9 0%, #1789FC 100%);
+height: 107vh;
+}
+.cad-professor input{
+background: linear-gradient(141deg, #006CD9 0%, #1789FC 100%);}
+.cad-professor img{
+  float: left;
+  margin-left: 65vw;
+  margin-top: -63vh;
+  width: 25vw;
+}
+.cad-professor select{
+background: #1789FC;
+}
+/*  Telas adm */
+
+/*Configuração da tabela da listagem de dados*/
+.adm table{
+margin-left: 2vw;
+border: 2px solid #FFF;
+border-radius: 2vh;
+background-color: #003F64;
+font-size: 15px;
+color: #FFF;
+}
+.adm thead{
+border: 1px solid;
+border-radius: 1vh;
+background-color: #001F32;
+}
+.adm tr{
+margin: 0vw;
+}
+.adm td{
+padding-right: 7vw;}
+
+.adm input
+{
+display:block;
+}
 
