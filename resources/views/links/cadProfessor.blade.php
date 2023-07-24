@@ -1,5 +1,6 @@
 @include('layout._menu')
 <!--Para acessar essa tela colocar  /links/cadProfessor na barra do navegador-->
+<div class="espaco">
 <div class="form-cad cad-professor">
     <h1>Cadastre-se</h1>
 
@@ -80,4 +81,6 @@
     <img src="{!! asset('img/cadastro/professor.svg') !!}" title=" " alt="Essa imagem não foi encontrada :/ Mas é o robô mascote Jumper!!">
 
 </div>
+</div>
+
 @include('layout._footer')

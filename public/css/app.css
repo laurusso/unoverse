@@ -196,7 +196,7 @@ body{
     width: 100%;
     font-family: Consolas;
     /* display: flex; */
-    margin-top: 16vh;
+    /* margin-top: 16vh; */
     /* color: var(--cor-quaternaria);sw */
     position: relative ;
 }
@@ -205,7 +205,7 @@ body{
 /* slider */
 .container-slide{
     height: 74.6vh;
-    width: 97vw;
+    width: 100vw;
     /* border-radius: 20px; */
     overflow: hidden;
     position: relative;
@@ -270,6 +270,7 @@ body{
 /* PAGINA DE DEVS (devs.blade.php) */
 /*engloba apenas um dev e um texto de apresentacao*/
 .engloba-texto{
+  margin-top: 20vh;
     width: 98%;
     display: flex;
 }
@@ -325,6 +326,7 @@ body{
     font-size: 2rem;
     margin-left: 2vw;
     margin-top: 5vh;
+    font-size: 2rem;
     float: left;
     padding: 1vw;
     width: 25vw;
@@ -355,7 +357,7 @@ body{
 .card-azul:hover{
     transition: 0.2s;
     transform: translateY(-1vw); 
-	box-shadow: 0 1vw 1vw rgba(255,213,113); 
+	  box-shadow: 0 1vw 1vw rgba(255,213,113); 
 }
 .card-azul img{
     width:15vw;
@@ -460,6 +462,9 @@ body{
 
 
  /*ENTRAR*/
+ .espaco{
+  margin-top: 20vh;
+ }
  .form_entrar{
   width: 60vw;
   height: 80vh;
@@ -553,6 +558,9 @@ margin-top: 14vw;
 font-size: 4vh;
 text-decoration: none;
 border-radius: 15vh;
+}
+.olhoCor{
+  color: #FFFFFF;
 }
 
 /* PAGINAS DE CADASTRO (pasta links) */

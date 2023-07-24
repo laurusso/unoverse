@@ -12,7 +12,7 @@
                     <input type="radio"   name="slide" id="slide3">
 
                     <div class="slide s1">
-                        <img src="{!! asset('img/katia.jpeg') !!}">
+                        <img src="{!! asset('img/robotica.png') !!}">
                     </div>
 
                     <div class="slide">
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="slide">
-                        <img src="{!! asset('img/uno.png') !!}">
+                        <img src="{!! asset('img/robo.png') !!}">
                     </div>
 
                 </div>
