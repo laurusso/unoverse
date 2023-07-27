@@ -2,7 +2,9 @@
     Pagina inicial do site (a home)
    -->
         <!-- CHAMADA DA DIV FIXED -->
+        @section('titulo', 'Home')
         @include('layout._menu')
+        
 
             <!-- Slideshow container -->
             <div class="container-slide">

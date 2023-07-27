@@ -43,6 +43,9 @@ Route::get('/menu/devs',['as'=>'menu.devs','uses'=>'App\Http\Controllers\MenuCon
 //rota entrar (mudar quando o login for programado)
 Route::get('/menu/entrar',['as'=>'menu.entrar','uses'=>'App\Http\Controllers\MenuController@entrar']);
 
+//rota Cadastro
+Route::get('/menu/menuCad',['as'=>'menu.menuCad','uses'=>'App\Http\Controllers\MenuController@menuCad']);
+
 Route::get('/menu/teste',['as'=>'menu.teste','uses'=>'App\Http\Controllers\MenuController@teste']);
 
 

@@ -711,3 +711,20 @@ padding-right: 7vw;}
 display:block;
 }
 
+/* Configuraçoes na pagina Cadastrar */
+.escolha{
+  text-align: center;
+}
+.cards_cadastro{
+  grid-template-columns: repeat(3,22vw);
+
+}
+.estudante{
+  background-color: #00DEB6;
+}
+.curioso{
+  
+}
+.professor{
+
+}

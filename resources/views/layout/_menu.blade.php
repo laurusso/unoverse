@@ -1,6 +1,6 @@
 <!-- 
     Esse codigo foi desenvolvido durante o ano de 2023 pela equipe de numero 3 do CTI do curso de informatica, que desenvolveu a plataforma Unoverse.
-    Os participantes da equipe sao: Laura Rodrigues Russo, Nicole Emilia, Paula Sofia Antunes, Evellyn Cipriano, Pedro Kazuki Mori Hirata, Eloisa Goncalves e Deborah Campos.
+    Os participantes da equipe sao: Laura Russo, Nicole Emilia, Paula Sofia Antunes, Evellyn Cipriano, Pedro Kazuki Mori Hirata, Eloisa Goncalves e Deborah Campos.
     A plataforma tem objetivo basico de capacitacao de professores da rede publica de ensino, para que possam ensinar a robótica aos seus alunos.
     A documentacao nao apresenta acentos ou caracteres especiais, pois nao ficam com boa leitura no Github ou ate mesmo no Google Drive; para acessar
     o projeto, basta entrar nesse link <https://github.com/laurusso/unoverse>. MUDAR ESSE LINK DPS
@@ -83,7 +83,7 @@
               Logar
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
+              <li><a class="dropdown-item" href="{{route('menu.menuCad')}}">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
               <li><a class="dropdown-item" href="{{route('menu.entrar')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
           </li>
         </ul>
