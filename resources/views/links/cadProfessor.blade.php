@@ -74,7 +74,7 @@
        
 
         <div class="cad-items-submit">
-            <input type="submit" value="Enviar">  <!--add o caminho p/ verificacão -->
+            <input type="submit" value="Enviar" class="envia">  <!--add o caminho p/ verificacão -->
         </div>
 
     </form>

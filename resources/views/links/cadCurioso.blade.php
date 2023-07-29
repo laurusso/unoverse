@@ -67,7 +67,7 @@
        
 
         <div class="cad-items-submit sbm-curioso ">
-            <input type="submit" value="Enviar">  <!--add o caminho p/ verificacão -->
+            <input type="submit" class="envia" value="Enviar">  <!--add o caminho p/ verificacão -->
         </div>
 
     </form>

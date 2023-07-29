@@ -4,9 +4,32 @@
     <h1>Escolha sua categoria!</h1>
 </div>
 <div class="cards_cadastro">
-    <div class="estudante"></div>
-    <div class="curioso"></div>
-    <div class="professor"></div>
 
+    <div class="estudante">
+        <div class="imagem_cad">
+            <img src="{!! asset('img/Estudante_Cad.svg') !!}" alt="Buzzer">
+        </div>
+        <div class="botao_modulo">
+        <a href="{{route('links.cadEstudante')}}">Estudante</a>
+        </div>
+    </div>
 
+    <div class="curioso">
+        <div class="imagem_cad">
+            <img src="{!! asset('img/Curioso_Cad.svg') !!}" alt="Jumper">
+        </div>
+    <div class="botao_modulo">
+        <a href="{{route('links.cadCurioso')}}">Curioso</a>
+        </div>
+    </div>
+
+    <div class="professor">
+        <div class="imagem_cad">
+            <img src="{!! asset('img/Professor_Cad.svg') !!}" alt="LED">
+        </div>
+        <div class="botao_modulo">
+            <a href="{{route('links.cadProfessor')}}">Professor</a>
+        </div>
+
+    </div>
 </div>

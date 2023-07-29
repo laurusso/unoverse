@@ -579,6 +579,7 @@ margin-left: 5vw;
 padding-top: 2vh;
 }
 .form-cad label {
+outline: none;
 font-size: 24px;
 color:#FFFFFF;
 }
@@ -591,6 +592,7 @@ border-radius: 4vh;
 width: 22vw;
 height: 3.7vh;
 margin-top: 2vh;
+outline: none;
 }
 
 .cad-items-radio label{
@@ -599,6 +601,7 @@ margin-right: 0vw;
 margin-top: 1vh;
 }
 .cad-items-radio input{
+outline: none;
 width: 1vw;
 margin-right: 0.5vw;
 margin-top: 0;
@@ -622,6 +625,7 @@ margin-top: 2vh;
 }
 
 .cad-items-submit input{
+outline: none;
 background: #FFFFFF;
 width: 9vw;
 height: 8vh;
@@ -646,7 +650,10 @@ background: linear-gradient(141deg, #9747FF 0%, #BE8BFF 100%);
 }
 .cad-curioso input{
 background: linear-gradient(141deg, #9747FF 0%, #BE8BFF 100%);
-
+outline: none;
+}
+.envia:hover{
+  text-decoration: underline;
 }
 
 /*Configuracoes especificas de estudante*/
@@ -656,6 +663,7 @@ height: 107vh;
 }
 .cad-estudante input{
 background: linear-gradient(144deg, #1AB9BD 0%, #00FFD1 100%); 
+outline: none;
 }
 .cad-estudante img{
   float: left;
@@ -666,6 +674,9 @@ background: linear-gradient(144deg, #1AB9BD 0%, #00FFD1 100%);
 .cad-estudante select{
 background: #00FFD1;
 }
+.envia:hover{
+  text-decoration: underline;
+}
 
 /*Configuracoes especificas de Professor*/
 .cad-professor{
@@ -673,7 +684,9 @@ background: linear-gradient(141deg, #006CD9 0%, #1789FC 100%);
 height: 107vh;
 }
 .cad-professor input{
-background: linear-gradient(141deg, #006CD9 0%, #1789FC 100%);}
+background: linear-gradient(141deg, #006CD9 0%, #1789FC 100%);
+outline: none;
+}
 .cad-professor img{
   float: left;
   margin-left: 65vw;
@@ -683,6 +696,10 @@ background: linear-gradient(141deg, #006CD9 0%, #1789FC 100%);}
 .cad-professor select{
 background: #1789FC;
 }
+.envia:hover{
+  text-decoration: underline;
+}
+
 
 /*  TELAS ADM */
 
@@ -716,15 +733,70 @@ display:block;
   text-align: center;
 }
 .cards_cadastro{
-  grid-template-columns: repeat(3,22vw);
-
+  display:flex;
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
 }
 .estudante{
   background-color: #00DEB6;
+  width: 20vw;
+  height: 60vh;
+  box-shadow: 1vw 3vh 1.5vw gray;
+  border-radius: 3vh;
 }
 .curioso{
-  
+  background-color: #AC6BFF;
+  width:20vw;
+  height: 60vh;
+  box-shadow: 1vw 3vh 1.5vw gray;
+  border-radius: 3vh;
+
 }
 .professor{
+  background-color: #1789FC;
+  width:20vw;
+  height: 60vh;
+  box-shadow: 1vw 3vh 1.5vw gray;
+  border-radius: 3vh;
+}
+.botao_modulo{
+  background-color: #FFAD5A;
+  color:#FFF;
+  width: 14vw;
+  height: 11vh;
+  border-radius: 3vw;
+  margin: 13vh 3vw 3vw;
+  text-align: center;
+  padding-top: 2vh;
 
+}
+.imagem_cad{
+  text-align: center;
+  width:33vh;
+  height: 15vw;
+  margin: 2vh 1.5vw 2vh 1.5vw;
+}
+.botao_modulo a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 2vw;
+  margin-top: 5vh;
+
+}
+.botao_modulo:hover{
+  background-color: #ff8710;
+} 
+/*Configuração da página Ações*/
+#wave_acoes{
+  display: block;
+  width:100vw;
+  position: static;
+  z-index: -1;
+}
+#Projetos_Sociais{
+  position: absolute;
+  z-index: 10;
 }
