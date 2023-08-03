@@ -687,6 +687,14 @@ background: #1789FC;
 /*  TELAS ADM */
 
 /*Configuracao da tabela da listagem de dados*/
+.adm{
+  margin-left: 2vw;
+  margin-top: 17vh;
+}
+.adm h3{
+  color:#FFAD5A;
+  margin-bottom: -10vh;
+}
 .adm table{
 margin-left: 2vw;
 border: 2px solid #FFF;
