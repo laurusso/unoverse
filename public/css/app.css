@@ -265,8 +265,83 @@ body{
     margin-left: -40%;
  }
 
+ .video{
+  display: flex;
+ }
+ .bolas{
+  position: relative;
+  z-index: 1;
+  display: flex;
+
+ }
+.video iframe{
+  position: absolute;
+  z-index: 10;
+  margin-top: 3vh;
+  margin-left: 5vw;
 
 
+}
+.video p{
+  position: absolute;
+  font-size: 1.2vw; 
+  line-height: 5.5vh;
+  width: 45vw;   
+  margin-left: 50vw;
+  margin-top: 2vh;
+  z-index: 10;
+
+}
+ #bolas_azuis{
+  width: 25vw;
+  height: 33vh;
+  margin-top: 12vh;
+  margin-left: 2vh;
+
+ }
+ #bolas_amarelas{
+  width: 14vw;
+  height: 30vh;
+  margin-left: 1vw;
+
+
+ }
+ #wave_home{
+  position: relative;
+  z-index: 1;
+ }
+ 
+ .arduino_info{
+  display: block;
+  text-align: center;
+  justify-content:center;
+ }
+
+.arduino_info h2{
+  position: absolute;
+  z-index: 10;
+  color: #FFFFFF;
+  font-size: 4vw;
+  width: 42vw;
+  margin: 50vh 30vw 0vh 30vw;
+}
+.componentes{
+  position: absolute ;
+  z-index: 11;
+  display: grid;
+  grid-template-columns:  repeat(3,25vw);
+  /* margin: 2vh 5vw 0vh 5vw; */
+}
+.componentes a img{
+  width: 21vw;
+}
+.componentes a{
+  transition: 0.5s;
+}
+.componentes a:hover{
+  filter: brightness(40%);
+  transition: 0.5s;
+}
 /* PAGINA DE DEVS (devs.blade.php) */
 /*engloba apenas um dev e um texto de apresentacao*/
 .engloba-texto{
@@ -798,13 +873,27 @@ display:block;
   background-color: #ff8710;
 } 
 /*Configuração da página Ações*/
-#wave_acoes{
-  display: block;
-  width:100vw;
-  position: static;
-  z-index: -1;
-}
-#Projetos_Sociais{
+.texto_acoes{
   position: absolute;
   z-index: 10;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  color: #fff;
+  line-height: 4.5vh;
 }
+.texto_acoes p{
+  font-size: 1.1vw;
+  margin-top: 5vh;
+}
+.texto_acoes h1{
+  font-size: 2.5vw;
+  margin-top: 5vh;
+}
+#wave_acoes{
+  position: relative;
+  width:100vw;
+  z-index: 1;
+}
+
+  

@@ -37,7 +37,32 @@
              
              <div id="carouselExampleCaptions" class="carousel slide">
 
-            AAAAAAAAAAA
+            <div class="video">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/SigIbCVMTzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="bolas">
+                    <img src="{!! asset('img/bolas_azuis.png') !!}" id="bolas_azuis">
+                    <img src="{!! asset('img/bolas_amarelas.png') !!}"  id="bolas_amarelas">
+                </div>
+                <p>O Unoverse é um curso de robótica com arduíno que comtempla desde alunos de escolas públicas a professores e qualquer um interessado em adentrar o universo da tecnologia e programação de maneira acessível e divertida</p>
+            </div>
+
+            <div class="arduino_info">
+                <h2><b>Conheça o Arduíno</b></h2>
+                <img src="{!! asset('img/wave_home.svg') !!}" id="wave_home">
+                <div class="componentes">
+                    <a href="#">
+                        <img src="{!! asset('img/Placa_Uno.svg') !!}" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="{!! asset('img/Protoboard.svg') !!}" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="{!! asset('img/Jumpers.svg') !!}" alt="">
+                    </a>
+                     
+                </div>
+
+            </div>
 
         <!-- CHAMADA DA DIV FOOTER -->
         @include('layout._footer')
