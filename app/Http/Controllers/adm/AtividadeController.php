@@ -8,6 +8,8 @@ use App\Models\Atividades;
 
 class AtividadeController extends Controller
 {
+
+    
        
     public function index(){
         
@@ -64,48 +66,50 @@ class AtividadeController extends Controller
     }
 
     */
+
+    //param \Illuminate\Http\Request $request 
     public function salvar(Request $req)/*codigo incompleto */
     {
-        $nome = $req->nome;
-        $modulo = $req->modulo;
-        $descricao = $req->descricao;
-        $aluno = $req->alunos;
-       // $dados = $req['nome','modulo','descricao','aluno'];
-        $dados = $req->all();
-        $img = $req->upload;
-        $dados = $nome . $modulo . $descricao . $aluno;
+       // dd($req->all());
+        $Atv = $req->only(['nome','modulo','descricao','aluno']);
+       
+       //$Atvnome->nome = 'nome';
 
+
+       if($Atv['aluno']=='al'){
+                 $Atv['aluno'] = 'true';
+               }
+         else{
+        $Atv['aluno'] = 'false';
+             } 
+
+       
+      //  $img = $req->upload;
+        //$dados = $nome . $modulo . $descricao . $aluno;
+
+       // dd($Atv);
+        Atividades::create($Atv);
         
-        Atividades::create(
-            [
-                'num' => 'null',
-                'nome' => 'as',
-                'modulo' => 2,
-                'descricao' => 'as',
-                'aluno' => true,
-            ]
-        );
-        
-        if($req->hasFile('upload')){
+       // if($req->hasFile('upload')){
 
             
             //$file = $_FILES['upload']; 
         // $arq = $req->file('upload');
         //  $ex = $arq->guessClientExtension();
         // $ondeta =  $dir_origem . "/" . $arq;
-            $dir = "public/atividades/";
+            //$dir = "public/atividades/";
             
-            $destino = $dir.$img;
+          //  $destino = $dir.$img;
 
             
-            if(move_uploaded_file($destino,$img))
+         /*   if(move_uploaded_file($destino,$img))
             {
                 $dados_arq['upload'] = $destino;
             }
 
         // copy($ondeta,$destino);
-
-        }
+*/
+      //  }
 
 
     /*

@@ -70,7 +70,7 @@ return [
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'projetoscti5'),
             'username' => env('DB_USERNAME', 'projetoscti5'),
-            'password' => env('DB_PASSWORD', 'eq373a312'),
+            'password' => env('DB_PASSWORD', 'eve2023'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

@@ -2,7 +2,7 @@
 <div class="adm">   
     <div class="">
     <label>Nome da Atividade:</label>
-    <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
+    <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->'nome' : ''}}"  required>
     
     </div>
 
@@ -14,27 +14,29 @@
 
     <div class="">
     <label>Descricao:</label>    
-    <input type="text" name="descricao" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required>
+    <input type="text" name="descricao" value="{{isset($linha->'descricao') ? $linha->descricao : ''}}"  required>
     
     </div>
-
+    
     <div class="">
         <label>Conteudo destinado para?</label>
         <label>
-            <input type="radio" name="descricao" value="{{isset($linha->true) ? $linha->descricao : ''}}"  >
+            <input type="radio" name="aluno" value="al" {{isset($linha->aluno) && $linha->aluno == 'al' ? 'checked'  : '' }}  >
             Aluno 
         </label>
         <label>
-            <input type="radio" name="descricao" value="{{isset($linha->false) ? $linha->descricao : ''}}"  >
+            <input type="radio" name="aluno" value="pr"   {{ isset($linha->aluno) && $linha->aluno == 'pr' ? 'checked' : '' }} >
             Professor 
         </label>
     
     </div>
 
-    <div class="">
+    <!-- <div class="">
     <label>Arquivo</label>    
     <input type="file" name="upload"   value="{{isset($linha->upload) ? $linha->upload : ''}}"  required>
     
-    </div>
+    </div> -->
+
+    <button type="submit" value="enviar">
 
 </div>
