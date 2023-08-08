@@ -309,6 +309,7 @@ body{
  #wave_home{
   position: relative;
   z-index: 1;
+
  }
  
  .arduino_info{
@@ -326,11 +327,11 @@ body{
   margin: 50vh 30vw 0vh 30vw;
 }
 .componentes{
-  position: absolute ;
-  z-index: 11;
   display: grid;
   grid-template-columns:  repeat(3,25vw);
-  /* margin: 2vh 5vw 0vh 5vw; */
+  position: absolute;
+  z-index: 11;
+   margin: 70vh 12vw 0vh 12vw;
 }
 .componentes a img{
   width: 21vw;
@@ -342,6 +343,29 @@ body{
   filter: brightness(40%);
   transition: 0.5s;
 }
+.janela-modal{
+  /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
+  width: 100vw;
+  height: 594.5vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000073;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal{
+  width: 60%;
+  background-color: #ffffff9a;
+  backdrop-filter: blur(10px);
+ 
+}
+
+
+
+
 /* PAGINA DE DEVS (devs.blade.php) */
 /*engloba apenas um dev e um texto de apresentacao*/
 .engloba-texto{
