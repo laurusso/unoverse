@@ -11,6 +11,93 @@
         </div>
         <img src="{!! asset('img/Wave.svg') !!}" id="wave_acoes" alt="">
     </div>
+
+
+    <div class="envolve__slider">
+        <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="card__image">
+                <img src="{!! asset('img/social/feira.jpg') !!}" alt=" Imagem de feira de ciências Bauru">
+                </div>
+
+                <div class="card__content">
+                <span class="card__title">Semana da Ciência de Bauru - 2022</span>
+                <span class="card__name">Apresentação do robô mBot</span>
+                <p class="card__text">O robô em questão tem um sensor infravermelho que foi programado no mBlock (linguagem de blocos baseada em Scratch) para seguir uma linha preta :)</p>
+                    <!-- <button class="card-btn">View More</button> -->
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+                <div class="card__image">
+                <img src="{!! asset('img/social/ctifeira.jpg') !!}" alt=" Imagem de feira no CTI">
+                </div>
+
+                <div class="card__content">
+                <span class="card__title">Intervalo com robótica CTI</span>
+                <span class="card__name">Apresentação aos ingressantes do Colégio</span>
+                <p class="card__text">Na foto, aparece o jogo "Operando com Makey Makey" criado durante um projeto de extensão, é programado em blocos pelo Scratch :)</p>
+                    <!-- <button class="card-btn">View More</button> -->
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+                <div class="card__image">
+                <img src="{!! asset('img/social/ada.jpg') !!}" alt=" Imagem de aula na escola Ada Cariani">
+                </div>
+
+                <div class="card__content">
+                <span class="card__title">Aula introdutória de robótica - 2022</span>
+                <span class="card__name">Realizada na E.E. Ada Cariani Avalone Profª.</span>
+                <p class="card__text">Nesse dia, foi oferecida uma aula introdutória de programação em Arduino, com auxílio dos notebooks do estado de SP e kits Arduino do CTI</p>
+                    <!-- <button class="card-btn">View More</button> -->
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+                <div class="card__image">
+                <img src="{!! asset('img/social/zuiani.jpg') !!}" alt=" Imagem de apresentação na Escola Luiz Zuiani">
+                </div>
+
+                <div class="card__content">
+                <span class="card__title">Apresentação de protótipos de robótica</span>
+                <span class="card__name">Realizada na Escola Luiz Zuiani Dr EE EJA</span>
+                <p class="card__text">Foi um dia em que a professora Katia Livia (responsável pela robótica no CTI) foi conhecer os equipamentos que as escolas do estado de SP dispõe, aproveitando a opurtunidade para apresentar à escola alguns protótipos feitos no CTI.</p>
+                    <!-- <button class="card-btn">View More</button> -->
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+ 
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     
 
 

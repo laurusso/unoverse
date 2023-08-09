@@ -4,14 +4,6 @@
         <!-- CHAMADA DA DIV FIXED -->
         @section('titulo', 'Home')
         @include('layout._menu')
-        <div class="janela-modal" id="janela-modal">
-                <div class="modal">
-                    <h1 class="PlacaUno-Modal">Placa Uno</h1>
-                    <img src="{!! asset('img/Placa_Uno_Modal.svg') !!}" alt="">
-                    <p>A Placa Uno é a uma placa controladora baseada no ATmega328 destinado a estudantes e profissionais da área de eletrônica para desenvolver seus projetos de forma mais fácil que as plataformas de programação padrão, além de possuir grande quantidade de portas lógicas e compatibilidade com os Shields Arduino.</p>
-                </div>
-        </div>     
-
             <!-- Slideshow container -->
             <div class="container-slide">
                 <div class="slides">
@@ -56,7 +48,7 @@
             <div class="arduino_info">
                 <h2><b>Conheça o Arduíno</b></h2>
                 <div class="componentes">
-                    <a href="#">
+                    <a href="#" onclick="abrirModal()">
                         <img src="{!! asset('img/Placa_Uno.svg') !!}" alt="">
                     </a>
                     <a href="#">
@@ -72,10 +64,23 @@
 
             </div>
             
-             
+           
+
         <!-- CHAMADA DA DIV FOOTER -->
         @include('layout._footer')
 
        
 </body>
+<div class="janela-modal" id="janela-modal">
+                <div class="modal">
+                    <button class="fechar" id="fechar"><b>X</b></button>
+                    <h1 class="PlacaUno-Modal">Placa Uno</h1>
+                    <div class="conteudo_modal">
+                        <img src="{!! asset('img/Placa_Uno_Modal.png') !!}" alt="">
+                        <p>A Placa Uno é a uma placa controladora baseada no ATmega328 destinado a estudantes e profissionais da área de eletrônica para desenvolver seus projetos de forma mais fácil que as plataformas de programação padrão, além de possuir grande quantidade de portas lógicas e compatibilidade com os Shields Arduino.</p>
+                    </div>
+                   
+                </div>
+ </div> 
+ <script src="{{ asset('js/script.js') }}"></script>    
 </html>

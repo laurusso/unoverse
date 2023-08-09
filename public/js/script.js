@@ -114,3 +114,10 @@ function trocarOlho(){
     }//fim do else
 }//fim da funcao trocarOlho
 
+//CONFIGURAÇÃO DA JANELA MODAL
+function abrirModal()
+{
+    const modal=document.getElementById('janela-modal')
+  
+}
+

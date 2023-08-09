@@ -28,7 +28,13 @@ azul do fundo que virava branco, mas o mesmo azul fazia parte do topo */
             var(--transicaoTempo),
         var(--transicao2) var(--transicaoDuracao)
             var(--transicaoTempo);
+
+  /* vars de pagina acoes */
+  --font:'Consolas', sans-serif;
+  --color: #379BFF;
+  --bg-color: var(--cor-setima);
 }
+
 
 /* CONFIGURACOES USADAS EM ASPECTOS GERAIS DA PAGINA (menu, footer, divs mae e body, etc) */
 /* alteracao de alguns aspectos de classes que sao do bootstrap */
@@ -64,6 +70,7 @@ azul do fundo que virava branco, mas o mesmo azul fazia parte do topo */
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -346,7 +353,7 @@ body{
 .janela-modal{
   /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
   width: 100vw;
-  height: 594.5vh;
+  height: 597vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -357,11 +364,43 @@ body{
   z-index: 999;
 }
 .modal{
-  width: 60%;
-  background-color: #ffffff9a;
+  background-color: #ffffffb6;
   backdrop-filter: blur(10px);
+  border-radius: 2vw;
+  display:block !important; 
+  width:60vw !important; 
+  height:70vh !important; 
+  margin-left:17vw;
+  margin-top:20vh; 
+  padding: 10vh;
  
 }
+.conteudo_modal{
+  display: flex;
+  font-size: 1vw;
+  line-height: 4.5vh;
+  margin-top: 5vh;
+}
+.conteudo_modal img{
+  width: 20vw !important;
+  margin-right: 5vw;
+
+}
+.fechar{
+  position: absolute;
+  top: 5vh;
+  left: 55vw;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%;
+  background-color: #ff251e;
+  border: 0;
+  color: #FFFFFF;
+  
+  
+
+}
+
 
 
 
@@ -896,6 +935,7 @@ display:block;
 .botao_modulo:hover{
   background-color: #ff8710;
 } 
+
 /*Configuração da página Ações*/
 .texto_acoes{
   position: absolute;
@@ -920,4 +960,80 @@ display:block;
   z-index: 1;
 }
 
-  
+ /* slider */
+.swiper{
+  width:100%
+}
+.swiper-wraper{
+  width: 100%;
+  height: 40em;
+  display: flex;
+  align-items: center;
+}
+.card{
+  background-color: var(--bg-color);
+  width:40em;
+  height:100%;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active){
+  filter: blur(3px);
+}
+.card__image{
+  width: 39em;
+  height: 20em;
+  border-radius: 20%;
+  border: 5px solid var(--color);
+  padding: 3px;
+  margin-bottom: 2em;
+}
+
+.card__image img{
+  width:100%;
+  height: 100%;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.card__content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.card__title{
+  font-size: 1.5em;
+  font-weight: 500;
+  position: relative;
+  top:.2em;
+}
+
+.card__name{
+  color:var(--color);
+
+}
+
+.card__text{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1em 0;
+
+}
+
+.envolve__slider{
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+ 
+
