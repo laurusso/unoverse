@@ -333,6 +333,23 @@ body{
   width: 42vw;
   margin: 50vh 30vw 0vh 30vw;
 }
+.texto_info{
+  position: absolute;
+  z-index: 10;
+  display: block;
+  color: #FFFFFF;
+  font-size: 1.2vw;
+  margin: 140vh 20vw 0vh 20vw;
+  align-items: center !important;
+
+  
+}
+.texto_info img{
+  width: 50vw;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}
+
 .componentes{
   display: grid;
   grid-template-columns:  repeat(3,25vw);
@@ -350,7 +367,7 @@ body{
   filter: brightness(40%);
   transition: 0.5s;
 }
-.janela-modal{
+.janela-modal-placa-uno{
   /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
   width: 100vw;
   height: 597vh;
@@ -358,10 +375,45 @@ body{
   top: 0;
   left: 0;
   background-color: #00000073;
-  display: flex;  
+  display: none;  
   align-items: center;
   justify-content: center;
   z-index: 999;
+}
+.janela-modal-protoboard{
+  /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
+  width: 100vw;
+  height: 597vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000073;
+  display: none;  
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.janela-modal-jumpers{
+  /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
+  width: 100vw;
+  height: 597vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000073;
+  display: none;  
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.janela-modal-placa-uno.abrir{
+  display: flex;
+}
+.janela-modal-protoboard.abrir{
+  display: flex;
+}
+.janela-modal-jumpers.abrir{
+  display: flex;
 }
 .modal{
   background-color: #ffffffb6;
@@ -396,9 +448,6 @@ body{
   background-color: #ff251e;
   border: 0;
   color: #FFFFFF;
-  
-  
-
 }
 
 

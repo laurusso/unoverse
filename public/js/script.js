@@ -115,9 +115,46 @@ function trocarOlho(){
 }//fim da funcao trocarOlho
 
 //CONFIGURAÇÃO DA JANELA MODAL
-function abrirModal()
+function abrirModal_Placa_Uno()
 {
-    const modal=document.getElementById('janela-modal')
+    const modal=document.getElementById('janela-modal-placa-uno')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click',(e) =>{
+        if(e.target.id == 'fechar-placa-uno' || e.target.id =='janela-modal-placa-uno')
+        {
+            modal.classList.remove('abrir')
+        }
+    })
   
 }
+
+function abrirModal_Protoboard()
+{
+    const modal=document.getElementById('janela-modal-protoboard')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click',(e) =>{
+        if(e.target.id == 'fechar' || e.target.id =='janela-modal-protoboard')
+        {
+            modal.classList.remove('abrir')
+        }
+    })
+  
+}
+function abrirModal_Jumpers()
+{
+    const modal=document.getElementById('janela-modal-jumpers')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click',(e) =>{
+        if(e.target.id == 'fechar' || e.target.id =='janela-modal-jumpers')
+        {
+            modal.classList.remove('abrir')
+        }
+    })
+  
+}
+
+
 
