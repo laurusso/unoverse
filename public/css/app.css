@@ -183,7 +183,10 @@ body{
 
 /* tamanho logomarca */
 .logomarca{
-    height: 8vh;
+  align-items: left;
+  justify-content: left;
+  align-content: left;
+  height: 8vh;
 } 
 
 /* icone sol */
@@ -334,6 +337,7 @@ body{
   margin: 50vh 30vw 0vh 30vw;
 }
 .texto_info{
+  align-items: center !important;
   position: absolute;
   z-index: 10;
   display: block;
@@ -705,7 +709,8 @@ body{
   margin-top: 5vh;
   margin-bottom: 5vh;
   float: left;
-  width: 40vw;height: 8vh;
+  width: 40vw;
+  height: 8vh;
 }
 
 .form-itens input{
@@ -717,6 +722,7 @@ body{
   border-radius: 3.7vw;
   margin-top: 1vh;
   margin-left: 5vw;
+  outline: none;
 }
 
 .form-btn label{
@@ -985,7 +991,7 @@ display:block;
   background-color: #ff8710;
 } 
 
-/*Configuração da página Ações*/
+/*Configuração da página Acoes*/
 .texto_acoes{
   position: absolute;
   z-index: 10;
@@ -1010,11 +1016,19 @@ display:block;
 }
 
  /* slider */
+ .envolve__slider{
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+ 
 .swiper{
-  width:100%
+  width:99%;
 }
 .swiper-wraper{
-  width: 100%;
   height: 40em;
   display: flex;
   align-items: center;
@@ -1077,12 +1091,5 @@ display:block;
 
 }
 
-.envolve__slider{
-  font-family: var(--font);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
- 
+
 

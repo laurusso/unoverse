@@ -28,29 +28,6 @@
     />
   </head>
 <body>
-    <!--MAE
-     <div class="mae-claro" id="colorir">
-         TOPO FIXO
-        <div class="fixed-claro" id="temaFixed">
-             INSERCAO LOGOMARCA NO TOPO 
-            <div class="logo-div">
-                <img src="{!! asset('img/logo.png') !!}" class="logomarca">
-            </div>
-            INSERCAO LINKS TOPO 
-            <div class="link-topo">
-                <a class="linkagem" href="{{route('menu.home')}}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="linkagem" href="{{route('menu.modulos')}}">Módulos</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <a class="linkagem" href="{{route('menu.acoes')}}">Parcerias</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="linkagem" href="{{route('menu.devs')}}">Devs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
-            <div class="logar-cad-topo">
-                <a class="linkagem">Entrar</a> 
-                <a class="sol" href=""><i class="bi bi-person"></i></a> User
-                <a id="btnCadastro">Cadastrar</a>
-                <a class="sol" id="troca"><i id="iconetema" class="bi bi-sun-fill" onclick="trocarCores()"></i></a> Sol
-            </div>
-        </div> FIM FIXED--> 
-<!-- ABERTURA DA DIV MAE -->
  <div class="mae">
   <!-- INICIO DO TOPO FIXO LATERAL (OFFCANVAS EXTRAIDO DO BOOTSTRAP) -->
  <nav class="navbar navbar-dark fixed-top fixada">
