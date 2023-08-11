@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Arquivos extends Model
 {
     use HasFactory;
+    use HasFactory;
+    protected $fillable = ['upload','fk_num'];
 }
