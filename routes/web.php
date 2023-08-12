@@ -62,13 +62,11 @@ Route::get('/adm/lista',
 ['as'=>'adm.lista','uses'=>'App\Http\Controllers\adm\AtividadeController@lista']);
 Route::get('/adm/adicionar',
 ['as'=>'adm.adicionar','uses'=>'App\Http\Controllers\adm\AtividadeController@adicionar']);
-
-/* Rotas ainda não programadas no Controlador*/
 Route::post('/adm/salvar',
 ['as'=>'adm.salvar','uses'=>'App\Http\Controllers\adm\AtividadeController@salvar']);
-Route::get('/adm/editar/{id}',
+Route::get('/adm/editar/{num}',
 ['as'=>'adm.editar','uses'=>'App\Http\Controllers\adm\AtividadeController@editar']);
-Route::put('/adm/atualizar/{id}',
+Route::put('/adm/atualizar/{num}',
 ['as'=>'adm.atualizar','uses'=>'App\Http\Controllers\adm\AtividadeController@atualizar']);
-Route::get('/adm/excluir/{id}',
+Route::get('/adm/excluir/{num}',
 ['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir']);

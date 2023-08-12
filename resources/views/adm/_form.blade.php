@@ -36,18 +36,22 @@
     <input type="file" name="upload"   value="{{isset($linha->upload) ? $linha->upload : ''}}"  required>
     
     </div> -->
-    <div class=" ">
-  <div class="">
 
-    <input type="file" name="upload">
+    <input type="file" name="upload"  />
+   
+     @if(isset($linha->upload))
+    <div class="">
+        <input type="file" name="upload" src="{{asset($linha->upload)}}" />
+        </div>
+      <!-- <div class=""><input type="file" name="upload" src="{{asset($linha->upload)}}" > -->
   </div>
+     @endif 
 
 
-    @if(isset($linha->upload))
-<div class="input-field">
-  <input type="file" name="upload" value="{{asset($linha->upload)}}" />
-</div>
-@endif
-    <button type="submit" value="enviar">
+
+
+    
+
+  
 
 </div>

@@ -6,7 +6,7 @@
       <form class="" action="{{route('adm.salvar')}}" method="post"  enctype="multipart/form-data">
         {{ csrf_field() }}
         @include('adm._form')
-        
+        <button type="submit" value="enviar">Adicionar</button>
       </form>
     </div>
   </div>  

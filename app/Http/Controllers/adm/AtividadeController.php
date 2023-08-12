@@ -4,8 +4,9 @@ namespace App\Http\Controllers\adm;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Atividades;
-use App\Models\Arquivos;
+use App\Models\Atividade;
+use App\Models\Arquivo;
+use Illuminate\Support\Facades\DB;
 //use Illuminate\Support\Facades\Atividades;
 
 class AtividadeController extends Controller
@@ -13,19 +14,15 @@ class AtividadeController extends Controller
 
   
        
-    public function index(){
-        
+    public function index(){   
         //carrega view da home de adm
         return view('adm.index');
     }
- // $linhas = Curso::all();
-    //  return view ('admin.cursos.index',compact('linhas'));
-    
+
     public function lista() {
-    
-        $linhas = Atividades::all(); 
-        return view ('adm.lista',compact('linhas'));
-        
+        $linhas = Atividade::all(); 
+        $imgs = Arquivo::all();
+        return view ('adm.lista',compact('linhas','imgs'));  
     }
 
     // CHAMA VISApublic function index() {
@@ -39,86 +36,91 @@ class AtividadeController extends Controller
     public function editar($num) {
         // repare que ele recebe o id da ROTA
       //  $linha = Atividades::find($num);
-        $linha = Atividades::where('num', $num);
-
+        $linha = Atividade::where('num',$num)->first();
+        $linha['upload'] = Arquivo::where('fk_num',$num)->first();
+        if($linha['aluno'] == 'true')
+        {
+            $linha['aluno'] = 'al';
+        }
+        else if($linha['aluno'] == 'false')
+        {
+            $linha['aluno'] = 'pr';
+        }
+        else
+        {
+            $linha['aluno'] = '';
+        }
         // carrega o registro (realiza um select e um fetch internamente)
         return view('adm.editar',compact('linha'));
         // manda o registro encontrado para ser editado na vis�o
-    }
+    }   
 
-    /*
-    public function atualizar(Request $req, $id)
+   
+    public function atualizar(Request $req, $num)
     {
-    $dados = $req->all();
-    if(isset($dados['publicado'])){
-    $dados['publicado'] = 'sim';
-    }else{
-    $dados['publicado'] = 'nao';
-    }
-    if($req->hasFile('imagem')){
-    $imagem = $req->file('imagem');
-    $num = rand(1111,9999);
-    $dir = "img/cursos/";
-    $ex = $imagem->guessClientExtension();
-    $nomeImagem = "imagem_".$num.".".$ex;
-    $imagem->move($dir,$nomeImagem);
-    $dados['imagem'] = $dir."/".$nomeImagem;
-    }
-    Curso::find($id)->update($dados);
-    return redirect()->route('admin.cursos');
+        $atualiza_atv = $req->only(['nome','modulo','descricao','aluno']);
+        if($atualiza_atv['aluno']=='al')//testa valor enviado pelo radiobutton
+        {   $atualiza_atv['aluno'] = 'true'; } //selecionou aluno atribuiu valor TRUE
+       else
+        {    $atualiza_atv['aluno'] = 'false';} //selecionou professor atribuiu valor FALSE
+        
+        if($req->hasFile('upload')){
+            $num = rand(1111,9999); // escolhe numero pra não repetir
+            $dir = "atividades/"; // pasta onde armazena arquivos, localizada no projeto em: /public/atividades
+            $ex = $req['upload']->guessClientExtension(); // pega extensão, jpg, png ...
+            $nomeArquivo = "aula".$num.".".$ex; // monta novo nome
+            $req['upload']->move($dir,$nomeArquivo);//move o arquivo para  /public/atividades
+    
+        }
+       
+        Atividade::where('num',$num)->update($atualiza_atv);
+        return redirect()->route('adm.lista');
     }
 
-    */
+    
 
    
     public function salvar(Request $req)
     {
         
-        $dados_atv = $req->only(['nome','modulo','descricao','aluno']); //recebe por request os dados da tabela ATIVIDADES
-        
+        //$dados_atv = $req->only(["nome",'modulo',"descricao",'aluno']); //recebe por request os dados da tabela ATIVIDADES
+        $dados_atv = $req->except(['upload']);
+
        if($dados_atv['aluno']=='al')//testa valor enviado pelo radiobutton
        {
-            $dados_atv['aluno'] = '1';//selecionou aluno atribuiu valor TRUE
+            $dados_atv['aluno'] = 'true';//selecionou aluno atribuiu valor TRUE
        }
        else{
-            $dados_atv['aluno'] = '0';//selecionou professor atribuiu valor FALSE
+            $dados_atv['aluno'] = 'false';//selecionou professor atribuiu valor FALSE
        } 
-        
-       Atividades::create($dados_atv); //Cria registro na tabela ATIVIDADES
-
-     
+      
+        //Cria registro na tabela ATIVIDADES
+        Atividade::create($dados_atv);
+      
+    
         $num = rand(1111,9999); // escolhe numero pra não repetir
         $dir = "atividades/"; // pasta onde armazena arquivos, localizada no projeto em: /public/atividades
         $ex = $req['upload']->guessClientExtension(); // pega extensão, jpg, png ...
         $nomeArquivo = "aula".$num.".".$ex; // monta novo nome
         $req['upload']->move($dir,$nomeArquivo);//move o arquivo para  /public/atividades
 
-        $resul_id = Atividades::select('AUTO_INCREMENT')  //coleta resultado da pesquisa do próximo id a ser inserido
-                                    ->from('information_schema.TABLES')
-                                    ->where('TABLE_SCHEMA', '=', 'unoverse')
-                                    ->where('TABLE_NAME', '=', 'atividades')
-                                    ->first();
-
-        $id_foren = ($resul_id->AUTO_INCREMENT) - 1;  //retira -1 do resultado da pesquisa, obtendo o valor do ultimo id inserido
+        $ultimoId = Atividade::orderBy('num', 'desc') ->value('num'); //seleciona o ultimo id inserio em Atividades
         $upload = $dir . $nomeArquivo; //armazena o nome e diretorio da image para inserir na tabela ARQUIVOS
         $dados_arq = array( 
                 "upload" => $upload,
-                "fk_num" => $id_foren);
+                "fk_num" => $ultimoId);
            
-            Arquivos::create($dados_arq); //Cria registro na tabela ARQUIVOS
+        Arquivo::create($dados_arq); //Cria registro na tabela ARQUIVOS
 
     
-            return redirect()->route('adm.lista');//retorna para view lista
+        return redirect()->route('adm.lista');//retorna para view lista
     }
-    /*
+   
     // CHAMA EXCLUSAO
-    public function excluir($id) {
-    // repare que ele recebe o id da ROTA
-    Curso::find($id)->delete();
-    // apos selecionar o registro, � chamado o m�todo DELETE do OBJETO registro
-    // � mapeado internamente como um 'delete from' interno que rodara no BD
-    return redirect()->route('admin.cursos');
-    // abre a vis�o da lista de cursos
+    public function excluir($num) {
+        Arquivo::where('fk_num',$num)->delete();//Necessario excluir o registro que possui foreign key o id de Atividades
+        Atividade::where('num',$num)->delete();//exclusao do registro de Atividades
+        return redirect()->route('adm.lista');
 
-    }*/
+    }
 }

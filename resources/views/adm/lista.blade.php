@@ -24,8 +24,16 @@
                                 <td>{{ $row->modulo }}</td>
                                 <td>{{ $row->descricao }}</td>
                     
-                               
-                               <!-- <td><img src="{{ asset($row->imagem) }}" width=100  alt="{{ $row->titulo }}"></td>-->
+                                @foreach($imgs as $rua)
+                                    @if($row->num == $rua->fk_num)
+                                
+                                        <td><img src="{{ asset($rua->upload) }}" width=100  alt="{{ $row->nome }}"></td> 
+    
+                                    @endif
+                                    <!-- <td><img src="{{ asset($row->imagem) }}" width=100  alt="{{ $row->titulo }}"></td> -->
+                                @endforeach
+                                
+                                
                                 <td> <!-- COLUNA COM ALTERAR E EXCLUIR -->
                                     <a class='btn deep-orange' href="{{ route('adm.editar',$row->num) }}">Alterar</a>
                                     <a class='btn rede' href="{{ route('adm.excluir',$row->num) }}">Excluir</a>
