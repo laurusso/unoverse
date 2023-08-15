@@ -55,6 +55,10 @@ Route::get('/links/cadCurioso',['as'=>'links.cadCurioso','uses'=>'App\Http\Contr
 Route::get('/links/cadEstudante',['as'=>'links.cadEstudante','uses'=>'App\Http\Controllers\MenuController@cadEstudante']);
 Route::get('/links/cadProfessor',['as'=>'links.cadProfessor','uses'=>'App\Http\Controllers\MenuController@cadProfessor']);
 
+Route::post('pessoa',
+['as'=>'cadastrar','uses'=>'App\Http\Controllers\PessoaController@cadastrar']);
+
+
 //rota ADM  !!!dps  do login é necessário agrupar
 Route::get('/adm/index',
 ['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index']);
@@ -70,3 +74,4 @@ Route::put('/adm/atualizar/{num}',
 ['as'=>'adm.atualizar','uses'=>'App\Http\Controllers\adm\AtividadeController@atualizar']);
 Route::get('/adm/excluir/{num}',
 ['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir']);
+

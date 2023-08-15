@@ -11,7 +11,7 @@
         <div class="bola"></div>
    </div>
 
-    <form action="#" method="post">
+    <form action="{{route('cadastrar')}}" method="post">
         {{csrf_field() }}
         <div class="cad-items">
             <label for="nome">Nome:</label>

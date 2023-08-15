@@ -14,11 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('professors', function (Blueprint $table) {
-            $table->id('id_prof');    
-            $table->unsignedBigInteger('fk_pessoa');
-            $table->foreign('fk_pessoa')->references('id_pessoa')->on('pessoas');
-            $table->string('email_prof');
-            $table->foreign('email_prof')->references('email')->on('pessoas');
+            $table->unsignedBigInteger('id_prof');  
+            $table->foreign('id_prof')->references('id_pessoa')->on('pessoas');
+            $table->string('email_prof',50);
             $table->timestamps();
         });
     }
