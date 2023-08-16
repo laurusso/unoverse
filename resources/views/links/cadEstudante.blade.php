@@ -70,10 +70,12 @@
                     <input type="radio" name="genero" value="nao_informado">
                     Prefiro não dizer
                 </label>
+
+                <input type="hidden" name="curioso" value="false">
         </div>
         </div>
        
-
+        
         <div class="cad-items-submit">
             <input type="submit" value="Enviar" class="envia">  <!--add o caminho p/ verificacão -->
         </div>

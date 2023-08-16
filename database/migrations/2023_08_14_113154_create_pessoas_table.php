@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id('id_pessoa');
             $table->string('email',50);
             $table->string('senha',100);
-            $table->string('foto',80);
+            $table->binary('foto');
             $table->string('nome',50);
             $table->string('sobrenome',50);
             $table->string('genero',20);

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +30,11 @@ Route::get('/', function () {
 // ROTAS PARA O MENU    
 // rota home
 Route::get('/menu/home',['as'=>'menu.home','uses'=>'App\Http\Controllers\MenuController@home']);
+//Route::get('/menu/home', [MenuController::class, 'funcao'])->name('nome da rota');
 
+/*Route::get('/menu/home', function() {
+    return view('menu.home')->name('home');
+});*/
 // rota modulos
 Route::get('/menu/modulos',['as'=>'menu.modulos','uses'=>'App\Http\Controllers\MenuController@modulos']);
 
