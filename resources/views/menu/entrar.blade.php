@@ -14,7 +14,7 @@
             <div class="bola"></div>
     </div>
 
-        <form action="#" method="post">
+        <form action="{{route('login')}}" method="post">  
             {{csrf_field() }}
             <div class="form-itens">
                 <label for="email">E-mail:</label>

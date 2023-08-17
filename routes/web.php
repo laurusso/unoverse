@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\Auth\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,11 +31,12 @@ Route::get('/', function () {
 
 // ROTAS PARA O MENU    
 // rota home
-Route::get('/menu/home',['as'=>'menu.home','uses'=>'App\Http\Controllers\MenuController@home']);
+//Route::get('/menu/home',['as'=>'menu.home','uses'=>'App\Http\Controllers\MenuController@home']);
 //Route::get('/menu/home', [MenuController::class, 'funcao'])->name('nome da rota');
-
-/*Route::get('/menu/home', function() {
-    return view('menu.home')->name('home');
+Route::get('/menu/home', [MenuController::class, 'home'])->name('menu.home');
+/*
+Route::get('/menu/home', function() {
+    return view('menu.home')->name('menu.home');
 });*/
 // rota modulos
 Route::get('/menu/modulos',['as'=>'menu.modulos','uses'=>'App\Http\Controllers\MenuController@modulos']);
@@ -52,6 +55,14 @@ Route::get('/menu/menuCad',['as'=>'menu.menuCad','uses'=>'App\Http\Controllers\M
 
 Route::get('/menu/teste',['as'=>'menu.teste','uses'=>'App\Http\Controllers\MenuController@teste']);
 
+
+
+
+
+//Rota login
+
+//Route::get('/menu/entrar', [MenuController::class, 'entrar'])->name('menu.entar');
+Route::post('/menu/entrar', [LoginController::class, 'login'])->name('login');
 
 
 /*rota temporaria */

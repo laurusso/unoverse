@@ -17,7 +17,7 @@ class PessoaSeeder extends Seeder
      */
     public function createPessoa(Request $req)
     {
-        $dados = $req->only(['email','senha','foto','nome','sobrenome','genero','curioso']);
+        $dados = $req->all();
         Pessoa::create($dados);
     }
 

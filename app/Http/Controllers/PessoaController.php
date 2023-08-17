@@ -13,9 +13,10 @@ class PessoaController extends Controller
         $senha =  $req->only(['senha']);
        // $dados_pessoa['senha'] = bcrypt($senha);
         $dados_pessoa['adm'] = false;
-        //antes ajustar cript senha, foto
         Pessoa::create($dados_pessoa);
-       
+        //antes ajustar cript senha, foto
+        return view('menu.home')->with('success', 'Cadastro realizado com sucesso! Agora você faz parte na familia <3');
+
     }
 
 }
