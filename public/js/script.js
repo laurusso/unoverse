@@ -102,14 +102,14 @@ const olho = document.getElementById('olho'); //const para icone olho
 olho.addEventListener('click', trocarOlho);
 
 function trocarOlho(){
-    if(olho.classList.contains('bi bi-eye')){
-        olho.classList.remove('bi bi-eye');
-        olho.classList.add('bi bi-eye-slash');
+    if(olho.classList.contains('bi-eye')){
+        olho.classList.remove('bi-eye');
+        olho.classList.add('bi-eye-slash');
         document.getElementById('senha').type = 'text';
     }//fim do if
     else{
-        olho.classList.remove('bi bi-eye-slash');
-        olho.classList.add('bi bi-eye');
+        olho.classList.remove('bi-eye-slash');
+        olho.classList.add('bi-eye');
         document.getElementById('senha').type = 'password';
     }//fim do else
 }//fim da funcao trocarOlho

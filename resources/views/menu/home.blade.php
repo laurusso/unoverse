@@ -12,15 +12,15 @@
                     <input type="radio"   name="slide" id="slide3">
 
                     <div class="slide s1">
-                        <img src="{!! asset('img/home/robots.jpg') !!}">
+                        <img src="{!! asset('img/home/slide1.jpg') !!}">
                     </div>
 
                     <div class="slide">
-                        <img src="{!! asset('img/home/people.jpg') !!}">
+                        <img src="{!! asset('img/home/slide2.jpg') !!}">
                     </div>
 
                     <div class="slide">
-                        <img src="{!! asset('img/home/purple.jpg') !!}">
+                        <img src="{!! asset('img/home/slide3.jpg') !!}">
                     </div>
 
                 </div>

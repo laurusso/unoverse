@@ -1,3 +1,4 @@
+@section('titulo', 'Cadastro Estudante')
 @include('layout._menu')
 
 <!--Para acessar essa tela colocar  /links/cadEstudante na barra do navegador-->

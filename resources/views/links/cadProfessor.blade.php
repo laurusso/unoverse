@@ -1,3 +1,4 @@
+@section('titulo', 'Cadastro Professor')
 @include('layout._menu')
 <!--Para acessar essa tela colocar  /links/cadProfessor na barra do navegador-->
 <div class="espaco">

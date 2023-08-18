@@ -3,6 +3,7 @@
  -->
 
 <!-- CHAMADA DA DIV FIXED -->
+@section('titulo', 'Devs')
 @include('layout._menu')
     <div class="engloba-texto">
         <div class="texto-devs">

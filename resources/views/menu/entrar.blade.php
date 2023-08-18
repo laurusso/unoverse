@@ -1,7 +1,7 @@
 <!-- 
     Aquivo que contem as configuracoes para logar-se no site, caso ja tenha conta
  -->
-
+ @section('titulo', 'Login')
 @include('layout._menu')
 
 <div class="espaco">

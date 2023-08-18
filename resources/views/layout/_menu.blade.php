@@ -15,7 +15,7 @@
       Este primeiro arquivo representa apenas o menu, que é fixo em todas as paginas do site.
    -->
     <meta charset="UTF-8">
-    @yield('titulo') <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
+    <title>@yield('titulo')</title> <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css">

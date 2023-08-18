@@ -1,3 +1,4 @@
+@section('titulo', 'Cadastro Curioso')
 @include('layout._menu')
 
 <!--Para acessar essa tela colocar  /links/cadCurioso na barra do navegador-->
