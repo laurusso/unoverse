@@ -5,24 +5,40 @@
 @include('layout._menu')
 
 <div class="espaco">
+    <!-- temporario messagem de error -->
+    @error('error')
+        <span>{{ $message }} </span>
+    @enderror
+
+    @if (session()->has('success'))
+
+        {{ session()->get('success')}}
+    @endif
     <div class="form_entrar">
         <h1>Entrar</h1>
 
+        
     <div class="linha_titulo">
             <div class="retangulo"></div>
             <div class="bola"></div>
             <div class="bola"></div>
     </div>
 
-        <form action="{{route('login')}}" method="post">  
+        <form action="{{route('login.login')}}" method="post">  
             {{csrf_field() }}
             <div class="form-itens">
                 <label for="email">E-mail:</label>
-                <input type="text" name="email" id="email" autocomplete="off" required>
+                <input type="text" name="email" id="email" autocomplete="off" >
+                @error('email')
+                    <span>{{ $message }} </span>
+                @enderror
             </div>
             <div class="form-itens">
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" required> <a class="olhoCor"><i id="olho" class="bi bi-eye"></i></a>
+                <input type="password" name="senha" id="senha"> <a class="olhoCor"><i id="olho" class="bi bi-eye"></i></a>
+                @error('senha')
+                    <span>{{ $message }} </span>
+                @enderror
             </div>
 
             <div class="form-btn">

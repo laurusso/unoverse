@@ -65,7 +65,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="{{route('menu.menuCad')}}">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
-              <li><a class="dropdown-item" href="{{route('menu.entrar')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
+              <li><a class="dropdown-item" href="{{route('login.index')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
           </li>
         </ul>
         <!-- UMA BARRA DE PESQUISA *********** NAO SEI SE USAREMOS SO DEIXEI AI -->

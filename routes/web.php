@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Auth\LoginController;
 
+use App\Http\Controllers\PessoaController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,7 +51,7 @@ Route::get('/menu/acoes',['as'=>'menu.acoes','uses'=>'App\Http\Controllers\MenuC
 Route::get('/menu/devs',['as'=>'menu.devs','uses'=>'App\Http\Controllers\MenuController@devs']);
 
 //rota entrar (mudar quando o login for programado)
-Route::get('/menu/entrar',['as'=>'menu.entrar','uses'=>'App\Http\Controllers\MenuController@entrar']);
+//Route::get('/menu/entrar',['as'=>'menu.entrar','uses'=>'App\Http\Controllers\MenuController@entrar']);
 
 //rota Cadastro
 Route::get('/menu/menuCad',['as'=>'menu.menuCad','uses'=>'App\Http\Controllers\MenuController@menuCad']);
@@ -62,8 +65,14 @@ Route::get('/menu/teste',['as'=>'menu.teste','uses'=>'App\Http\Controllers\MenuC
 //Rota login
 
 //Route::get('/menu/entrar', [MenuController::class, 'entrar'])->name('menu.entar');
-Route::post('/menu/entrar', [LoginController::class, 'login'])->name('login');
+Route::post('/menu/entrar', [PessoaController::class, 'login'])->name('login');
 
+Route::controller(PessoaController::class)->group(function(){
+    Route::get('menu/entrar', 'index')->name('login.index');
+    Route::post('menu/entrar', 'login')->name('login.login');
+   // Route::get('menu/logout', 'logot')->name('login.logout');
+
+});
 
 /*rota temporaria */
 Route::get('/links/cadCurioso',['as'=>'links.cadCurioso','uses'=>'App\Http\Controllers\MenuController@cadCurioso']);
@@ -75,6 +84,9 @@ Route::post('pessoa',
 
 
 //rota ADM  !!!dps  do login é necessário agrupar
+
+
+Route::middleware(['auth'])->group(function(){
 Route::get('/adm/index',
 ['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index']);
 Route::get('/adm/lista',
@@ -90,3 +102,4 @@ Route::put('/adm/atualizar/{num}',
 Route::get('/adm/excluir/{num}',
 ['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir']);
 
+});
