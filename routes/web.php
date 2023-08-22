@@ -70,7 +70,7 @@ Route::post('/menu/entrar', [PessoaController::class, 'login'])->name('login');
 Route::controller(PessoaController::class)->group(function(){
     Route::get('menu/entrar', 'index')->name('login.index');
     Route::post('menu/entrar', 'login')->name('login.login');
-   // Route::get('menu/logout', 'logot')->name('login.logout');
+    Route::get('menu/logout', 'logout')->name('login.logout');
 
 });
 

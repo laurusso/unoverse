@@ -58,16 +58,32 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>
           </li>
+
+
+          @if (auth()->check())
+          <li class="nav-item dropdown">
+            <!-- PARA LOGAR, PODE ESCOLHER ENTRE JA CADASTRADO OU NAO CADASTRADO (DROPDOWN EXTRAIDO DO BOOTSTRAP) -->
+            <a class="nav-link " href="{{route('login.logout')}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              logout
+            </a>
+          Oia como loga 
+          bemviado {{auth()->user->nome}}
+         
+            @else
+
           <li class="nav-item dropdown">
             <!-- PARA LOGAR, PODE ESCOLHER ENTRE JA CADASTRADO OU NAO CADASTRADO (DROPDOWN EXTRAIDO DO BOOTSTRAP) -->
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Logar
             </a>
+
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="{{route('menu.menuCad')}}">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
               <li><a class="dropdown-item" href="{{route('login.index')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
           </li>
         </ul>
+        @endif
+       
         <!-- UMA BARRA DE PESQUISA *********** NAO SEI SE USAREMOS SO DEIXEI AI -->
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

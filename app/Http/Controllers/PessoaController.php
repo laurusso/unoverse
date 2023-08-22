@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pessoa;
-//use Illuminate\Suport\Facedes\Auth;
+
+use Illuminate\Support\Facades\Auth;
 class PessoaController extends Controller
 {
     public function cadastrar(Request $req){   
@@ -24,7 +25,11 @@ class PessoaController extends Controller
         return view('menu.entrar');
     }
 
-    public function logout(){}
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login.index');
+     
+    }
     
     public function login(Request $req)
     {
@@ -42,15 +47,26 @@ class PessoaController extends Controller
         );
 
         $user = Pessoa::where('email', $req->input('email'))->first();
-        $credenciais = $req->only('email','senha');
-        $autenticado = Auth()->attempt($credenciais);
-        
-        if(!$autenticado){
-            return redirect()->route('login.index')->withErrors(['error' => 'email or password invalid']);
+                                        //$credenciais = $req->only('email','senha');
+                                    // $autenticado = Auth()->attempt($credenciais);
+                                    
+        if(!$user){
+            return redirect()->route('login.index')->withErrors(['error' => 'email']);
         }
+      
+        if(!($req->input('senha') == $user->senha))
+        //if(!password_verify($req->input('senha'), $user->senha))
+        {
+            return redirect()->route('login.index')->withErrors(['error' => 'email or password invalid']);
 
-        return redirect()->route('login.index')->with(['sucess' => 'logged in']);
-     
+        }
+      
+       // Auth::loginUsingId($user->id_pessoa);
+        dd(Auth::loginUsingId($user->id_pessoa));
+        session()->get($user->id_pessoa);
+      //  return redirect()->route('login.index')->with(['success','logged in']);
+        return redirect()->route('login.index')->with('success', 'Logged in');
+
+        
     }
-
 }

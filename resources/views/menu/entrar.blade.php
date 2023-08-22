@@ -6,15 +6,26 @@
 
 <div class="espaco">
     <!-- temporario messagem de error -->
-    @error('error')
+  
+    @if(session()->has('success'))
+        {{ session()->get('success') }} 
+    @endif
+
+    @if(auth()->check())
+
+        <div>Oia como loga 
+        bemviado {{auth()->user()->nome}}
+        <a href="{{route('login.logout')}}" >logout </a>
+
+
+        </div>
+      
+     @else 
+  @error('error')
         <span>{{ $message }} </span>
     @enderror
 
-    @if (session()->has('success'))
-
-        {{ session()->get('success')}}
-    @endif
-    <div class="form_entrar">
+        <div class="form_entrar">
         <h1>Entrar</h1>
 
         
@@ -47,9 +58,11 @@
             <div class="form-btn">
             <a href="add link de cadastro" alt="Ir para cadastro">Cadastrar</a>
             </div>
-        </form>
+        </form> @endif
     </div>
 </div>
+   
+   
 <script src="{{ asset('js/script.js') }}"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
