@@ -72,6 +72,7 @@
                 </label>
 
                 <input type="hidden" name="curioso" value="false">
+                <input type="hidden" name="type_user" value="professor">
 
         </div>
         </div>

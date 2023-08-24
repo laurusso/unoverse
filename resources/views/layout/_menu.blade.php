@@ -55,19 +55,15 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.acoes')}}">Ações</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('menu.devs')}}">Devs</a>
-          </li>
+         
 
 
           @if (auth()->check())
-          <li class="nav-item dropdown">
-            <!-- PARA LOGAR, PODE ESCOLHER ENTRE JA CADASTRADO OU NAO CADASTRADO (DROPDOWN EXTRAIDO DO BOOTSTRAP) -->
-            <a class="nav-link " href="{{route('login.logout')}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              logout
-            </a>
-          Oia como loga 
-          bemviado {{auth()->user->nome}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('login.logout')}}">Logout</a>
+          </li>
+         
+           <p>Olá {{ Auth::user()->nome }} </p>
          
             @else
 

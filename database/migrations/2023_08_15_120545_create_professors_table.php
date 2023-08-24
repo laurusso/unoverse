@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('professors', function (Blueprint $table) {
             $table->unsignedBigInteger('id_prof');  
-            $table->foreign('id_prof')->references('id_pessoa')->on('pessoas');
-            $table->string('email_prof',50);
+            $table->foreign('id_prof')->references('id')->on('pessoas');
+            $table->string('email',50);
             $table->timestamps();
         });
     }

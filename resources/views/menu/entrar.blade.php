@@ -11,10 +11,10 @@
         {{ session()->get('success') }} 
     @endif
 
-    @if(auth()->check())
+    @if (Auth::check())
 
-        <div>Oia como loga 
-        bemviado {{auth()->user()->nome}}
+       
+        <p>Olá {{ Auth::user()->nome }}</p>  
         <a href="{{route('login.logout')}}" >logout </a>
 
 

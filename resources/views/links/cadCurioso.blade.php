@@ -64,6 +64,7 @@
                     Prefiro não dizer
                 </label>
                 <input type="hidden" name="curioso" value="true">
+                <input type="hidden" name="type_user" value="curioso">
         </div>
         </div>
        
