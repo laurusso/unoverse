@@ -86,7 +86,7 @@ Route::post('pessoa',
 //rota ADM  !!!dps  do login é necessário agrupar
 
 
-Route::middleware(['auth'])->group(function(){
+Route::middleware(['adm'])->group(function(){
 Route::get('/adm/index',
 ['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index']);
 Route::get('/adm/lista',

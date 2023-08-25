@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use Spatie\Permission\Models\Role;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,13 +12,20 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
+   // public function run()
+   // {
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+      //  }
+
+    public function run()
+    {
+        Role::create(['name' => 'aluno']);
+        Role::create(['name' => 'professor']);
+        Role::create(['name' => 'adm']);
     }
 }
