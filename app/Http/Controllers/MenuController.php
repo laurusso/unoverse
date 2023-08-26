@@ -55,4 +55,10 @@ class MenuController extends Controller
             return view("links.cadProfessor");
             
         }
+
+
+        public function teste() {
+            return view("users.professor.conteudo");
+            
+        }
 }

@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
 class AdmAcess
 {
     /**
@@ -16,7 +18,7 @@ class AdmAcess
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->adm == 1)
+        if(Auth::check() && Auth::user()->adm == 'true')
         {
             return $next($request);
         }

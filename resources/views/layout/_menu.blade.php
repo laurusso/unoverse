@@ -19,9 +19,15 @@
                         @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css">
+    
+    
     <!-- ICONES EXTRAIDOS DO BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link 
       rel="stylesheet" 
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" 

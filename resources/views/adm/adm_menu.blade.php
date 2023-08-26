@@ -39,7 +39,13 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('adm.lista')}}">Lista</a>
           </li>
+          @if (auth()->check())
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('login.logout')}}">Logout</a>
+          </li>
          
+           <p>Olá {{ Auth::user()->nome }} </p>
+          @endif
          
         </ul>
         
@@ -54,3 +60,4 @@
 
 
       
+ 

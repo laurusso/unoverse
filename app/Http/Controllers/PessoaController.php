@@ -17,6 +17,7 @@ class PessoaController extends Controller
         $senha =  $req->only(['senha']);
        // $dados_pessoa['senha'] = bcrypt($senha);
         $dados_pessoa['adm'] = false;
+     
 
        // dd($req->input('type_user') == 'aluno' );
         Pessoa::create($dados_pessoa);

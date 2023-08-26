@@ -1,5 +1,12 @@
 // javascript do site, contem configuracoes dinamicas e interativas do site
+const subMenus = document.querySelectorAll('.subMenu');
 
+subMenus.forEach(subMenu => {
+    const parentMenuItem = subMenu.previousElementSibling;
+    parentMenuItem.addEventListener('click', () => {
+        subMenu.classList.toggle('active');
+    });
+});
 
 //TROCA O SOL PELA LUA
 

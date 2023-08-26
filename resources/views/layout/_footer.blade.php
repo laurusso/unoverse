@@ -52,5 +52,6 @@
 </html>
 
 </div> <!--FIM MAE-->
+<script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

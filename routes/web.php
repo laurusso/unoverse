@@ -6,7 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\PessoaController;
 
-
+use App\Http\Middleware\Auth\AdmAcess;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,7 +56,7 @@ Route::get('/menu/devs',['as'=>'menu.devs','uses'=>'App\Http\Controllers\MenuCon
 //rota Cadastro
 Route::get('/menu/menuCad',['as'=>'menu.menuCad','uses'=>'App\Http\Controllers\MenuController@menuCad']);
 
-Route::get('/menu/teste',['as'=>'menu.teste','uses'=>'App\Http\Controllers\MenuController@teste']);
+Route::get('/users/professor/conteudo',['as'=>'menu.conteudo','uses'=>'App\Http\Controllers\MenuController@teste']);
 
 
 
@@ -86,9 +86,9 @@ Route::post('pessoa',
 //rota ADM  !!!dps  do login é necessário agrupar
 
 
-Route::middleware(['adm'])->group(function(){
+//Route::middleware(['adm'])->group(function(){
 Route::get('/adm/index',
-['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index']);
+['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index'])->middleware('adm');
 Route::get('/adm/lista',
 ['as'=>'adm.lista','uses'=>'App\Http\Controllers\adm\AtividadeController@lista']);
 Route::get('/adm/adicionar',
@@ -102,4 +102,4 @@ Route::put('/adm/atualizar/{num}',
 Route::get('/adm/excluir/{num}',
 ['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir']);
 
-});
+//});
