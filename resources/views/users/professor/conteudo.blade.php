@@ -3,27 +3,53 @@
 @include('layout._menu')
 
 
-<!-- <div class="conteudo">
+ <div class="conteudo">
 
-<div class="sidebar">
-        <h2>Menu</h2>
-        <ul id="mainMenu">
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a>
-                <ul class="subMenu">
+    <div class="btn">
+
+    <span class="material-symbols-outlined">
+menu
+</span>
+    </div>
+
+<nav class="sidebar">
+       <div class="text"> Side Menu </div>
+        <ul >
+            <li><a   href="#">Item 1</a></li>
+            <li><a class="item-btn" href="#">Item 2 <span class="material-symbols-outlined first">
+stat_minus_1
+</span>  
+<!-- cada class de subtopico tem que ter nome diferente -->
+</a>
+                <ul class="item-show">
                     <li><a href="#">Subitem 1</a></li>
                     <li><a href="#">Subitem 2</a></li>
                 </ul>
             </li>
-            <li><a href="#">Item 3</a></li>
+            <li><a  href="#">Item 3</a></li>
         </ul>
     </div>
-    <div class="content">
-        <h2>Main Content</h2>
-    </div>
-    <script src="script.js"></script>
 
-</div> -->
+
+    <script>
+        $('.btn').click(function(){
+            $(this).toggleClass("click");
+        })
+
+        $('.item-btn').click(function(){
+            $('nav ul .item-show').toggleClass("show");
+            $('nav ul .first-show').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function(){
+            $('nav ul .serv-show').toggleClass("show1");
+        });
+
+        $('nav ul li').click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        </script>
+    
+</div> 
 
 <!-- 
 <div class="conteudo">
