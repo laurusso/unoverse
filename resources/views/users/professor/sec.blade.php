@@ -1,4 +1,4 @@
-
+<!-- Codigo de segurança dps apagar -->
 @section('titulo', 'Módulos')
 @include('layout._menu') 
 
@@ -12,11 +12,10 @@ menu
 </span>
     </div>
 
-
-
 <nav class="nav sidebar2">
+  
+
        <div class="text"> Side Menu </div>
-      
         <ul >
             <li><a   href="#">Item 1</a></li>
             <li><a class="item-btn" href="#">Item 2 <span class="material-symbols-outlined first">

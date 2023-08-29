@@ -46,7 +46,8 @@
             </div>
             <div class="form-itens">
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha"> <a class="olhoCor"><i id="olho" class="bi bi-eye"></i></a>
+                <input type="password" name="senha" id="senha"> <i id="olho" class="bi bi-eye"></i>
+                <!-- <a class="olhoCor"><i id="olho" class="bi bi-eye"></i></a> -->
                 @error('senha')
                     <span>{{ $message }} </span>
                 @enderror

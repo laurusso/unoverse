@@ -35,15 +35,15 @@
                                 
                                 
                                 <td> <!-- COLUNA COM ALTERAR E EXCLUIR -->
-                                    <a class='btn deep-orange' href="{{ route('adm.editar',$row->num) }}">Alterar</a>
-                                    <a class='btn rede' href="{{ route('adm.excluir',$row->num) }}">Excluir</a>
+                                    <a class='btn-lista' href="{{ route('adm.editar',$row->num) }}">Alterar</a>
+                                    <a class='btn-lista' href="{{ route('adm.excluir',$row->num) }}">Excluir</a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
                 <div class=''> <!-- BOTAO ADICIONAR -->
-                     <a  href="{{ route('adm.adicionar')}}">Adicionar</a>
+                     <a class="btn-lista lista-add"  href="{{ route('adm.adicionar')}}">Adicionar</a>
                 </div>
 
             </div>

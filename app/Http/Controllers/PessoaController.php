@@ -92,9 +92,13 @@ class PessoaController extends Controller
         Auth::loginUsingId($user->id);
       //  session()->get($user->id_pessoa);
       //  return redirect()->route('login.index')->with(['success','logged in']);
-        return redirect()->route('menu.home')->with('success', 'Logged in');
+      if(Auth::user()->adm == true){
+         return redirect()->route('adm.index')->with('success', 'Logged in');
 
-        
+      }
+       else{
+      return redirect()->route('menu.home')->with('success', 'Logged in');
+       }
     }
 
     public function logout(){

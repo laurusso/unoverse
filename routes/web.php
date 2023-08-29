@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
-use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ConteudoController;
 
 use App\Http\Controllers\PessoaController;
 
-use App\Http\Middleware\Auth\AdmAcess;
+// use App\Http\Middleware\Auth\AdmAcess;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,7 +82,7 @@ Route::get('/links/cadProfessor',['as'=>'links.cadProfessor','uses'=>'App\Http\C
 Route::post('pessoa',
 ['as'=>'cadastrar','uses'=>'App\Http\Controllers\PessoaController@cadastrar']);
 
-
+Route::get('/users/professor/teste', [ConteudoController::class, 'listar'])->name('user.conteudo');
 //rota ADM  !!!dps  do login é necessário agrupar
 
 
@@ -90,16 +90,16 @@ Route::post('pessoa',
 Route::get('/adm/index',
 ['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index'])->middleware('adm');
 Route::get('/adm/lista',
-['as'=>'adm.lista','uses'=>'App\Http\Controllers\adm\AtividadeController@lista']);
+['as'=>'adm.lista','uses'=>'App\Http\Controllers\adm\AtividadeController@lista'])->middleware('adm');
 Route::get('/adm/adicionar',
-['as'=>'adm.adicionar','uses'=>'App\Http\Controllers\adm\AtividadeController@adicionar']);
+['as'=>'adm.adicionar','uses'=>'App\Http\Controllers\adm\AtividadeController@adicionar'])->middleware('adm');
 Route::post('/adm/salvar',
-['as'=>'adm.salvar','uses'=>'App\Http\Controllers\adm\AtividadeController@salvar']);
+['as'=>'adm.salvar','uses'=>'App\Http\Controllers\adm\AtividadeController@salvar'])->middleware('adm');
 Route::get('/adm/editar/{num}',
-['as'=>'adm.editar','uses'=>'App\Http\Controllers\adm\AtividadeController@editar']);
+['as'=>'adm.editar','uses'=>'App\Http\Controllers\adm\AtividadeController@editar'])->middleware('adm');
 Route::put('/adm/atualizar/{num}',
-['as'=>'adm.atualizar','uses'=>'App\Http\Controllers\adm\AtividadeController@atualizar']);
+['as'=>'adm.atualizar','uses'=>'App\Http\Controllers\adm\AtividadeController@atualizar'])->middleware('adm');
 Route::get('/adm/excluir/{num}',
-['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir']);
+['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir'])->middleware('adm');
 
 //});

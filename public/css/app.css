@@ -769,7 +769,14 @@ border-radius: 15vh;
 .olhoCor{
   color: #FFFFFF;
 }
-
+#olho
+{
+  
+  float: right;
+    display: flex;
+    transform: translate(8vw, -4vh);
+    font-size: 40px;
+}
 /* PAGINAS DE CADASTRO (pasta links) */
 /*Form cadastro padrao entre os modos*/
 .form-cad{
@@ -942,6 +949,18 @@ padding-right: 7vw;}
 {
 display:block;
 }
+
+.btn-lista{
+  color: #fff;
+  background-color: #003F64;
+  font-size: 25px;
+  width: 20vw;
+  height: 15vh;
+  border-radius: 4vw;
+
+
+}
+
 
 /* Configuraçoes na pagina Cadastrar */
 .escolha{
@@ -1119,45 +1138,58 @@ display:block;
 .conteudo * {
   
   margin: 0;
-  margin-top: 40px;
-  margin-left: 2px;
+  /* margin-top: 4px; */
+  /* margin-left: 2px; */
   padding: 0;
   user-select: none;
+
   /* color: white; */
   box-sizing: border-box;
   font-family: 'Consolas';
+  
 
 }
-.btn{
+.btnC{
   position: absolute;
   top: 15px;
+  /* margin-top: 10px; */
   left: 45px;
   height: 45px;
   width: 45px;
+  text-align: center;
   background: #1b1b1b;
-  border-radius: #1b1b1b;
+  border-radius: 3px;
   cursor: pointer;
   transition:  left 0.4s ease ;
+  /* display: flex; */
 }
-.btn.click
+.btnC.click
 {
   left: 260px;
 }
-.btn span{
+.btnC span{
   color: white;
   font-size: 28px;
   line-height: 45px;
 }
+.btnC.click span:before{
+  content: '\f00d';
+}
 
-.sidebar{
+.sidebar2{
   position: fixed;
   width: 250px;
+  
   height: 100%;
   left: -250px;
   background-color: #1b1b1b;
+  transition: left 0.4s ease;
+}
+.sidebar2.show{
+  left: 0px;
 }
 
-.sidebar .text{
+.sidebar2 .text{
   color:white;
   font-size: 25px;
   font-weight: 600;
@@ -1167,19 +1199,19 @@ display:block;
   letter-spacing: 1px;
 }
 
-nav ul{
+.nav ul{
   background: #1b1b1b;
   height: 100%;
   width: 100%;
   list-style: none;
 
 }
-nav ul li{
+.nav ul li{
   line-height: 60px;
   border-bottom: 1px solid white;
 }
 
-nav ul li a{
+.nav ul li a{
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -1191,7 +1223,7 @@ nav ul li a{
   position: relative;
 }
 
-nav ul li.active a {
+.nav ul li.active a {
   color: #00DEB6;
   background: #1e1e1e;
   border-left-color: #00DEB6 ;
@@ -1199,45 +1231,45 @@ nav ul li.active a {
 
 
 
-nav ul li.active ul li a {
+.nav ul li.active ul li a {
   color: #e6e6e6;
   background: #1b1b1b;
   border-left-color: transparent ;
 }
 
-nav ul ul li a:hover{
+.nav ul ul li a:hover{
   color: cyan!important;
   background: #1e1e1e!important;
   
 }
-nav ul li:last-child{
+.nav ul li:last-child{
   border-bottom: 1px solid red;
 
 }
 
-nav ul ul{
+.nav ul ul{
   position: static;
   display: none;
 }
 
-nav ul .item-show.show{
+.nav ul .item-show.show{
   display: block;
 }
-nav ul .serv-show.show1{
+.nav ul .serv-show.show1{
   display: block;
 }
  
-nav ul ul li{
+.nav ul ul li{
   line-height: 42px;
   border-bottom: none;
 }
-nav ul ul li a{
+.nav ul ul li a{
   font-size: 17px;
   color: #e6e6e6;
   padding-left: 80px;
 }
 
-nav ul li a span{
+.nav ul li a span{
   position: absolute;
   top: 50%;
   right: 20px;
@@ -1247,7 +1279,7 @@ nav ul li a span{
   transition: transform 0.4s;
 }
 
-nav ul li a span.rotate{
+.nav ul li a span.rotate{
 
     transform: translateY(-50%) rotate(-180deg);
 
