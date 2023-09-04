@@ -41,6 +41,9 @@
           </li>
           @if (auth()->check())
           <li class="nav-item">
+            <a class="nav-link" href="{{route('login.perfil')}}">Perfil</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{route('login.logout')}}">Logout</a>
           </li>
          

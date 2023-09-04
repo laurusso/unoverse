@@ -42,11 +42,12 @@
                         @endforeach
                     </tbody>
                 </table>
-                <div class=''> <!-- BOTAO ADICIONAR -->
-                     <a class="btn-lista lista-add"  href="{{ route('adm.adicionar')}}">Adicionar</a>
-                </div>
+                
 
             </div>
+            <div class="btn-add"> <!-- BOTAO ADICIONAR -->
+                     <a class=" btn-lista lista-add"  href="{{ route('adm.adicionar')}}">Adicionar</a>
+                </div>
 
             </div>
 

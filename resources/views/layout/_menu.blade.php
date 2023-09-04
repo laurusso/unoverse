@@ -65,9 +65,13 @@
 
 
           @if (auth()->check())
+           <li class="nav-item">
+            <a class="nav-link" href="{{route('login.perfil')}}">Meu perfil</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('login.logout')}}">Logout</a>
           </li>
+         
          
            <p>Olá {{ Auth::user()->nome }} </p>
          

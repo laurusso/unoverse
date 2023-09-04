@@ -7,6 +7,8 @@ use App\Models\Pessoa;
 use App\Models\Aluno;
 use App\Models\Professor;
 
+use Intervention\Image\Facades\Image;
+//use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 class PessoaController extends Controller
 {
@@ -56,7 +58,15 @@ class PessoaController extends Controller
         return view('menu.entrar');
     }
    
-
+    public function perfil(){
+        $id = Auth::user()->id;
+        $user = Pessoa::where('id',$id)->first();
+      
+        $img = Auth::user()->foto;
+        dd($img);
+        
+        return view('users.perfil',compact('user','img'));
+    }
     
     public function login(Request $req)
     {

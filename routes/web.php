@@ -5,6 +5,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ConteudoController;
 
 use App\Http\Controllers\PessoaController;
+use App\Models\Pessoa;
 
 // use App\Http\Middleware\Auth\AdmAcess;
 /*
@@ -83,6 +84,9 @@ Route::post('pessoa',
 ['as'=>'cadastrar','uses'=>'App\Http\Controllers\PessoaController@cadastrar']);
 
 Route::get('/users/professor/teste', [ConteudoController::class, 'listar'])->name('user.conteudo');
+
+Route::get('/users/perfil', [PessoaController::class, 'perfil'])->name('login.perfil');
+
 //rota ADM  !!!dps  do login é necessário agrupar
 
 
