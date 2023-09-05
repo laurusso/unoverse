@@ -917,10 +917,54 @@ background: #1789FC;
 
 /*  TELAS ADM */
 
+/*pagina index*/
+
+.bloco-geral{
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 2vw;
+}
+
+.botoes-escolha{
+  width: 60%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.img-adm{
+  width: 40%;
+}
+
+.img-adm img{
+  width: 30vw;
+  height: 90vh;
+}
+
+.btn-escolha{
+  margin: 2vw;
+  padding: 1vw;
+  width: 28vw;
+  height: 8vh;
+  background-color: #1789FC;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 2vw;
+  font-size: 1vw;
+  transition: var(--transicao);
+}
+
+.btn-escolha:hover{
+  background-color: #50a6fc;
+  transition: var(--transicao);
+}
+
 /*Configuracao da tabela da listagem de dados*/
 .adm{
-  margin-left: 2vw;
   margin-top: 17vh;
+  margin-left: 2vw;
 }
 .adm h3{
   color:#FFAD5A;
@@ -1076,7 +1120,7 @@ display:block;
   z-index: 1;
 }
 
- /* slider */
+ /* acoes-slider */
  .envolve__slider{
   font-family: var(--font);
   display: flex;

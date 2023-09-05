@@ -42,7 +42,7 @@
                     <img src="{!! asset('img/bolas_azuis.png') !!}" id="bolas_azuis">
                     <img src="{!! asset('img/bolas_amarelas.png') !!}"  id="bolas_amarelas">
                 </div>
-                <p>O Unoverse é um curso de robótica com arduíno que comtempla desde alunos de escolas públicas a professores e qualquer um interessado em adentrar o universo da tecnologia e programação de maneira acessível e divertida</p>
+                <p>O Unoverse é um curso de robótica com arduíno que contempla desde alunos de escolas públicas a professores e qualquer um interessado em adentrar o universo da tecnologia e programação de maneira acessível e divertida</p>
             </div>
 
             <div class="arduino_info">

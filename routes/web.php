@@ -5,6 +5,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ConteudoController;
 
 use App\Http\Controllers\PessoaController;
+
+use App\Http\Controllers\adm\AtividadeController;
 use App\Models\Pessoa;
 
 // use App\Http\Middleware\Auth\AdmAcess;
@@ -107,3 +109,5 @@ Route::get('/adm/excluir/{num}',
 ['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir'])->middleware('adm');
 
 //});
+
+

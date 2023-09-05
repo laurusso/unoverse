@@ -6,7 +6,7 @@
       Este arquivo representa apenas o menu para administrador
    -->
     <meta charset="UTF-8">
-    @yield('titulo') <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
+    <title>@yield('titulo')</title> <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css">
@@ -33,6 +33,9 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
+          <li>
+            <a class="sol"><i id="iconetema" class="bi bi-sun-fill"></i></a> <!-- ICONE TEMA -->
+          </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('adm.index')}}">Home</a>
           </li>
