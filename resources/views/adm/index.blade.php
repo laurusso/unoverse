@@ -10,7 +10,7 @@
         <a class="btn-escolha" href="{{route('adm.lista')}}">Lista de Usuários</a>  <!--mudar link-->
     </div>
     <div class="img-adm">
-    <img src="{!! asset('img/adm/adm-robot.svg') !!}">
+        <img src="{!! asset('img/adm/adm-robot.svg') !!}">
     </div>
 </div>
     

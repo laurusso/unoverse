@@ -1,21 +1,22 @@
 <!--Form para o adm adicionar atividades no banco de dados-->
 <div class="adm">   
-    <div class="">
-    <label>Nome da Atividade:</label>
-    <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
+    <div class="form_cad_ativ">
+        <div class="" >
+        <label>Nome da Atividade:</label>
+        <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
+    </div>
     
     </div>
 
     <div class="">
-    <label>Modulo</label>   
-    <input type="num"  min="0"  name="modulo" value="{{isset($linha->modulo) ? $linha->modulo : ''}}"  required>
-    
+        <label>Modulo</label>   
+        <input type="num"  min="0"  name="modulo" value="{{isset($linha->modulo) ? $linha->modulo : ''}}"  required>
+        
     </div>
 
     <div class="">
-    <label>Descricao:</label>    
-    <input type="text" name="descricao" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required>
-    
+        <label>Descricao:</label>    
+        <input type="text" name="descricao" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required>
     </div>
     
     <div class="">
