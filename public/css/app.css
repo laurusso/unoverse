@@ -1042,6 +1042,10 @@ display:block;
   height: 86.6vh;
   border-radius:3vw;
 } 
+.adm label{
+  color: #ffffff;
+  
+}
 .espaco{
   color: #fff;
 }

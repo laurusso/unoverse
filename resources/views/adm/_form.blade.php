@@ -2,9 +2,9 @@
 <div class="adm">   
     <div class="form_cad_ativ">
         <div class="" >
-        <label>Nome da Atividade:</label>
-        <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
-    </div>
+            <label>Nome da Atividade:</label>
+            <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
+        </div>
     
     </div>
 
@@ -43,7 +43,7 @@
      @if(isset($linha->upload))
     <div class="">
         <input type="file" name="upload" src="{{asset($linha->upload)}}" />
-        </div>
+    </div>
       <!-- <div class=""><input type="file" name="upload" src="{{asset($linha->upload)}}" > -->
   </div>
      @endif 
