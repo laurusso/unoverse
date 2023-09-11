@@ -39,7 +39,7 @@
 
         <div class="cad-items">
             <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" required>
+            <input type="password" name="senha" id="senha" required> <i id="olho" class="bi bi-eye-slash"></i></input>
         </div>
 
         <div class="cad-items">
@@ -83,6 +83,7 @@
         </div>
 
     </form>
+    <script src="{{ asset('js/teste.js') }}"></script> 
     <img src="{!! asset('img/cadastro/estudante.svg') !!}" title=" " alt="Essa imagem não foi encontrada :/ Mas é o robô mascote Jumper!!">
 
 </div>

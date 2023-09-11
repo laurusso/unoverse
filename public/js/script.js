@@ -103,23 +103,14 @@ const transicaoUpdate = () => {
 }; //fim da funcao transicaoUpdate
 
 
-//FUNCAO DE TROCAR O OLHO DA SENHA  (LOGIN)
 
-const olho = document.getElementById('olho'); //const para icone olho
-olho.addEventListener('click', trocarOlho);
 
-function trocarOlho(){
-    if(olho.classList.contains('bi-eye')){
-        olho.classList.remove('bi-eye');
-        olho.classList.add('bi-eye-slash');
-        document.getElementById('senha').type = 'text';
-    }//fim do if
-    else{
-        olho.classList.remove('bi-eye-slash');
-        olho.classList.add('bi-eye');
-        document.getElementById('senha').type = 'password';
-    }//fim do else
-}//fim da funcao trocarOlho
+
+
+
+
+
+
 
 //CONFIGURAÇÃO DA JANELA MODAL
 function abrirModal_Placa_Uno()
