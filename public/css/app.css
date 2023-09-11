@@ -972,30 +972,30 @@ background: #1789FC;
   margin-bottom: -10vh;
 }
 .adm table{
-margin-left: 2vw;
-border: 2px solid #FFF;
-background-color: #003F64;
+  margin-left: 2vw;
+  border: 2px solid #FFF;
+  background-color: #003F64;
   font-size: 25px;
   color: #003F64;
 }
 
 .adm thead{
-border: 1px solid;
-padding: 1vw;
-background-color: #003F64;;
+  border: 1px solid;
+  padding: 1vw;
+  background-color: #003F64;;
 }
 
 .adm tr{
-margin: 0vw;
+  margin: 0vw;
 }
 .adm td{
-padding-right: 7vw;
-color: #FFF;
+  padding-right: 7vw;
+  color: #FFF;
 }
 
 .adm input
 {
-display:block;
+  display:block;
 }
 
 .btn-lista{
@@ -1032,18 +1032,59 @@ display:block;
 /* Configuraçoes na pagina Cadastrar */
 .cadatv-content{
   display: flex;
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-left: 3vw;
   justify-content: space-between;
+
+}
+.conteudo_form_ativ{
+  margin-left: 5%;
+}
+.form_atividade h3{
+  color: #fff;
+  font-size: 4.9vh;
+  margin-top:2%;
+  margin-left:2%;
+}
+.adicionar_ativ{
+  margin-top: 15%;
+  margin-left: 65%;
+  background-color: #fff;
+  color: #F96800;
+  border: none;
+  border-radius: 5.2vh;
+  width: 12vw;
+  height: 10vh;
+  font-size: 1.8vw;
+  transition: var(--transicao);
+}
+
+.adicionar_ativ:hover{
+  background-color: #ffb682;
+  color:#ffffff;
+  transition: var(--transicao);
 }
 .form_atividade{
   background: linear-gradient(90deg, rgba(249,104,0,1) 4%, rgba(255,173,90,1) 98%);
   width: 39.6vw;
   height: 86.6vh;
   border-radius:3vw;
+}
+.form_cad_ativ{
+
+  margin-top: 8%;
 } 
-.adm label{
-  color: #ffffff;
+.form_cad_ativ label{
+  color: #fff;
+  font-size: 3vh;
+}
+.form_cad_ativ input{
+  display:block;
+  outline: none;
+  border-color: #fff;
+  border-radius: 5.2vh;
+  background: linear-gradient(90deg, rgba(249,104,0,1) 4%, rgba(255,173,90,1) 98%);
+  width: 50%;
   
 }
 .espaco{

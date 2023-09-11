@@ -3,13 +3,18 @@
 <!--Falta adicionar a class p/ configuração da tela-->
 <div class="cadatv-content">
   <div class="form_atividade">
-    <h3 class="espaco"><b>Cadastro de Atividades</b></h3>
+    <h3 class=""><b>Cadastro de Atividades</b></h3>
+    <div class="linha_titulo">
+            <div class="retangulo"></div>
+            <div class="bola"></div>
+            <div class="bola"></div>
+    </div>
       <div class="">
         <form class="" action="{{route('adm.salvar')}}" method="post"  enctype="multipart/form-data">
           {{ csrf_field() }}
           @include('adm._form')
 
-          <button type="submit" value="enviar">Adicionar</button>
+          <button type="submit" value="enviar" class="adicionar_ativ">Adicionar</button>
 
         </form>
       </div>
