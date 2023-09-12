@@ -4,8 +4,8 @@
 <div class="cadatv-content">
   <div class="form_atividade">
     <h3 class=""><b>Cadastro de Atividades</b></h3>
-    <div class="linha_titulo">
-            <div class="retangulo"></div>
+    <div class="linha_titulo2">
+            <div class="retangulo2"></div>
             <div class="bola"></div>
             <div class="bola"></div>
     </div>

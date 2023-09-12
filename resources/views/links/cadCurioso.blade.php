@@ -35,8 +35,12 @@
         </div>
 
         <div class="cad-items">
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" required> <i id="olho" class="bi bi-eye-slash"></i></input>
+            <div class="container-senha">
+                <label for="senha">Senha:</label>
+                <div class="input-wrapper">
+                    <input type="password" name="senha" id="senha"> <i id="olho" class="bi bi-eye-slash"></i>
+                </div>
+            </div>
         </div>
 
         <div class="cad-items">
@@ -74,11 +78,10 @@
 
     </form>
 
-    <script src="{{ asset('js/teste.js') }}"></script> 
+    <script src="{{ asset('js/eye.js') }}"></script> 
     <img src="{!! asset('img/cadastro/curioso.svg') !!}" title=" " alt="Essa imagem não foi encontrada :/ Mas é o robô mascote !!">
 
 </div>
 </div>
 
 
-@include('layout._footer')

@@ -18,7 +18,7 @@
         <a href="{{route('login.logout')}}" >logout </a>
 
 
-        </div>
+    </div>
       
      @else 
   @error('error')
@@ -45,9 +45,14 @@
                 @enderror
             </div>
             <div class="form-itens">
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha"> <i id="olho" class="bi bi-eye-slash"></i>
-                <!-- <a class="olhoCor"><i id="olho" class="bi bi-eye"></i></a> -->
+                <!-- classe container e input-wrapper sao para arrumar o olho ao lado do input -->
+                <div class="container-senha">
+                    <label for="senha">Senha:</label>
+                    <div class="input-wrapper">
+                        <input type="password" name="senha" id="senha"> <i id="olho" class="bi bi-eye-slash"></i>
+                    </div>
+                </div>
+                
                 @error('senha')
                     <span>{{ $message }} </span>
                 @enderror
@@ -62,12 +67,13 @@
         </form> @endif
     </div>
 </div>
+
    
    
-<script src="{{ asset('js/teste.js') }}"></script> 
+<script src="{{ asset('js/eye.js') }}"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 
 
 
-@include('layout._footer')
+

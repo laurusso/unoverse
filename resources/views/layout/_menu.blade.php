@@ -69,11 +69,11 @@
             <a class="nav-link" href="{{route('login.perfil')}}">Meu perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('login.logout')}}">Logout</a>
+            <a class="nav-link" href="{{route('login.logout')}}">Sair <i class="bi bi-box-arrow-right"></i></a>
           </li>
          
          
-           <p>Olá {{ Auth::user()->nome }} </p>
+           <p>Olá {{ Auth::user()->nome }}!  </p>
          
             @else
 

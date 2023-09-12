@@ -83,6 +83,19 @@
                 </div>
             </div>
 
+            <div class="card swiper-slide">
+                <div class="card__image">
+                <img src="{!! asset('img/social/tangaras.jpg') !!}" alt=" Imagem de apresentação na Escola Jardim Tangarás">
+                </div>
+
+                <div class="card__content">
+                <span class="card__title">Apresentação de protótipos de robótica</span>
+                <span class="card__name">Realizada na EE Jardim Tangarás</span>
+                <p class="card__text">Participação da equipe de robótica na Primeira Feira de Ciências da Escola Estadual Jardim Tangarás. </p>
+                    <!-- <button class="card-btn">View More</button> -->
+                </div>
+            </div>
+
             </div>
         </section>
     </div>

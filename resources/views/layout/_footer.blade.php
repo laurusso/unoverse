@@ -23,12 +23,12 @@
             >
           </p>
           <p>
-            <a href=""
+            <a href="" target="_blank"
               ><i class="bi bi-youtube"></i> Youtube</a
             >
           </p>
           <p>
-            <a href=""
+            <a href="https://instagram.com/projeto_unoverse" target="_blank"
               ><i class="fab fa-instagram"></i> Instagram</a
             >
           </p>

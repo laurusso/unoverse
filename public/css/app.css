@@ -98,7 +98,6 @@ body{
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     width: 100%;
-    margin-top: 10rem;
   }
   
   .footer .logo-space {
@@ -664,6 +663,7 @@ body{
     /* z-index: 1; */
  }
 
+ 
 
  /*ENTRAR*/
  .espaco{
@@ -682,6 +682,7 @@ body{
   align-content: center;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10vh;
 }
 .form_entrar h1{
   font-size: 6vh;
@@ -703,10 +704,24 @@ body{
   display:flex;
   padding-left: 5vw;
 }
+/* o espaco ate a linha do adm precisava diminuir, por isso criamos retangulo 2 */
+.linha_titulo2{
+  display:flex;
+  padding-left: 1vw;
+}
 .retangulo{
   width: 12vw;
   height: 1vh;
   left: 21vw;
+  top: 34vh;
+  background:#FFFFFF;
+  border-radius: 5vh;
+}
+/* o retangulo do adm precisava aumentar, por isso criamos retangulo 2 */
+.retangulo2{
+  width: 30vw;
+  height: 1vh;
+  /* left: 21vw; */
   top: 34vh;
   background:#FFFFFF;
   border-radius: 5vh;
@@ -727,6 +742,7 @@ body{
 }
 
 .form-itens input{
+  color: #FFFFFF;
   display: flex;
   width: 45vw;
   height: 5vh;
@@ -737,6 +753,7 @@ body{
   margin-left: 5vw;
   outline: none;
 }
+
 
 .form-btn label{
 color: #FFAD5A;
@@ -751,6 +768,7 @@ margin-left: -24vw;
 margin-top: 14vw;
 
 }
+
 .form-btn a{
 color: #FFAD5A;
 background-color: #FFFFFF;
@@ -770,12 +788,25 @@ border-radius: 15vh;
 }
 #olho
 {
-  
-  float: right;
+    float: right;
     display: flex;
-    transform: translate(8vw, -4vh);
     font-size: 40px;
 }
+
+/* essas classes abaixo servem para arrumar o lugar do olho ao lado do input */
+.container-senha{
+  height: 5vh;
+  background-color: transparent;
+}
+
+.input-wrapper{
+  /* padding: 8px 12px; */
+  width: 49vw;
+  display: flex;
+  align-items: center;
+  gap:6px;
+}
+
 /* PAGINAS DE CADASTRO (pasta links) */
 /*Form cadastro padrao entre os modos*/
 .form-cad{
@@ -783,6 +814,7 @@ width: 60vw;
 height: 87vh;
 border-radius: 40px;
 margin-left: 5vw;
+margin-bottom: 10vh;
 }
 
 .form-cad h1 {
@@ -802,6 +834,7 @@ color:#FFFFFF;
 display: block;
 border: 1px solid;
 border-radius: 4vh;
+font-size: 16px;
 width: 22vw;
 height: 3.7vh;
 margin-top: 2vh;
@@ -837,17 +870,19 @@ display: block;
 margin-top: 2vh;
 }
 
+
 .cad-items-submit input{
 outline: none;
 background: #FFFFFF;
 width: 9vw;
 height: 8vh;
 border-radius: 2vw;
-font-size: 20px;
+font-size: 25px;
 float: left;
 margin-left: 0vw;
 margin-top: 9vh;
 }
+
 
 
 /*Configuraçoess especificas de curioso*/
@@ -962,7 +997,7 @@ background: #1789FC;
 
 /*Configuracao da tabela da listagem de dados*/
 .adm{
-  margin-top: 17vh;
+  /* margin-top: 17vh; */
   margin-left: 2vw;
 }
 .adm h3{
@@ -994,6 +1029,7 @@ background: #1789FC;
 
 .adm input
 {
+  color: #FFF;
   display:block;
 }
 
@@ -1046,7 +1082,7 @@ background: #1789FC;
   margin-left:2%;
 }
 .adicionar_ativ{
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 65%;
   background-color: #fff;
   color: #F96800;

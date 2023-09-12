@@ -16,3 +16,6 @@ function trocarOlho(){
         pssrd.type ="text";
     }//fim do else
 }//fim da funcao trocarOlho
+
+
+//alert 

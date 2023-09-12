@@ -1,9 +1,9 @@
 <!--Lista os dados armazenados no Banco-->
 @include('adm.adm_menu') 
 
-        <div class='adm'>
-            <h3 class='adm'>Lista de atividades</h3>
-            <div class='adm'>
+        <div class='adm espaco'>
+            <h3 class='adm '>Lista de atividades</h3>
+            <div class='adm espaco'>
                 <table>
                     <thead>
                         <tr> <!-- CABECALHO -->

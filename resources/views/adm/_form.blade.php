@@ -1,5 +1,5 @@
 <!--Form para o adm adicionar atividades no banco de dados-->
-<div class="conteudo_form_ativ">   
+<div class="adm conteudo_form_ativ">   
     <div class="form_cad_ativ">
         <div class="Nome_da_Atividade" >
             <label>Nome da Atividade:</label>
@@ -9,13 +9,13 @@
   
 
     <div class="form_cad_ativ">
-        <label>Modulo</label>   
+        <label>Módulo</label>   
         <input type="num"  min="0"  name="modulo" value="{{isset($linha->modulo) ? $linha->modulo : ''}}"  required>
         
     </div>
 
     <div class="form_cad_ativ">
-        <label>Descricao:</label>    
+        <label>Descrição:</label>    
         <input type="text" name="descricao" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required>
     </div>
     
@@ -42,7 +42,7 @@
     <input type="file" name="upload"/>
    
      @if(isset($linha->upload))
-    <div        >
+    <div>
         <input type="file" name="upload" src="{{asset($linha->upload)}}"/>
     </div>
       <!-- <div class=""><input type="file" name="upload" src="{{asset($linha->upload)}}" > -->
