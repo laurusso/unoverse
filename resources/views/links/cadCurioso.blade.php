@@ -12,7 +12,7 @@
         <div class="bola"></div>
    </div>
 
-    <form action="{{route('cadastrar')}}" method="post">
+    <form action="{{route('cadastrar')}}" method="post" enctype="multipart/form-data">
         {{csrf_field() }}
         <div class="cad-items">
             <label for="nome">Nome:</label>

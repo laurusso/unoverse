@@ -5,12 +5,20 @@
    
     <div class="body-perfil">
         
-         <h3>Meu perfil</h3>
+         <h3><b>Meu perfil:</b></h3>
         <div class="quadro-perfil">
         
                 @if($user) <!-- LOOP PRA LER A TABELA -->
+                <div class="modulo_perfil">
+                    <h2>{{ $user->modulo }} </h2>
+                </div>
+                <div class="img_perfil">
+                    <img src="{{ asset($img) }}">
+                </div>
                 
-                <img src="{{ url('/img/' . $img) }}">
+                
+
+                <h2>Nome:</h2>
                 <p>{{ $user->nome }} </p>
                 @endif
         </div>

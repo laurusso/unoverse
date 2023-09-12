@@ -19,8 +19,14 @@ class PessoaController extends Controller
         $senha =  $req->only(['senha']);
        // $dados_pessoa['senha'] = bcrypt($senha);
         $dados_pessoa['adm'] = false;
-     
-
+        
+        $num = rand(1111,9999); // escolhe numero pra não repetir
+        $dir = "user/"; // pasta onde armazena arquivos, localizada no projeto em: /public/atividades
+        $ex = $req['foto']->guessClientExtension(); // pega extensão, jpg, png ...
+        $nomeArquivo = "user".$num.".".$ex; // monta novo nome
+        $req['foto']->move($dir,$nomeArquivo);//move o arquivo para  /public/atividades
+       
+        $dados_pessoa['foto'] = $dir . $nomeArquivo;
        // dd($req->input('type_user') == 'aluno' );
         Pessoa::create($dados_pessoa);
         //antes ajustar cript senha, foto
@@ -61,11 +67,11 @@ class PessoaController extends Controller
     public function perfil(){
         $id = Auth::user()->id;
         $user = Pessoa::where('id',$id)->first();
-      
-        $img = Auth::user()->foto;
-        dd($img);
+        $img = $user['foto'];
+       
+       
         
-        return view('users.perfil',compact('user','img'));
+        return view('menu.perfil',compact('user','img'));
     }
     
     public function login(Request $req)

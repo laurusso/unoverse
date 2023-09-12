@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 //use Illuminate\Support\Facades\Atividades;
 
 class AtividadeController extends Controller
-{
+{ 
 
   
        

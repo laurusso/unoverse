@@ -1290,18 +1290,30 @@ background: #1789FC;
   margin: 1em 0;
 
 }
-.body-perfil{
-  
+.body-perfil h3{
+  color: #000000;
+  font-size: 3vw;
+  margin-top: 20vh;
+  margin-left: 5vw;
 }
-
-
 .quadro-perfil{
   width: 90vw;
   height: 90vh;
   margin-left: 5vw;
-  margin-top: 25vh;
+  margin-top: 13vh;
   background-color: #1789FC;
   border-radius: 3vw;
+  display: flex;
+}
+.quadro-perfil p{
+  color: #fff;
+
+}
+.img_perfil img{
+  width: 20vw;
+  clip-path: circle();
+  margin-left: 5vw;
+  margin-top: 15vh;
 }
 
 

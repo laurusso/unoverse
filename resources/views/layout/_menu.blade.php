@@ -61,6 +61,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.acoes')}}">Ações</a>
           </li>
+          
          
 
 
