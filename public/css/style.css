@@ -224,14 +224,11 @@ body{
  }
 
  .navigation{
-
     position: absolute;
-    height: 20vh;
-    /* bottom: 20px; */
+    bottom: 20px;
     left: 50%;
-    /* transform: translate(-50%); */
-    transform: translateY(-78%);
-    display:block;
+    transform: translate(-50%);
+    display: flex;
  }
  .dot{
     width: 8px;
@@ -254,7 +251,6 @@ body{
     display:flex;
     width: 500vw;
     height: 100vh;
-    margin-top: 10vh;
  }
  .slide {
     width: 20%;
@@ -263,10 +259,8 @@ body{
  }
 
  .slide img{
-    width: 40vw;
-    height: 30vh;
-    
-    
+    width: 99vw;
+    height: 100%;
  }
 
  #slide1:checked ~ .s1{ /*Testa para saber se o slide1 está check, caso esteja a class .s1 assume a propriedade definida*/
@@ -298,12 +292,12 @@ body{
 }
 .video p{
   position: absolute;
-  font-size: 3.2vw;
-  line-height: 4.5vh;
-  width: 67vw;
-  margin-left: 17vw;
+  font-size: 1.2vw; 
+  line-height: 5.5vh;
+  width: 45vw;   
+  margin-left: 50vw;
   margin-top: 2vh;
-  text-align: center;
+  z-index: 10;
 
 }
  #bolas_azuis{
@@ -959,43 +953,6 @@ background: #1789FC;
 
 
 
-/* Estilo para o modal de fundo */
-#modal-bg {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
-}
-
-/* Estilo para o modal interno */
-.modal-iframe {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  background-color: #fff;
-  border: 1px solid #000;
-}
-
-/* Estilo para o botão de fechar o modal */
-#fechar-modal {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  cursor: pointer;
-}
-.btn-visua
-{
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
-}
-
 /*pagina index*/
 
 .bloco-geral{
@@ -1108,6 +1065,50 @@ background: #1789FC;
     text-decoration: none;
     
 }
+
+
+/* Estilo para o modal de fundo */
+#modal-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+/* Estilo para o modal interno */
+.modal-iframe {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+/* Estilo para o botão de fechar o modal */
+#fechar-modal {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+.btn-visua
+{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+
+
+
+
+
 
 /* Configuraçoes na pagina Cadastrar */
 .cadatv-content{
@@ -1513,42 +1514,3 @@ background: #1789FC;
 
 }
 */
-
-
-.quadro-perfil{
-  width: 90vw;
-  height: 60vh;
-  margin-left: 5vw;
-  margin-top: 15vh;
-  background-color: #1789FC;
-  border-radius: 3vw;
-}
-.caixa-foto{
-    width: 50vh;
-   height: 50vh;
-   float: left;
-}
-.caixa-foto img{
-  width: 13vw;
-  border-radius: 8vw;
-  margin-top: 15vh;
-  margin-left: 5vw;
- 
-}
-.caixa-user{
-  float: left;
-  font-family: 'Consolas';
-  font-size: 25px;
-  width: 30vw;
-  margin-top: 2vh;
-  color: #FFF;
- 
- 
-}
-.caixa-user label{
-    font-size: 30px;
-    margin-top: 5vh;
-}
-.caixa-user p{
-  margin-left: 1vw;
-}

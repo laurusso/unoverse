@@ -65,12 +65,18 @@ class AtividadeController extends Controller
         {    $atualiza_atv['aluno'] = 'false';} //selecionou professor atribuiu valor FALSE
         
         if($req->hasFile('upload')){
-            $num = rand(1111,9999); // escolhe numero pra não repetir
+            $n = rand(1111,9999); // escolhe numero pra não repetir
             $dir = "atividades/"; // pasta onde armazena arquivos, localizada no projeto em: /public/atividades
             $ex = $req['upload']->guessClientExtension(); // pega extensão, jpg, png ...
-            $nomeArquivo = "aula".$num.".".$ex; // monta novo nome
+            $nomeArquivo = "aula".$n.".".$ex; // monta novo nome
             $req['upload']->move($dir,$nomeArquivo);//move o arquivo para  /public/atividades
     
+        }
+        $arq = Arquivo::where('fk_num',$num);
+        $arquivoParaExcluir = $arq['upload'];
+        if (file_exists($arquivoParaExcluir)) {
+            // Tenta excluir o arquivo
+            unlink($arquivoParaExcluir);
         }
        
         Atividade::where('num',$num)->update($atualiza_atv);
@@ -118,8 +124,15 @@ class AtividadeController extends Controller
    
     // CHAMA EXCLUSAO
     public function excluir($num) {
+        $arq = Arquivo::where('fk_num',$num);
+        $arquivoParaExcluir = $arq['upload'];
         Arquivo::where('fk_num',$num)->delete();//Necessario excluir o registro que possui foreign key o id de Atividades
         Atividade::where('num',$num)->delete();//exclusao do registro de Atividades
+       
+        if (file_exists($arquivoParaExcluir)) {
+            // Tenta excluir o arquivo
+            unlink($arquivoParaExcluir);
+        }
         return redirect()->route('adm.lista');
 
     }

@@ -27,13 +27,13 @@ class PessoaController extends Controller
         $req['foto']->move($dir,$nomeArquivo);//move o arquivo para  /public/atividades
        
         $dados_pessoa['foto'] = $dir . $nomeArquivo;
-       // dd($req->input('type_user') == 'aluno' );
+       
         Pessoa::create($dados_pessoa);
         //antes ajustar cript senha, foto
 
         $id_user = Pessoa::orderBy('id', 'desc') ->value('id'); //seleciona o ultimo id inserio em Atividades
-        //    dd($req->only(['type_user']));
-      
+        
+
         if($req->input('type_user') == "aluno")
         {    
             $dado = array(
@@ -51,10 +51,8 @@ class PessoaController extends Controller
             );
              Professor::create($dado);
         }
-        /*else if($req->only(['curioso']) == true)
-        {
-
-        }*/
+        $id_pessoa = Pessoa::orderBy('id', 'desc') ->value('id');
+        Auth::loginUsingId($id_pessoa);
        
         return view('menu.home')->with('success', 'Cadastro realizado com sucesso! Agora você faz parte na familia <3');
 
@@ -67,9 +65,14 @@ class PessoaController extends Controller
     public function perfil(){
         $id = Auth::user()->id;
         $user = Pessoa::where('id',$id)->first();
-        $img = $user['foto'];
-       
-       
+      
+       if($user['foto'] == null)
+       {
+            $img = "user/Defaultuser.png";
+       }
+       else{
+            $img = $user['foto'];
+       }
         
         return view('menu.perfil',compact('user','img'));
     }
@@ -119,6 +122,7 @@ class PessoaController extends Controller
 
     public function logout(){
         Auth::logout();
+       
         return redirect()->route('login.index');
      
     }

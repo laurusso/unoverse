@@ -23,17 +23,22 @@
                                 <td>{{ $row->nome }}</td>
                                 <td>{{ $row->modulo }}</td>
                                 <td>{{ $row->descricao }}</td>
-                    
-                                @foreach($imgs as $rua)
-                                    @if($row->num == $rua->fk_num)
+
+                                <td>
+                                    @foreach($imgs as $rua)
+                                        @if($row->num == $rua->fk_num)
+                                            <button class="btn-visua" onclick="abrirModal('{{ asset($rua->upload) }}')">Visualizar </button>
+                                        @endif
+                                    @endforeach
+                                </td>
+                                <div id="modal-bg">
+                                       
+                                        <span id="fechar-modal" onclick="fecharModal()">X Fechar</span>
+                                        <iframe id="arquivo" class="modal-iframe" src=""></iframe>
+                                        
                                 
-                                        <td><img src="{{ asset($rua->upload) }}" width=100  alt="{{ $row->nome }}"></td> 
-    
-                                    @endif
-                                    <!-- <td><img src="{{ asset($row->imagem) }}" width=100  alt="{{ $row->titulo }}"></td> -->
-                                @endforeach
-                                
-                                
+                                </div>
+                                       
                                 <td> <!-- COLUNA COM ALTERAR E EXCLUIR -->
                                     <a class='btn-lista' href="{{ route('adm.editar',$row->num) }}">Alterar</a>
                                     <a class='btn-lista' href="{{ route('adm.excluir',$row->num) }}">Excluir</a>
@@ -45,11 +50,12 @@
                 
 
             </div>
-            <div class="btn-add"> <!-- BOTAO ADICIONAR -->
+                <div class="btn-add"> <!-- BOTAO ADICIONAR -->
                      <a class=" btn-lista lista-add"  href="{{ route('adm.adicionar')}}">Adicionar</a>
                 </div>
 
             </div>
+            <script src="{{ asset('js/vizu.js') }}"></script> 
 
 
 <!-- CHAMADA DA DIV FOOTER -->
