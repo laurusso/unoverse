@@ -23,13 +23,14 @@
                         <img src="{!! asset('img/home/slide3.jpg') !!}">
                     </div>
 
+                    <div class="navigation">
+                                        <label class="dot" for="slide1"></label>
+                                        <label class="dot" for="slide2"></label>
+                                        <label class="dot" for="slide3"></label>    
+                    </div> 
                 </div>
 
-                <div class="navigation">
-                    <label class="dot" for="slide1"></label>
-                    <label class="dot" for="slide2"></label>
-                    <label class="dot" for="slide3"></label>    
-                </div> 
+                
 
              </div><!--acaba slider -->
              
@@ -41,6 +42,10 @@
                 <div class="bolas">
                     <img src="{!! asset('img/bolas_azuis.png') !!}" id="bolas_azuis">
                     <img src="{!! asset('img/bolas_amarelas.png') !!}"  id="bolas_amarelas">
+                </div>
+                <div class="app_bolas">
+                    <img src="{!! asset('img/app_bolas_azuis.svg') !!}" id="app_bolas_azuis">
+                    <img src="{!! asset('img/app_bolas_amarelas.svg') !!}"  id="app_bolas_amarelas">
                 </div>
                 <p>O Unoverse é um curso de robótica com arduíno que contempla desde alunos de escolas públicas a professores e qualquer um interessado em adentrar o universo da tecnologia e programação de maneira acessível e divertida</p>
             </div>
