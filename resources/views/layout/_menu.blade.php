@@ -15,6 +15,7 @@
       Este primeiro arquivo representa apenas o menu, que é fixo em todas as paginas do site.
    -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('titulo')</title> <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->

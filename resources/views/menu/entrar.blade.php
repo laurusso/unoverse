@@ -41,7 +41,7 @@
                 <label for="email">E-mail:</label>
                 <input type="text" name="email" id="email" autocomplete="off" >
                 @error('email')
-                    <span>{{ $message }} </span>
+                    <div class="error-entrar">{{ $message }} </div>
                 @enderror
             </div>
             <div class="form-itens">
@@ -51,11 +51,12 @@
                     <div class="input-wrapper">
                         <input type="password" name="senha" id="senha"> <i id="olho" class="bi bi-eye-slash"></i>
                     </div>
+                    @error('senha')
+                    <div class="error-entrar">{{ $message }} </div>
+                @enderror
                 </div>
                 
-                @error('senha')
-                    <span>{{ $message }} </span>
-                @enderror
+               
             </div>
 
             <div class="form-btn">

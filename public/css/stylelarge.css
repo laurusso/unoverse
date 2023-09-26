@@ -166,11 +166,11 @@ body{
     }
   }
   
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {   
     .footer .conteudo,
     .footer {
       font-size: 14px;
-    }
+    }   
   }
   
   @media (orientation: landscape) and (max-height: 500px) {
@@ -206,7 +206,7 @@ body{
     /* display: flex; */
     /* margin-top: 16vh; */
     /* color: var(--cor-quaternaria);sw */
-    position: relative ;
+    position: relative;
 }
 
 /* PAGINA DE HOME (home.blade.php) */
@@ -276,11 +276,14 @@ body{
  .video{
   display: flex;
  }
+ .app_bolas img{
+  display: none;
+ }
+ 
  .bolas{
   position: relative;
   z-index: 1;
   display: flex;
-
  }
 .video iframe{
   position: absolute;
@@ -692,8 +695,20 @@ body{
 .form_entrar label{
   font-size: 4vh;
   padding-left: 5vw;
-  padding-top: 2vw;
+  
 }
+
+.error-entrar {
+  background-color: #FFF;
+  color: #FFAD5A;
+  /* padding: 0vw; */
+  border-radius: 1vw;
+  width: 17vw;
+  padding-left: 2vw;
+  margin-left: 7vw;
+  margin-top: 1vh;
+}
+
 /* .form_entrar input{
   /* background-color:none; 
   border-color: var(--cor-secundaria);
@@ -754,7 +769,9 @@ body{
   outline: none;
 }
 
-
+.form-btn{
+  margin-top: 5vh;
+}
 .form-btn label{
 color: #FFAD5A;
 background-color: #FFFFFF;
@@ -998,35 +1015,65 @@ background: #1789FC;
 }
 
 /*Configuracao da tabela da listagem de dados*/
-.adm{
-  /* margin-top: 17vh; */
-  margin-left: 2vw;
-}
+
 .adm h3{
-  color:#FFAD5A;
-  font-size: 50px;
+  color: #000;
+  font-size: 41px;
   margin-bottom: -10vh;
 }
-.adm table{
-  margin-left: 2vw;
-  border: 2px solid #FFF;
-  background-color: #003F64;
+.atv{
+  background-color: #FFF;
+  font-size: 19px;
+  box-shadow: 4px 15px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 2vh 0 5vh 5vh;
+  margin-bottom: 4vw;
+  margin-left: 3vw;
+}
+
+.atv thead{
+  background-color: #9747FF;
   font-size: 25px;
-  color: #003F64;
 }
 
-.adm thead{
-  border: 1px solid;
+.atv tbody
+{
+  color: #000;
+}
+
+
+.num{
+  width: 7vw;
+  /* padding-left: 2vw; */
+  text-align: center;
+  border-radius: 2vh 0 0;
+}
+
+.atv tr {
+    border-radius: 5vh;
+}
+.nome{
+  margin: 4vw;
+  padding-inline: 1vw;
+  width: 25vw;
+}
+.modulo{
+  width: 6vw;
+  text-align: center;
+}
+.descricao{
+  padding-inline: 1vw;
+  width: 26vw;
+}
+.arquivo{
+  padding-inline: 3vw;
+}
+.btn-excluir{
   padding: 1vw;
-  background-color: #003F64;;
+  width: 8vw;
+  border-radius: 0 2vh 0 0;
 }
-
-.adm tr{
-  margin: 0vw;
-}
-.adm td{
-  padding-right: 7vw;
-  color: #FFF;
+.btn-alterar{
+  width: 8vw;
 }
 
 .adm input
@@ -1037,33 +1084,25 @@ background: #1789FC;
 
 .btn-lista{
   color: #fff;
-  background-color: #003F64;
   font-size: 25px;
-  margin-top: 2vh;
-  border-radius: 4vw;
-  
-
 }
 
 .btn-add{
-  width: 6vw;
-  height: 5vh;
+  width: 29vw;
+  /* height: 9vh; */
   text-align: center;
   margin: 1vh;
   margin-top: 5vh;
-  
-  
+  float: right;
 }
 .lista-add{
-    width: 15vw;
-    height: 10vh;
-    background: linear-gradient(141deg, #003F64  0%, #006CD9 100%);
+    background: #9747FF;
     padding: 1vw;
-    border-radius: 2vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-radius: 10vh;
     padding-inline: 2vw;
-    margin-top: 5vh;
     text-decoration: none;
-    
 }
 
 

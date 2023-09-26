@@ -212,22 +212,21 @@ body{
 /* PAGINA DE HOME (home.blade.php) */
 /* slider */
 .container-slide{
-    height: 74.6vh;
-    width: 100vw;
-    /* border-radius: 20px; */
-    overflow: hidden;
-    position: relative;
-    top: 37.4vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    margin-bottom: 5vh;
+  height: 33.6vh;
+  width: 100vw;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  position: relative;
+  top: 16.4vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  margin-bottom: 5vh;
  }
-
+   
  .navigation{
     position: absolute;
-    bottom: 37vh;
-    left: 50%;
-    /* transform: translate(-50%); */
+    bottom: 2vh;
+    left: 45%;
     display: flex;
  }
  .dot{
@@ -260,9 +259,9 @@ body{
  }
 
  .slide img{
-    width: 99vw;
+    width: 100vw;
     /* height: 100%; */
- }
+ } 
 
  #slide1:checked ~ .s1{ /*Testa para saber se o slide1 está check, caso esteja a class .s1 assume a propriedade definida*/
     margin-left: 0;
@@ -276,7 +275,7 @@ body{
 
  .video{
   display: flex;
- }
+ }  
  
  .bolas img{
   display: none;
@@ -285,27 +284,29 @@ body{
   position: relative;
   z-index: 1;
   display: flex;
+  transform: translateY(-100px);
  }
  .app_bolas img{
-  width: 18vw;
+  width: 14vw;
  }
- #app_bolas_azuis
+ #app_bolas_azuis  
  {
   top: 20vh;
  }
  #app_bolas_amarelas{
   float: right;
-  /* margin-top: 39vh; */
-  margin-left: 61vw;
+  transform: translate(33vh, 33vh);
  }
 
 .video iframe{
   position: absolute;
   z-index: 10;
-  margin-top: 3vh;
+  margin-top: 35vh;
   margin-left: 5vw;
+  width: 90vw;
+  height: 25vh;
 
-
+     
 }
 .video p{
   position: absolute;
@@ -335,6 +336,7 @@ body{
  #wave_home{
   position: relative;
   z-index: 1;
+  margin-top: 57vh;
 
  }
  
