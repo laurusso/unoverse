@@ -131,6 +131,18 @@ class AtividadeController extends Controller
         //$dados_atv = $req->only(["nome",'modulo',"descricao",'aluno']); //recebe por request os dados da tabela ATIVIDADES
         $dados_atv = $req->except(['upload']);
 
+      
+       
+        if($dados_atv['aluno'] == "curioso")
+        {
+            $dados_atv['curioso'] = true;
+            $dados_atv['aluno'] = false;
+        } 
+        else
+        {
+            $dados_atv['curioso'] = false;
+        }
+
         if($req->hasFile('codigo')){
             
             //$num = rand(1111,9999); // escolhe numero pra não repetir

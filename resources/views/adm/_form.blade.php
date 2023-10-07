@@ -10,7 +10,23 @@
             
         <div class="">
             <label>Módulo</label>   
-            <input type="number"  min="0"  name="modulo" value="{{isset($linha->modulo) ? $linha->modulo : ''}}"  required>
+   
+                <label>
+                        <!-- <input type="radio" name="aluno" value="al" {{isset($linha->aluno) && $linha->aluno == 'al' ? 'checked'  : '' }}  > -->
+                        <input type="radio" name="modulo" value="iniciante" {{isset($linha->modulo) && $linha->modulo == iniciante ? 'checked' : '' }}>
+                    Iniciante 
+                    </label>  
+                    <label>
+                    <input type="radio" name="modulo" value="intermediario" {{isset($linha->modulo) && $linha->modulo == intermediario ? 'checked' : '' }}>
+                        <!-- <input type="radio" name="aluno" value="pr"   {{ isset($linha->aluno) && $linha->aluno == 'pr' ? 'checked' : '' }} > -->    
+                        intermediario 
+                    </label>
+                    <label>
+                    <input type="radio" name="modulo" value="avancado" {{isset($linha->modulo) && $linha->modulo == avancado ? 'checked' : '' }}>
+                        <!-- <input type="radio" name="aluno" value="pr"   {{ isset($linha->aluno) && $linha->aluno == 'pr' ? 'checked' : '' }} > -->    
+                        Avançado 
+                    </label>
+            
         </div>
 
         <div class="">
@@ -35,7 +51,7 @@
                     <label >
                         Codigo:
                         <input  type="file" name="codigo" src="{{asset($linha->codigo)}}"/>
-                        <img  src="{!! asset('img/adm/icon-upload.png') !!}">
+                        <i class="bi bi-upload"></i>
                     </label>
               </div>
                 @else
@@ -44,7 +60,7 @@
                     <label >
                         Codigo: 
                     <input type="file" name="codigo"/>
-                    <img src="{!! asset('img/adm/icon-upload.png') !!} " >
+                    <i class="bi bi-upload"></i>
                     </label>
               </div>
                 @endif 
@@ -53,17 +69,17 @@
             @if(isset($linha->upload))
             <div>
                 <label>Atividade
-                    <input type="file" name="upload" src="{{asset($linha->upload)}}"/>
-                    <img src="{!! asset('img/adm/icon-upload.png') !!}">
+                    <input type="file" name="upload" src="{{asset($linha->upload)}}"/> 
+                    <i class="bi bi-upload"></i>
                 </label>
             </div>
             <!-- <div class=""><input type="file" name="upload" src="{{asset($linha->upload)}}" > -->
-            >
+            
         @else
-        <label>Atividade</label> 
+        <label>Atividade
         <input type="file" name="upload"/>
-        <img src="{!! asset('img/adm/icon-upload.png') !!}">
-
+        <i class="bi bi-upload"></i>
+</label> 
 
             @endif 
     </div>
@@ -83,7 +99,7 @@
                         Professor 
                     </label>
                     <label>
-                    <input type="radio" name="curioso" value="true" {{isset($linha->curioso) && $linha->curioso == true ? 'checked' : '' }}>
+                    <input type="radio" name="aluno" value="curioso" {{isset($linha->curioso) && $linha->curioso == curioso ? 'checked' : '' }}>
                         <!-- <input type="radio" name="aluno" value="pr"   {{ isset($linha->aluno) && $linha->aluno == 'pr' ? 'checked' : '' }} > -->    
                         Curioso 
                     </label>

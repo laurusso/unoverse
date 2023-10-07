@@ -1275,7 +1275,7 @@ background: #1789FC;
 }
 .caixa-cadAtv input[type="file"]
 {
-  display: none;
+  /* display:ruby-text; */
 }
 
 
