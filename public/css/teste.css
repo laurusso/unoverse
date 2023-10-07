@@ -1,0 +1,66 @@
+#fechar-modal{
+    color: #fff;      
+} 
+
+/* PAGINA DE ATIVIDADES (atividade.blade.php) */
+
+.pag-atvs{
+    height: 80vh;
+    margin-top: 20vh;
+  }
+  
+  .content{
+    margin: 0;
+  }
+  .sidebar-btn{
+    border: none;
+    background-color: #9747FF;
+    color: #FFFFFF;
+    margin-bottom: 0;
+  }
+
+  .engloba-atv{
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    
+  }
+  .engloba-atv.active{
+    width: 20%;
+    box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
+  }
+  .blocado{
+    background-color: #FFFFFF;
+  }  
+  .menu-atv{
+    list-style: none;
+    background-color: #FFFFFF;
+    border-radius: 1vh;
+    padding: 0;
+  }
+  .titulo-bloc{
+    color: #FFFFFF;
+    align-items: center;
+    height: 5vh;
+    background-color: #9747FF;
+  }
+  .eng-atv{
+    padding: 1vh;
+  }
+  .btn-atv{
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #9747FF;
+    border-radius: 1vh;
+    border: none;
+    padding: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    transition: 0.4s;
+  }
+  .btn-atv:hover{
+    text-decoration: underline;  
+    box-shadow: 0 0.5vw 0.5vw rgba(0,0,0,0.5);
+    transition: 0.4s;
+  }
+     

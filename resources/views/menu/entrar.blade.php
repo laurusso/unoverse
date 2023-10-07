@@ -22,6 +22,7 @@
       
      @else 
   @error('error')
+    
         <span>{{ $message }} </span>
     @enderror
 

@@ -318,6 +318,8 @@ body{
 
  }
  #wave_home{
+  width: 100%;
+  height: 90%;    
   position: relative;
   z-index: 1;
 
@@ -326,7 +328,7 @@ body{
  .arduino_info{
   display: block;
   text-align: center;
-  justify-content:center;
+  justify-content:center;   
  }
 
 .arduino_info h2{
@@ -337,22 +339,35 @@ body{
   width: 42vw;
   margin: 50vh 30vw 0vh 30vw;
 }
-.texto_info{
-  align-items: center !important;
+.texto_info{ 
+  align-items: center;
+  margin-top: 125vh;
+  width: 100%;
   position: absolute;
   z-index: 10;
-  display: block;
+  display: flex;
   color: #FFFFFF;
   font-size: 1.2vw;
-  margin: 140vh 20vw 0vh 20vw;
-  align-items: center !important;
-
-  
+  /* margin: 140vh 20vw 0vh 20vw; */
+  flex-direction: column;
 }
 .texto_info img{
   width: 50vw;
-  margin-top: 7vh;
-  margin-bottom: 7vh;
+  margin-top: 7vh;    
+  margin-bottom: 7vh;   
+  box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
+  border: dotted 7px;
+  border-radius: 2vh;
+  border-color: #FFD571;             
+}   
+
+.app-texto_info{
+display: none;
+}
+.texto_info p{    
+  text-align: center;  
+  width: 70%;
+
 }
 
 .componentes{
@@ -371,6 +386,10 @@ body{
 .componentes a:hover{
   filter: brightness(40%);
   transition: 0.5s;
+}
+.engloba-comp p{
+  display: none;
+
 }
 .janela-modal-placa-uno{
   /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
@@ -479,6 +498,7 @@ body{
 }
 .texto-devs h1{
     font-weight: bold;
+    margin-bottom: 5vh;
 }
 
 /*engloba os outros 6 devs */
@@ -488,6 +508,7 @@ body{
     grid-column-gap: 1vw;
     grid-row-gap: 5vh;
     margin-top: 20vh;
+    margin-bottom: 10vh;
     font-family: Consolas;
     position: relative;
     align-content: center;
@@ -495,7 +516,7 @@ body{
     align-items: center;
     
 }
-
+     
 /* card de laura e configuracoes */
 .card-roxo{
     float: left;
@@ -517,7 +538,7 @@ body{
 .card-roxo h2{
     font-size: 2rem;
     margin-left: 2vw;
-    margin-top: 5vh;
+    margin-top: 12vh;
     font-size: 2rem;
     float: left;
     padding: 1vw;
@@ -620,7 +641,10 @@ body{
  }
  
  .imagemmodu{
-     width: 30vw;
+     width: 30vw;     
+ }
+ .app-imagemmodu{
+  display: none;
  }
  
  
@@ -703,7 +727,7 @@ body{
   color: #FFAD5A;
   /* padding: 0vw; */
   border-radius: 1vw;
-  width: 17vw;
+  width: 18vw;
   padding-left: 2vw;
   margin-left: 7vw;
   margin-top: 1vh;
@@ -966,6 +990,42 @@ background: #1789FC;
 }
 
 
+/* PAGINA DE ATIVIDADES (atividade.blade.php) */
+
+.pag-atv{
+  height: auto;
+}
+
+.engloba-atv{
+  width: 20%;
+  margin-top: 17vh;   
+  border-radius: 20px;
+  text-align: center; 
+}
+.blocado{
+  background-color: #FFFFFF;
+}  
+.menu-atv{
+  list-style: none;
+}
+.titulo-bloc{
+  background-color: #9747FF;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 /*  TELAS ADM */
 
 
@@ -1020,6 +1080,7 @@ background: #1789FC;
   color: #000;
   font-size: 41px;
   margin-bottom: -10vh;
+  margin-left: 3vw;
 }
 .atv{
   background-color: #FFF;
@@ -1136,17 +1197,15 @@ background: #1789FC;
   right: 5%;
   cursor: pointer;
 }
-.btn-visua
-{
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+.btn-visua{
+  background-color: #F96800;
+  color: #fff;
+  border-radius: 5vw;
+  border:none;
+  width: 8vw;
+  height: 7vh;
+ 
 }
-
-
-
-
-
 
 
 /* Configuraçoes na pagina Cadastrar */
@@ -1186,28 +1245,67 @@ background: #1789FC;
 }
 .form_atividade{
   background: linear-gradient(90deg, rgba(249,104,0,1) 4%, rgba(255,173,90,1) 98%);
-  width: 39.6vw;
-  height: 86.6vh;
+  width: 50vw;
+  height: 130vh;
   border-radius:3vw;
 }
-.form_cad_ativ{
-
+.conteudo_form_ativ{
   margin-top: 8%;
 } 
-.form_cad_ativ label{
-  color: #fff;
-  font-size: 3vh;
+.form_cad_ativ{
+  /* margin-top: 6vh; */
 }
+.form_cad_ativ label{
+  color: #000;  
+  font-size: 3vh;
+} 
 .form_cad_ativ input{
-  display:block;
+  display: block;
   outline: none;
-  border-color: #fff;
+  font-size:2.5vh;
+  border-color: #fff;  
   border-radius: 5.2vh;
-  background: linear-gradient(90deg, rgba(249,104,0,1) 4%, rgba(255,173,90,1) 98%);
-  width: 50%;
+  background: #F97700;
+  /* width: 43%;*/ 
   
 }
-.espaco{
+.caixa-cadAtv{
+  float: left;
+  width: 20vw;
+}
+.caixa-cadAtv input[type="file"]
+{
+  display: none;
+}
+
+
+/* .custom-file-input {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+} 
+
+.input-file {
+  display: none;
+}
+
+.custom-file-input label {
+  
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+
+
+
+
+.form_tipouser
+{
+  font-size: 2vh;
+}
+.espaco{ 
   color: #fff;
 }
 .escolha{
@@ -1381,21 +1479,37 @@ background: #1789FC;
   margin-top: 20vh;
   margin-left: 5vw;
 }
-.quadro-perfil{
+.perfil{
+  display: flex;
+  margin-top: 13vh;
   width: 90vw;
   height: 90vh;
   margin-left: 5vw;
-  margin-top: 13vh;
   background-color: #1789FC;
   border-radius: 3vw;
-  display: flex;
 }
-.quadro-perfil p{
+.quadro-perfil-esquerda{
+  display: block;
+}
+.quadro-perfil-meio{
+  display: block;
+}
+.quadro-perfil-meio p{
   color: #fff;
+  font-size: 2vw;
+
+}
+.editar-perfil{
+  background-color: #004A95;
+  color:#fff;
+  height: 10vh;
+  width: 15vw;
+  border-radius: 1vw;
+  fon
 
 }
 .img_perfil img{
-  width: 20vw;
+  width: 25vw;
   clip-path: circle();
   margin-left: 5vw;
   margin-top: 15vh;

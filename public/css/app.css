@@ -284,7 +284,7 @@ body{
   position: relative;
   z-index: 1;
   display: flex;
-  transform: translateY(-100px);
+  /* transform: translateY(-100px); */
  }
  .app_bolas img{
   width: 14vw;
@@ -295,7 +295,7 @@ body{
  }
  #app_bolas_amarelas{
   float: right;
-  transform: translate(33vh, 33vh);
+  transform: translate(33vh, 20vh);
  }
 
 .video iframe{
@@ -315,7 +315,7 @@ body{
     line-height: 3.5vh;
     width: 79vw;
     margin-left: 10vw;
-    /* margin-top: 2vh; */
+    margin-top: 5vh;
     z-index: 10;
 
 }
@@ -334,17 +334,19 @@ body{
 
  }
  #wave_home{
+  width: 70vh;
   position: relative;
   z-index: 1;
-  margin-top: 57vh;
+  margin-top: 57vh;     
 
  }
  
- .arduino_info{
+ .arduino_info{   
   display: block;
-  text-align: center;
-  justify-content:center;
+  /* text-align: center; */
+  /* justify-content:center; */
  }
+
 
 .arduino_info h2{
   position: absolute;
@@ -352,43 +354,57 @@ body{
   color: #FFFFFF;
   font-size: 4vw;
   width: 42vw;
-  margin: 50vh 30vw 0vh 30vw;
+  font-weight: bold;
+  margin: 77vh 30vw 0vh 30vw;
 }
 .texto_info{
+  display: none;      
+}
+.app-texto_info{
   align-items: center !important;
   position: absolute;
   z-index: 10;
   display: block;
   color: #FFFFFF;
-  font-size: 1.2vw;
-  margin: 140vh 20vw 0vh 20vw;
+  font-size: 5vw;
+  margin: 140vh 15vw 0vh 15vw;
   align-items: center !important;
-
-  
 }
-.texto_info img{
-  width: 50vw;
+.app-texto_info img{
+  width: 75vw;
   margin-top: 7vh;
   margin-bottom: 7vh;
+  box-shadow: 0 1vw 1vw rgba(0,0,0,0.5);
+  border: dotted 7px;
+  border-radius: 2vh;
+  border-color: #FFD571;
+}
+.componentes{    
+  width: 100%;
+  display: block;  
+  position: absolute;   
+  z-index: 11;
+  margin: 83vh 12vw 0vh 12vw;
+}    
+.componentes a img{
+  padding: 2vh; 
+  width: 30vw;      
+}
+.componentes a{   
+  transition: 0.5s;     
 }
 
-.componentes{
-  display: grid;
-  grid-template-columns:  repeat(3,25vw);
-  position: absolute;
-  z-index: 11;
-   margin: 70vh 12vw 0vh 12vw;
-}
-.componentes a img{
-  width: 21vw;
-}
-.componentes a{
-  transition: 0.5s;
-}
-.componentes a:hover{
-  filter: brightness(40%);
-  transition: 0.5s;
-}
+.engloba-comp{
+  display: flex;  
+  margin-bottom: 2vh;
+ }
+
+ .engloba-comp p{    
+  color: #FFFFFF;
+  width: 50%;     
+ }
+
+
 .janela-modal-placa-uno{
   /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
   width: 100vw;
@@ -399,12 +415,12 @@ body{
   background-color: #00000073;
   display: none;  
   align-items: center;
-  justify-content: center;
+  justify-content: center;     
   z-index: 999;
 }
 .janela-modal-protoboard{
   /* essa classe pe o overlay responsável por deixar o fundo do site escuro quando o botão é apertado */
-  width: 100vw;
+  width: 100vw;   
   height: 597vh;
   position: absolute;
   top: 0;
@@ -429,50 +445,14 @@ body{
   z-index: 999;
 }
 .janela-modal-placa-uno.abrir{
-  display: flex;
+  display: none;
 }
 .janela-modal-protoboard.abrir{
-  display: flex;
+  display: none;
 }
 .janela-modal-jumpers.abrir{
-  display: flex;
+  display: none;
 }
-.modal{
-  background-color: #ffffffb6;
-  backdrop-filter: blur(10px);
-  border-radius: 2vw;
-  display:block !important; 
-  width:60vw !important; 
-  height:70vh !important; 
-  margin-left:17vw;
-  margin-top:20vh; 
-  padding: 10vh;
- 
-}
-.conteudo_modal{
-  display: flex;
-  font-size: 1vw;
-  line-height: 4.5vh;
-  margin-top: 5vh;
-}
-.conteudo_modal img{
-  width: 20vw !important;
-  margin-right: 5vw;
-
-}
-.fechar{
-  position: absolute;
-  top: 5vh;
-  left: 55vw;
-  width: 3vw;
-  height: 3vw;
-  border-radius: 100%;
-  background-color: #ff251e;
-  border: 0;
-  color: #FFFFFF;
-}
-
-
 
 
 
@@ -621,40 +601,47 @@ body{
 /* PAGINA DE MODULOS (modulos.blade.php) */
  
 .titulo{
-    color:#FFAD5A;
-    font-family: 'Consolas';
-    font-size: 3vw;
-    /* margin-left: 5vw; */
-    margin-top: 3vh;
-    margin-bottom: 5vh;
+  color: #FFAD5A;
+  font-family: 'Consolas';
+  font-size: 5vw;
+  /* margin-left: 5vw; */
+  margin-top: 3vh;
+  margin-bottom: 2vh;
  }
  
  .line_modo{
-    height: 60vh;
-    margin-top: 20vh;
-    width: auto;
+  height: 14vh;
+  margin-top: 20vh;
+  width: auto;
  
  }
- 
- .imagemmodu{
+  
+ .imagemmodu{   
+    display: none;
      width: 30vw;
  }
+ .app-imagemmodu{
+  width: max-content;
+  margin-top: 9vh;
+  margin-left: 7vw;
+
+}
  
  
  .caixa{
-    width: 30vw;
-    float: left;
-    margin-left: 13vw;
-    font-family: 'Consolas';
-    font-size: 1.5vw;
-    text-align: justify;
+  width: 43vw;
+  float: left;
+  margin-left: 4vw;
+  font-family: 'Consolas';
+  font-size: 3vw; 
+  text-align: justify;
  }
 
- .modulos{
+ .modulos{ 
     margin-bottom: 50em;
  }
  .line_modo a{
-  text-decoration: none;
+  text-decoration: none; 
   color: #1789FC;
  }
  .line_modo a:hover{
@@ -667,6 +654,7 @@ body{
  .modulos a:hover{
   border-bottom: 1px solid #FFAD5A;
  }
+
 
 /* PAGINA DE ENTRAR (entrar.blade.php) */
 
@@ -1292,7 +1280,7 @@ background: #1789FC;
 }
  
 .swiper{
-  width:99%;
+  width:99%;  
 }
 .swiper-wraper{
   height: 40em;

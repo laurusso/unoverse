@@ -8,9 +8,7 @@
     <div id="titulo_acoes">
         <div class="texto_acoes">
             <h1>Projetos sociais</h1>
-            <p>O Colégio Técnico Industrial “Prof. Isaac Portal Roldán” sempre busca expandir seus projetos para além da escola. Logo, a robótica, dirigida pela professora doutora Katia Livia Zambon, é sempre levada a outras escolas de Bauru, com intuito de compartilhar conhecimentos. As imagens mostram esses momentos únicos de interação social :)</p>
-            <p>Além disso, é importante pontuar que a visitação em escolas do estado de SP e o posterior desenvolvimento dessa plataforma foram motivados a partir do Projeto de Extensão do Prograd Unesp Presente, com intuito social, realizado de abril de 2022 a abril de 2023, mas as visitações seguiram seu curso em decorrência dos esforços da professora Kátia e seus alunos na robótica, além desse TCC.</p>
-        </div>
+             </div>
         <img src="{!! asset('img/Wave.svg') !!}" id="wave_acoes" alt="">
     </div>
 

@@ -1,0 +1,45 @@
+<svg width="211" height="342" viewBox="0 0 211 342" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M208.549 207.226C215.222 254.504 210.466 341.426 166.34 341.426C122.213 341.426 40.6734 257.824 40.6734 215.556C40.6734 173.288 59.2913 132.075 103.418 132.075C148.993 122.819 185.421 140.219 208.549 207.226Z" fill="url(#paint0_linear_186_123)"/>
+<ellipse cx="69.3676" cy="46.3832" rx="20.165" ry="45.7642" transform="rotate(45.7342 69.3676 46.3832)" fill="url(#paint1_linear_186_123)"/>
+<rect y="61.0837" width="149.148" height="118.346" rx="59.173" transform="rotate(-5.99249 0 61.0837)" fill="url(#paint2_linear_186_123)"/>
+<path d="M6.55077 123.47C4.65649 102.314 20.6758 83.8005 41.8848 82.6348L92.1403 79.8728C111.455 78.8112 128.208 93.0845 130.227 112.322C132.32 132.257 117.856 150.114 97.921 152.206L47.8647 157.461C27.0197 159.649 8.41993 144.346 6.55077 123.47Z" fill="#100051"/>
+<ellipse cx="149.156" cy="54.6433" rx="20.1647" ry="45.7632" transform="rotate(23.9925 149.156 54.6433)" fill="url(#paint3_linear_186_123)"/>
+<ellipse cx="37.681" cy="200.476" rx="24.0741" ry="53.0355" transform="rotate(10.0106 37.681 200.476)" fill="url(#paint4_linear_186_123)"/>
+<path d="M25.7747 109.58C26.0775 107.143 28.1238 105.322 30.5749 105.178C33.8122 104.988 36.4332 107.743 36.2162 110.979C35.6901 118.82 35.9934 124.719 37.3944 132.013C37.9939 135.134 35.7815 138.145 32.6084 138.332C30.1368 138.477 27.9074 136.826 27.3727 134.409C25.3673 125.342 24.6222 118.854 25.7747 109.58Z" fill="#00FFD1"/>
+<path d="M78.3926 103.004C78.6954 100.568 80.7417 98.7473 83.1928 98.6032C86.4301 98.4129 89.0512 101.168 88.8341 104.403C88.308 112.245 88.6113 118.143 90.0123 125.438C90.6118 128.559 88.3994 131.57 85.2263 131.757C82.7547 131.902 80.5253 130.251 79.9906 127.833C77.9852 118.767 77.2401 112.278 78.3926 103.004Z" fill="#00FFD1"/>
+<line x1="24.8981" y1="113.841" x2="40.3206" y2="112.934" stroke="#100051" stroke-width="5"/>
+<line x1="78.2643" y1="119.989" x2="93.6868" y2="119.083" stroke="#100051" stroke-width="5"/>
+<line x1="74.4999" y1="108.604" x2="89.9224" y2="107.697" stroke="#100051" stroke-width="5"/>
+<line x1="25.578" y1="125.408" x2="41.0005" y2="124.501" stroke="#100051" stroke-width="5"/>
+<circle cx="119.271" cy="192.535" r="4.0554" fill="#00DEB6"/>
+<circle cx="123.519" cy="206.053" r="4.0554" fill="#00DEB6"/>
+<rect x="96.6765" y="195.262" width="15.4491" height="6.17965" rx="3.08983" transform="rotate(-13.8293 96.6765 195.262)" fill="white"/>
+<rect x="103.293" y="206.658" width="11.4194" height="6.17965" rx="3.08983" transform="rotate(-13.8293 103.293 206.658)" fill="white"/>
+<ellipse cx="145.105" cy="186.123" rx="24.0741" ry="55.7605" transform="rotate(-46.7092 145.105 186.123)" fill="url(#paint5_linear_186_123)"/>
+<defs>
+<linearGradient id="paint0_linear_186_123" x1="169.287" y1="122.241" x2="-1.61864" y2="262.635" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8AA14"/>
+<stop offset="1" stop-color="#F96800"/>
+</linearGradient>
+<linearGradient id="paint1_linear_186_123" x1="69.3676" y1="0.618992" x2="69.3676" y2="92.1474" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8AA14"/>
+<stop offset="1" stop-color="#F96800"/>
+</linearGradient>
+<linearGradient id="paint2_linear_186_123" x1="147.511" y1="60.9741" x2="-1.78282" y2="175.4" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8AA14"/>
+<stop offset="1" stop-color="#F96800"/>
+</linearGradient>
+<linearGradient id="paint3_linear_186_123" x1="152.486" y1="33.5121" x2="104.801" y2="36.5566" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8AA14"/>
+<stop offset="1" stop-color="#F96800"/>
+</linearGradient>
+<linearGradient id="paint4_linear_186_123" x1="8.7241" y1="225.498" x2="89.5884" y2="122.652" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9A400"/>
+<stop offset="1" stop-color="#FFD878"/>
+</linearGradient>
+<linearGradient id="paint5_linear_186_123" x1="120.926" y1="204.557" x2="185.818" y2="178.158" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9A400"/>
+<stop offset="1" stop-color="#FFD878"/>
+</linearGradient>
+</defs>
+</svg>

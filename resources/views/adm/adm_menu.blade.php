@@ -8,6 +8,11 @@
     <meta charset="UTF-8">
     <title>@yield('titulo')</title> <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
     <!-- INSERCAO CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" media="screen and (max-width: 768px)">
 
@@ -17,6 +22,7 @@
     <!-- ICONES EXTRAIDOS DO BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
 </head>
 <body>
    

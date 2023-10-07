@@ -7,7 +7,7 @@
         <h1>Olá Administrador!!!</h1>
         <a class="btn-escolha" href="{{route('adm.adicionar')}}">Cadastro de Atividades</a>
         <a class="btn-escolha" href="{{route('adm.lista')}}">Lista de Atividades</a>
-        <a class="btn-escolha" href="{{route('adm.lista')}}">Lista de Usuários</a>  <!--mudar link-->
+        <a class="btn-escolha" href="{{route('lista.user')}}">Lista de Usuários</a>  
     </div>
     <div class="img-adm">
         <img src="{!! asset('img/adm/adm-robot.svg') !!}">

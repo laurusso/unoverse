@@ -23,7 +23,7 @@
       <img src="{!! asset('img/adm/adm-robot.svg') !!}">
   </div>
    
-</div>
+</div> 
 <!-- CHAMADA DA DIV FOOTER -->
 @include('adm.adm_footer')
 

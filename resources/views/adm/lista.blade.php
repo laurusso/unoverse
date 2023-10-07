@@ -1,8 +1,8 @@
 <!--Lista os dados armazenados no Banco-->
-@include('adm.adm_menu') 
+      @include('adm.adm_menu') 
 
         <div class='adm espaco'>
-            <h3 class='adm '>Lista de atividades</h3>
+            <h3 class='adm '><b>Lista de atividades</b></h3>
             <div class="btn-add"> <!-- BOTAO ADICIONAR -->
                      <a class=" btn-lista lista-add"  href="{{ route('adm.adicionar')}}">Adicionar atividades</a>
                 </div>
@@ -19,7 +19,7 @@
                             <th class="btn-alterar">Alterar</th>
                             <th class="btn-excluir">Excluir</th>
                        </tr>
-                    </thead>
+                    </thead> 
                     <tbody>
                         @foreach($linhas as $row) <!-- LOOP PRA LER A TABELA -->
                             <tr>

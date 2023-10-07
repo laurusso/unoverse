@@ -34,7 +34,7 @@
 
              </div><!--acaba slider -->
              
-             <div id="carouselExampleCaptions" class="carousel slide">
+             <div id="carouselExampleCaptions" class="carousel">
             
              
             <div class="video">
@@ -47,37 +47,56 @@
                     <img src="{!! asset('img/app_bolas_azuis.svg') !!}" id="app_bolas_azuis">
                     <img src="{!! asset('img/app_bolas_amarelas.svg') !!}"  id="app_bolas_amarelas">
                 </div>
-                <p>O Unoverse é um curso de robótica com arduíno que contempla desde alunos de escolas públicas a professores e qualquer um interessado em adentrar o universo da tecnologia e programação de maneira acessível e divertida</p>
+                <p>O Unoverse é um curso de robótica com arduíno para pessoas interessadas em iniciar no universo da tecnologia e programação de maneira acessível e divertida. Seja você aluno, professor ou curioso!</p>
             </div>
 
             <div class="arduino_info">
-                <h2><b>Conheça o Arduíno</b></h2>
+                <h2>Conheça o Arduino</h2>
                 <div class="componentes">
                 
-                    <a href="#" onclick="abrirModal_Placa_Uno()">
-                        <img src="{!! asset('img/Placa_Uno.svg') !!}" alt="">
-                    </a>
-                    <a href="#" onclick="abrirModal_Protoboard()">
-                        <img src="{!! asset('img/Protoboard.svg') !!}" alt="">
-                    </a>
-                    <a href="#" onclick="abrirModal_Jumpers()">
-                        <img src="{!! asset('img/Jumpers.svg') !!}" alt="">
-                    </a>
-                 </div>
+                        <div class="engloba-comp">
+                            <a href="#" onclick="abrirModal_Placa_Uno()">
+                                <img src="{!! asset('img/Placa_Uno.svg') !!}" alt="">
+                            </a>
+                            <p>A Placa Uno é destinada a estudantes e profissionais de eletrônica para desenvolver seus projetos.</p>
+                        </div>
+                        <div class="engloba-comp">
+                        <p>Com uma protoboard é possível construir circuitos de projetos simples, usando uma matriz reutilizável.</p>    
+                            <a href="#" onclick="abrirModal_Protoboard()">   
+                                <img src="{!! asset('img/Protoboard.svg') !!}" alt="" >
+                            </a>
+                        </div>
+                        <div class="engloba-comp">
+                            <a href="#" onclick="abrirModal_Jumpers()">
+                                <img src="{!! asset('img/Jumpers.svg') !!}" alt="">
+                            </a>
+                            <p>Os jumpers são cabos elétricos com pontas preparadas para fazer conexões com o circuito.</p>
+                        </div>
+                    </div>       
+                 
                  
             </div>
-           
+              
             
+                
             <div class="texto_info">
                         <p>O Arduino é uma plataforma de prototipagem eletrônica muito versátil e amplamente utilizada por estudantes, hobbistas e profissionais das mais diversas áreas. Ele consiste em uma placa de circuito impresso com um microcontrolador e uma série de pinos de entrada e saída, que permitem a conexão e controle de sensores, botões, LEDs, motores e outros dispositivos eletrônicos.</p>
-                        <img src="{!! asset('img/Arduino_Exemplo.jpg') !!}">
-                        <p>Uma das principais características do Arduino é a sua facilidade de uso e programação. Ele possui uma linguagem de programação própria baseada em C/C++, que é bastante intuitiva e acessível mesmo para iniciantes. Além disso, existem diversas bibliotecas e exemplos disponíveis que facilitam o desenvolvimento de projetos.</p>
+                        <img src="{!! asset('img/home/arduino.jpg') !!}">
+                        <p>Uma das principais características do Arduino é a sua facilidade de uso e o seu baixo custo. Ele possui uma linguagem de programação própria baseada em C/C++, que é bastante intuitiva e acessível mesmo para iniciantes. Além disso, existem diversas bibliotecas e exemplos disponíveis que facilitam o desenvolvimento de projetos.</p>
+                        <img src="{!! asset('img/home/projetos.jpg') !!}">
+                
 
-                </div> 
-                <img src="{!! asset('img/wave_home.svg') !!}" id="wave_home">
 
-        <!-- CHAMADA DA DIV FOOTER -->
-        @include('layout._footer')
+            </div> 
+
+            <div class="app-texto_info">
+                        <p>A Arduino permite uma ampla utilização, tanto para hobbistas, quanto para profissionais. Consiste em uma placa com uma série de entradas que permitem conexões com outros componentes. </p>
+                        <img src="{!! asset('img/home/arduino.jpg') !!}">    
+            </div> 
+                <img src="{!! asset('img/wave_home.svg') !!}" id="wave_home">    
+
+        <!-- CHAMADA DA DIV FOOTER -->     
+        @include('layout._footer')   
 
        
 </body>

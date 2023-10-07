@@ -10,7 +10,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head> 
   <!-- 
       Este primeiro arquivo representa apenas o menu, que é fixo em todas as paginas do site.
    -->
@@ -19,12 +19,12 @@
     <title>@yield('titulo')</title> <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->
-    <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }} " type="text/css"> -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }} " type="text/css">
         <!-- INSERCAO CSS -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}" media="screen and (max-width: 768px)">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}"  media="screen and (max-width: 767px) and (orientation: portrait)" >   
 
 <!-- CSS para telas maiores (acima de 768px) -->
-          <link rel="stylesheet" href="{{ asset('css/stylelarge.css') }}" media="screen and (min-width: 769px)">
+         <link rel="stylesheet" href="{{ asset('css/stylelarge.css') }}" media="only screen and (min-width: 769px)">   
     
     <!-- ICONES EXTRAIDOS DO BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -32,14 +32,14 @@
     
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
     <link 
       rel="stylesheet" 
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" 
-    />
+    /> 
   </head>
-<body>
- <div class="mae">
+<body>  
+ <div class="mae"> 
   <!-- INICIO DO TOPO FIXO LATERAL (OFFCANVAS EXTRAIDO DO BOOTSTRAP) -->
  <nav class="navbar navbar-dark fixed-top fixada">
   <div class="container-fluid">
@@ -61,7 +61,10 @@
             <a class="nav-link active" aria-current="page" href="{{route('menu.home')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('menu.modulos')}}">Módulos</a>
+            <a class="nav-link" href="{{route('menu.modulos')}}">Módulos</a>  
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('menu.devs')}}">Devs 2023</a>  
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.acoes')}}">Ações</a>
@@ -88,7 +91,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Logar
             </a>
-
+    
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="{{route('menu.menuCad')}}">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
               <li><a class="dropdown-item" href="{{route('login.index')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
@@ -96,12 +99,8 @@
         </ul>
         @endif
        
-        <!-- UMA BARRA DE PESQUISA *********** NAO SEI SE USAREMOS SO DEIXEI AI -->
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-        </form>
-      </div>
+       
+          </div>
     </div>
   </div>
 </nav>

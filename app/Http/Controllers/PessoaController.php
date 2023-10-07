@@ -1,4 +1,4 @@
-<?php
+<?php     
 
 namespace App\Http\Controllers;
 
@@ -6,14 +6,19 @@ use Illuminate\Http\Request;
 use App\Models\Pessoa;
 use App\Models\Aluno;
 use App\Models\Professor;
+use App\Models\Atividade;
+use App\Models\Arquivo;
 
+
+use Illuminate\Support\Facades\Log;
 use Intervention\Image\Facades\Image;
 //use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 class PessoaController extends Controller
 {
     public function cadastrar(Request $req){   
-        //carrega view da home de adm
+        //carrega view da home de adm   
        
         $dados_pessoa = $req->only(['email','senha','foto','nome','sobrenome','genero','curioso']);
         $senha =  $req->only(['senha']);
@@ -59,11 +64,16 @@ class PessoaController extends Controller
     }
     public function index(){
 
-        return view('menu.entrar');
+        return view('menu.entrar');   
     }
+    public function atividade(){
+        $atvs = Atividade::all();
+        $arq = Arquivo::all();
+        return view('users.atividade',compact('atvs','arq'));   
+    }  
    
     public function perfil(){
-        $id = Auth::user()->id;
+        $id = Auth::user()->id;   
         $user = Pessoa::where('id',$id)->first();
       
        if($user['foto'] == null)
@@ -84,7 +94,7 @@ class PessoaController extends Controller
             [
                 'email' => 'required|email',
                 'senha'=> 'required'
-            ],
+            ],       
             [   'email.required' => 'Email é obrigatório',
                 'email.email' => 'O email deve ser válido',
                 'senha.required' => 'Senha é obrigatória',
@@ -121,9 +131,13 @@ class PessoaController extends Controller
     }
 
     public function logout(){
-        Auth::logout();
-       
-        return redirect()->route('login.index');
-     
+        Auth::logout(); 
+        session()->invalidate(); 
+
+        
+      
+        return redirect('menu/entrar');
+
+        
     }
 }

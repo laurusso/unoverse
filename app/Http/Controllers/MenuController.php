@@ -11,7 +11,11 @@ class MenuController extends Controller
     // ACESSO AS VISOES
     // acesso a home
     public function home() {
+        
         return view("menu.home");
+        
+
+  
         
     }
 
@@ -22,7 +26,7 @@ class MenuController extends Controller
     }
 
     // acesso a parcerias
-    public function acoes() {
+    public function acoes() { 
         return view("menu.acoes");
         
     }

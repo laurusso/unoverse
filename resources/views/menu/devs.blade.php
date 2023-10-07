@@ -3,16 +3,12 @@
  -->
 
 <!-- CHAMADA DA DIV FIXED -->
-@section('titulo', 'Devs')
+@section('titulo', 'Devs 2023')
 @include('layout._menu')
     <div class="engloba-texto">
         <div class="texto-devs">
-            <h1>desenvolvedores</h1>
-            <p>Os desenvolvedores da Unoverse são estudantes do 3° ano do Colégio Técnico Industrial "Prof. Isaac Portal Roldán" - UNESP em Bauru, 
-                cursam informática integrado ao ensino médio. A aplicação da plataforma se dá em razão da expansão da robótica ligada à 
-                existênca de componentes eletrônicos nas escolas estaduais de Bauru e a não qualificação de professores dessa rede para tal fim. 
-                Logo, a Unoverse é um site de auxílio de ensino a esse nicho de pessoas principalmente, mas os devs desenvolveram de modo a ficar 
-                livre aos possíveis usuários do website. Aproveite os recursos que a tecnologia pode te trazer :)</p>
+            <h1>desenvolvedores 2023</h1>
+            <p>O Unoverse iniciou-se em 2023 através dessa equipe de desenvolvedores, ano em que todos encontravam-se no 3º ano do ensino médio integrado ao técnico de informática no Colégio Técnico Industrial "Prof. Isaac Portal Roldán" - UNESP em Bauru. Assim, em conjunto analisaram a alta procura de escolas de Bauru em entender sobre robótica e planejaram o website de acordo com esses requisitos, com possibilidades para expansão. O principal objetivo foi de protagonizar a robótica a toda pessoa que se interesse  busque aprendizado!  </p>
         </div>
         <div class="card-roxo">
         <h2>Laura Rodrigues Russo - líder técnica</h2>
@@ -23,7 +19,7 @@
     <div class="engloba-pessoas">
             <div class="card-azul">
                 <img title="dev Nicole" alt="Essa imagem não foi enontrada :/ Mas é a dev Nicole!!" src="{!! asset('img/devs/nicole.jpg') !!}">
-                <h2>Nicole Emilia - designer</h2>
+                <h2>Nicole Emilia - programadora front-end</h2>
             </div>
 
             <div class="card-azul">
@@ -33,11 +29,11 @@
 
             <div class="card-azul">
                 <img title="dev Evellyn" alt="Essa imagem não foi enontrada :/ Mas é a dev Evellyn!!" src="{!! asset('img/devs/evellyn.jpg') !!}">
-                <h2>Evellyn Cipriano - designer</h2>
+                <h2>Evellyn Cipriano - programadora back-end</h2>
             </div>
             <div class="card-amarelo">
                 <img title="dev Pedro" alt="Essa imagem não foi enontrada :/ Mas é o dev Pedro!!" src="{!! asset('img/devs/pedro.jpg') !!}">
-                <h2>Pedro Kazuki Mori Hirata - desenvolvedor</h2>
+                <h2>Pedro Kazuki Mori Hirata - auxiliar</h2>
             </div>
             <div class="card-amarelo">
                 <img title="dev Eloisa" alt="Essa imagem não foi enontrada :/ Mas é a dev Eloisa!!" src="{!! asset('img/devs/eloisa.jpg') !!}">
@@ -48,7 +44,7 @@
                 <h2>Deborah Campos - administrativa técnica</h2>
             </div>
     </div>
-    
+        
     
 
 

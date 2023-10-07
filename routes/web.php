@@ -7,6 +7,8 @@ use App\Http\Controllers\ConteudoController;
 use App\Http\Controllers\PessoaController;
 
 use App\Http\Controllers\adm\AtividadeController;
+
+use App\Http\Controllers\adm\UserController;
 use App\Models\Pessoa;
 
 // use App\Http\Middleware\Auth\AdmAcess;
@@ -65,6 +67,8 @@ Route::get('/users/professor/conteudo',['as'=>'menu.conteudo','uses'=>'App\Http\
 
 
 
+
+
 //Rota login
 
 //Route::get('/menu/entrar', [MenuController::class, 'entrar'])->name('menu.entar');
@@ -96,9 +100,11 @@ Route::get('/users/perfil', [PessoaController::class, 'perfil'])->name('login.pe
 Route::get('/adm/index',
 ['as'=>'adm.index','uses'=>'App\Http\Controllers\adm\AtividadeController@index'])->middleware('adm');
 Route::get('/adm/lista',
-['as'=>'adm.lista','uses'=>'App\Http\Controllers\adm\AtividadeController@lista'])->middleware('adm');
+['as'=>'adm.lista','uses'=>'App\Http\Controllers\adm\AtividadeController@lista'])->middleware('adm');  
+// Route::get('/adm/lista_usuarios',
+// ['as'=>'adm.lista_usuarios','uses'=>'App\Http\Controllers\adm\UserController@lista'])->middleware('adm');
 Route::get('/adm/adicionar',
-['as'=>'adm.adicionar','uses'=>'App\Http\Controllers\adm\AtividadeController@adicionar'])->middleware('adm');
+['as'=>'adm.adicionar','uses'=>'App\Http\Controllers\adm\AtividadeController@adicionar'])->middleware('adm'); 
 Route::post('/adm/salvar',
 ['as'=>'adm.salvar','uses'=>'App\Http\Controllers\adm\AtividadeController@salvar'])->middleware('adm');
 Route::get('/adm/editar/{num}',
@@ -108,6 +114,13 @@ Route::put('/adm/atualizar/{num}',
 Route::get('/adm/excluir/{num}',
 ['as'=>'adm.excluir','uses'=>'App\Http\Controllers\adm\AtividadeController@excluir'])->middleware('adm');
 
-//});
 
+//adm lista user
+Route::get('/adm/lista_usuarios', [UserController::class, 'lista'])->name('lista.user')->middleware('adm');
 
+ 
+Route::get('/adm/trem',['as'=>'adm.tren','uses'=>'App\Http\Controllers\adm\AtividadeController@trem'])->middleware('adm');  
+// Route::get('/adm/trem/{num}', [AtividadeController::class, 'ler'])->name('adm.ler');
+// Route::get('/adm/trem/{code}', [AtividadeController::class, 'ler'])->name('adm.ler');
+
+Route::get('/users/atividade',['as'=>'users.atividade','uses'=>'App\Http\Controllers\PessoaController@atividade']);         
