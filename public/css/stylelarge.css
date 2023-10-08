@@ -1179,6 +1179,28 @@ background: #1789FC;
   z-index: 9999;
 }
 
+.lateral-bg {
+  display: none;
+}
+.iframe-aula iframe{
+  width: 74%;
+    height: 100%;
+    float: right;
+    margin-right: 2vw;
+    transform: translate(0vw, -64vh);
+} 
+
+.iframe-lateral
+{
+  /* width: 74%; */
+  /* height: 100%; */
+  /* float: right; */
+  /* margin-right: 4%; */
+  /* margin-bottom: 31vh; */
+  /* transform: translate(2vw, -63vh); */
+  /* background-color: #fff;
+  border: 1px solid #000 */
+}
 /* Estilo para o modal interno */
 .modal-iframe {
   position: absolute;
@@ -1252,11 +1274,9 @@ background: #1789FC;
 .conteudo_form_ativ{
   margin-top: 8%;
 } 
-.form_cad_ativ{
-  /* margin-top: 6vh; */
-}
+
 .form_cad_ativ label{
-  color: #000;  
+  color: #000;   
   font-size: 3vh;
 } 
 .form_cad_ativ input{
@@ -1505,7 +1525,7 @@ background: #1789FC;
   height: 10vh;
   width: 15vw;
   border-radius: 1vw;
-  fon
+  
 
 }
 .img_perfil img{

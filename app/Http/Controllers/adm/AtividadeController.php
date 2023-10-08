@@ -89,11 +89,15 @@ class AtividadeController extends Controller
     public function atualizar(Request $req, $num)
     {
         $atualiza_atv = $req->only(['nome','modulo','descricao','aluno']);
-        if($atualiza_atv['aluno']=='al')//testa valor enviado pelo radiobutton
-        {   $atualiza_atv['aluno'] = 'true'; } //selecionou aluno atribuiu valor TRUE
-       else
-        {    $atualiza_atv['aluno'] = 'false';} //selecionou professor atribuiu valor FALSE
-        
+        if($dados_atv['aluno'] == "curioso")
+        {
+            $dados_atv['curioso'] = true;
+            $dados_atv['aluno'] = false;
+        } 
+        else
+        {
+            $dados_atv['curioso'] = false;
+        }
         if($req->hasFile('upload')){
             $n = rand(1111,9999); // escolhe numero pra não repetir
             $dir = "atividades/"; // pasta onde armazena arquivos, localizada no projeto em: /public/atividades
@@ -115,6 +119,22 @@ class AtividadeController extends Controller
         Arquivo::where('fk_num',$num)->update($atualiza_arq);
 
         }
+        if($req->hasFile('codigo')){
+            
+            //$num = rand(1111,9999); // escolhe numero pra não repetir
+            $n = rand(1111,9999); // escolhe numero pra não repetir
+            $dir = "atividades/code/"; // pasta onde armazena arquivos, localizada no projeto em: /public/atividades
+            $ex = $req['codigo']->guessClientExtension(); // pega extensão, jpg, png ...
+            // $nomeArquivo = $req->file('codigo')->getClientOriginalName();
+            $nomeArquivo = "code".$n.".".$ex; // monta novo nome
+           // $nomeArquivo = "aula".$num.".".$ex; // monta novo nome
+            $req['codigo']->move($dir,$nomeArquivo);//move o arquivo para  /public/atividades
+    
+            $codigo = $dir . $nomeArquivo; //armazena o nome e diretorio da image para inserir na tabela ARQUIVOS
+            
+            $atualiza_atv['codigo'] = $codigo;
+            // dd($dados_atv['codigo']);
+        }  
         
        
         Atividade::where('num',$num)->update($atualiza_atv);

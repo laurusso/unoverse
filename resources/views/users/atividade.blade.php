@@ -17,16 +17,13 @@
                     @foreach($atvs as $row)
                         @foreach($arq as $row2)
                             @if($row->num == $row2->fk_num)
-                                <li><button onclick="abrirModal('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}}</button></li>
+                                <li><button onclick="abrirLateral('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}}</button></li>
                             @endif
                         @endforeach
                     @endforeach
-                </div>
-                <div class="eng-atv">
-                    <div id="modal-bg">
-                        <span id="fechar-modal" onclick="fecharModal()">X Fechar</span>
-                        <iframe id="arquivo" class="modal-iframe" src=""></iframe>                                
-                    </div>
+                <!-- </div>
+                <div class="eng-atv">  -->
+                    
                 </div>
                 
             </ul>
@@ -34,6 +31,10 @@
         </div>    
 
     </div>
+                    <span class="iframe-aula" id="lateral-bg">
+                        <span id="fechar-modal" onclick="fecharLateral()">X Fechar</span>
+                        <iframe id="arquivo" class="iframe-lateral" src=""></iframe>                                
+</span>
     
 </div>    
 <script src="{{ asset('js/vizu.js') }}"></script>   
