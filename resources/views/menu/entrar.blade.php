@@ -60,11 +60,13 @@
                
             </div>
 
-            <div class="form-btn">
-                <label><input type="submit"> Entrar</label> <!--add o caminho p/ verificacão -->
-            </div>
-            <div class="form-btn">
-            <a href="add link de cadastro" alt="Ir para cadastro">Cadastrar</a>
+            <div class="eng-btns-log">
+                <div class="form-btn">
+                    <label><input type="submit"> Entrar</label> <!--add o caminho p/ verificacão -->
+                </div>
+                <div class="form-btn">
+                    <a href="{{route('menu.menuCad')}}" alt="Ir para cadastro">Cadastrar</a>
+                </div>
             </div>
         </form> @endif
     </div>

@@ -19,7 +19,7 @@
     <div class="engloba-pessoas">
             <div class="card-azul">
                 <img title="dev Nicole" alt="Essa imagem não foi enontrada :/ Mas é a dev Nicole!!" src="{!! asset('img/devs/nicole.jpg') !!}">
-                <h2>Nicole Emilia - programadora front-end</h2>
+                <h2>Nicole Emilia - programadora front</h2>
             </div>
 
             <div class="card-azul">
@@ -29,15 +29,15 @@
 
             <div class="card-azul">
                 <img title="dev Evellyn" alt="Essa imagem não foi enontrada :/ Mas é a dev Evellyn!!" src="{!! asset('img/devs/evellyn.jpg') !!}">
-                <h2>Evellyn Cipriano - programadora back-end</h2>
+                <h2>Evellyn Cipriano - programadora back</h2>
             </div>
             <div class="card-amarelo">
                 <img title="dev Pedro" alt="Essa imagem não foi enontrada :/ Mas é o dev Pedro!!" src="{!! asset('img/devs/pedro.jpg') !!}">
-                <h2>Pedro Kazuki Mori Hirata - auxiliar</h2>
+                <h2>Pedro Kazuki Mori Hirata - auxiliar técnico</h2>
             </div>
             <div class="card-amarelo">
                 <img title="dev Eloisa" alt="Essa imagem não foi enontrada :/ Mas é a dev Eloisa!!" src="{!! asset('img/devs/eloisa.jpg') !!}">
-                <h2>Eloisa Gonçalves - gestora de banco de dados</h2>
+                <h2>Eloisa Gonçalves - gestora administrativa</h2>
             </div>
             <div class="card-amarelo">
                 <img title="dev Deborah" alt="Essa imagem não foi enontrada :/ Mas é a dev Deborah!!"src="{!! asset('img/devs/deborah.jpg') !!}">

@@ -4,11 +4,7 @@
 @include('layout._menu')  
 <link rel="stylesheet" href="{{ asset('css/teste.css') }} " type="text/css">
 
-<div class="pag-atvs">
-<div class="content">
-        <!-- Your page content goes here -->
-        <button id="toggleButton" class="sidebar-btn"><i class="bi bi-three-dots"></i></button>
-    </div>
+<!-- <div class="pag-atvs"> -->
     <div class="engloba-atv" id="sidebar">
         <div class="blocado">
             <ul class="menu-atv">
@@ -31,12 +27,15 @@
         </div>    
 
     </div>
-                    <span class="iframe-aula" id="lateral-bg">
+
+<div class="pag-atvs" id="content">
+        <span class="iframe-aula" id="lateral-bg">
                         <span id="fechar-modal" onclick="fecharLateral()">X Fechar</span>
                         <iframe id="arquivo" class="iframe-lateral" src=""></iframe>                                
-</span>
-    
-</div>    
+        </span>
+        <button id="toggleButton" class="sidebar-btn"><i id="list" class="bi bi-list"></i></button>
+</div>
+<!-- </div>     -->
 <script src="{{ asset('js/vizu.js') }}"></script>   
 <script src="{{ asset('js/sidebar.js') }}"></script>
      

@@ -11,10 +11,10 @@
                     <thead>
                         
                         <tr class="cabecalho" > <!-- CABECALHO -->
-                            <th class="num">Num</th>
+                            <th class="num">Número</th>
                             <th class="nome">Nome</th>
-                            <th class="modulo">Modulo</th>
-                            <th class="descricao">Descricao</th>
+                            <th class="modulo">Módulo</th>
+                            <th class="descricao">Descrição</th>
                             <th class="arquivo">Arquivo</th>
                             <th class="btn-alterar">Alterar</th>
                             <th class="btn-excluir">Excluir</th>
@@ -44,10 +44,10 @@
                                 </div>
                                        
                                 <td class="btn"> <!-- COLUNA COM ALTERAR E EXCLUIR -->
-                                    <a class='btn-alterar' href="{{ route('adm.editar',$row->num) }}"><img src="{!! asset('img/adm/adm_trocar.png') !!}"></a>
+                                    <a class='btn-alterar' href="{{ route('adm.editar',$row->num) }}"><i class="bi bi-arrow-left-right"></i></a>
                                 </td>
                                 <td>
-                                    <a class='btn-excluir' href="{{ route('adm.excluir',$row->num) }}"><img src="{!! asset('img/adm/adm_excluir.png') !!}"></a>
+                                    <a class='btn-excluir' href="{{ route('adm.excluir',$row->num) }}"><i class="bi bi-x-circle-fill"></i></a>
                                 </td>
                             </tr>
                         @endforeach
