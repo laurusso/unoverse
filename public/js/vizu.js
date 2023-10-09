@@ -11,6 +11,18 @@ function abrirLateral(url) {
     modalIframe.src = url;
     lateralBg.style.display = 'inline';
 }
+// function abrirCode(url ,num) {
+//     var lateralBg = document.getElementById('lateral-bg');
+//     var modalIframe = document.getElementById('arquivo');
+//     modalIframe.src = url;
+//     lateralBg.style.display = 'inline';
+
+//     var codeBg = document.getElementById('code-bg');
+//     var boxcode = document.getElementById('boxcode');
+//     boxcode = num;
+//     //codeBg.style.display = 'block';
+// }
+
   
 
 function fecharModal() {

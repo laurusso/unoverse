@@ -13,7 +13,7 @@
                     @foreach($atvs as $row)
                         @foreach($arq as $row2)
                             @if($row->num == $row2->fk_num)
-                                <li><button onclick="abrirLateral('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}}</button></li>
+                                <li><button onclick="abrirLateral('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}} @if($row->codigo) <a href="{{ route('code.ler', $row->codigo) }}"></a>@endif</button></li>
                             @endif
                         @endforeach
                     @endforeach
@@ -30,13 +30,29 @@
 
 <div class="pag-atvs" id="content">
         <span class="iframe-aula" id="lateral-bg">
-                        <span id="fechar-modal" onclick="fecharLateral()">X Fechar</span>
-                        <iframe id="arquivo" class="iframe-lateral" src=""></iframe>                                
+                <span id="fechar-modal" onclick="fecharLateral()">X Fechar</span>
+                <iframe id="arquivo" class="iframe-lateral" src=""></iframe>                                
         </span>
         <button id="toggleButton" class="sidebar-btn"><i id="list" class="bi bi-list"></i></button>
 </div>
+@if($conteudo)
+    <div id="lateral-bg" class="box size" name = "texto" >
+            <pre>
+                <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
+                
+
+                    <pre id="code">{{ $conteudo }}</pre>
+                </code>
+            </pre> 
+        
+    </div>
+@endif
+
+
+
 <!-- </div>     -->
 <script src="{{ asset('js/vizu.js') }}"></script>   
+<script src="{{ asset('js/prism.js') }}"></script> 
 <script src="{{ asset('js/sidebar.js') }}"></script>
      
 @include('layout._footer') 

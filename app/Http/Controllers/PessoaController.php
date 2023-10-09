@@ -140,4 +140,30 @@ class PessoaController extends Controller
 
         
     }
+    public function lercode($codigo)
+    {
+        //$num = 21;
+        // Caminho para o arquivo de texto
+       // $caminhoArquivo = $req;
+        $caminhoArquivo =  $codigo;
+        // Verifique se o arquivo existe
+        if (file_exists($caminhoArquivo)) {
+            // Leia o conteúdo do arquivo
+            $conteudo = file_get_contents($caminhoArquivo);
+
+            // Retorne a vista com o conteúdo 
+          //  return redirect()->back()->with('conteudo', $conteudo);
+            // return view('adm.trem')->with('conteudo', $conteudo);
+            //  return $conteudo;
+            return view('users.atividade', compact('conteudo') );
+        } else { 
+            // Arquivo não encontrado 
+           // $conteudo = "sem code"; 
+           // return redirect()->back()->with('conteudo', $conteudo);
+            // return view('adm.trem')->with('conteudo', $conteudo);
+            $conteudo = false;
+            return view('users.atividade', compact('conteudo'));
+            //  return $conteudo;
+        }
+    }
 }

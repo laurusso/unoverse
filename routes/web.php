@@ -93,6 +93,8 @@ Route::get('/users/professor/teste', [ConteudoController::class, 'listar'])->nam
 
 Route::get('/users/perfil', [PessoaController::class, 'perfil'])->name('login.perfil');
 
+Route::get('/users/atividade/{codigo}', [PessoaController::class, 'lercode'])->name('code.ler');
+
 //rota ADM  !!!dps  do login é necessário agrupar
 
 

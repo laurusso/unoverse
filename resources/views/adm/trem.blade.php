@@ -15,4 +15,18 @@
    @endif
     <hr> 
     @endforeach
-@include('adm.adm_footer')     
+@include('adm.adm_footer')      
+
+<div class="box size" name = "texto" >
+        <pre>
+            <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
+                void setup(){
+                    Serial.println(9600);
+                }
+                void loop(){
+                    println("Hello Jose!");
+                }
+            </code>
+        </pre> 
+       
+ </div>
