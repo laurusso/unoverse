@@ -6,15 +6,7 @@ function abrirModal(url) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const botaoExterno = document.getElementById("botaoExterno");
-    const submitButton = document.querySelector("#meuFormulario button[type=submit]");
 
-    botaoExterno.addEventListener("click", function() {
-        // Simula o clique no botão dentro do formulário
-        submitButton.click();
-    });
-});
 
 function MostraAtv(code) {
     

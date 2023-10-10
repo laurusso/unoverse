@@ -11,9 +11,9 @@
 <pre>
     <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
     
-     @if(session('conteudo'))
+     @if(isset($conteudo))
             <div class="alert alert-success">
-              <pre>  {{ session('conteudo') }} </pre>
+              <pre id="code">  {{ $conteudo }} </pre>
             </div>
         @endif
        

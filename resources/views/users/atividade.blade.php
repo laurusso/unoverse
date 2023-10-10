@@ -49,9 +49,9 @@
         <button id="toggleButton" class="sidebar-btn"><i id="list" class="bi bi-list"></i></button>
 </div>
 
-<iframe src="{{ asset('users.boxcode') }}" name="iframeResultado" id="iframeResultado" style="border:none;">
+<iframe width="500px" src="{{ asset('users/boxcode')}}">
 
-</iframe>
+</iframe> 
 
     
 

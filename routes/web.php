@@ -95,6 +95,7 @@ Route::get('/users/perfil', [PessoaController::class, 'perfil'])->name('login.pe
 
 // Route::get('/users/atividade/{codigo}', [PessoaController::class, 'lercode'])->name('code.ler');
 Route::post('/users/atividade/', [PessoaController::class, 'lercode'])->name('code.ler');
+Route::get('/users/boxcode', [PessoaController::class, 'boxcode']);
 //rota ADM  !!!dps  do login é necessário agrupar
 
 
@@ -125,4 +126,12 @@ Route::get('/adm/trem',['as'=>'adm.tren','uses'=>'App\Http\Controllers\adm\Ativi
 // Route::get('/adm/trem/{num}', [AtividadeController::class, 'ler'])->name('adm.ler');
 // Route::get('/adm/trem/{code}', [AtividadeController::class, 'ler'])->name('adm.ler');
 
-Route::get('/users/atividade',['as'=>'users.atividade','uses'=>'App\Http\Controllers\PessoaController@atividade']);         
+Route::get('/users/atividade',['as'=>'users.atividade','uses'=>'App\Http\Controllers\PessoaController@atividade']);   
+
+Route::get('/users/logadaCurioso', [PessoaController::class, 'logadoCurioso'])->name('log.curioso');
+Route::get('/users/logadaAluno', [PessoaController::class, 'logadoAluno'])->name('log.aluno');
+Route::get('/users/logadaProfessor', [PessoaController::class, 'logadoProfessor'])->name('log.professor');
+
+
+
+

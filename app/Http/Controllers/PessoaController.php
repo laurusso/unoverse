@@ -141,7 +141,10 @@ class PessoaController extends Controller
         
     }
 
-
+    public function boxcode()
+    {
+        return view('users.boxcode');
+    }
     public function lercode(Request $req)
     {
         //$num = 21;
@@ -155,14 +158,30 @@ class PessoaController extends Controller
             $conteudo = file_get_contents($caminhoArquivo);
 
             // Retorne a vista com o conteúdo 
-            return view('users.boxcode',compact('conteudo'));
+            // return redirect()->route('users.boxcode')->with('conteudo', $conteudo);
+            
+            return view('users.boxcode', compact('conteudo'));
   
         } else {  
             // Arquivo não encontrado 
           
             $conteudo = "semcode";
-            return view('users.boxcode',compact('conteudo'));
+            return view('users.boxcode', compact('conteudo'));
+            // return redirect()->route('users.boxcode')->with('conteudo', $conteudo);
             
         }
     }
+    public function logadoCurioso()
+    {
+        return view('users.logadaCurioso');
+    }
+    public function logadoAluno()
+    {
+        return view('users.logadaAluno');
+    }
+    public function logadoProfessor()
+    {
+        return view('users.logadaProfessor');
+    }
+
 }
