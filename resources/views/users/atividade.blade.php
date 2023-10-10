@@ -13,7 +13,20 @@
                     @foreach($atvs as $row)
                         @foreach($arq as $row2)
                             @if($row->num == $row2->fk_num)
-                                <li><button onclick="abrirLateral('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}} @if($row->codigo) <a href="{{ route('code.ler', $row->codigo) }}"></a>@endif</button></li>
+                            <form  method="post" action="{{route('code.ler')}}" target="iframeResultado">
+                            {{ csrf_field() }}
+                                     <!-- Campos do formulário (se necessário) -->
+                                     <input type="text" name="code" value="{{isset($row->codigo) ? $row->codigo : ''}}">
+                                     <button type="submit" id="botaoExterno" onclick="abrirLateral('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}} </button>
+
+                                    
+                                </form>
+                                <li>
+                                    <!-- <button  onclick="abrirLateral('{{ asset($row2->upload) }}')" class="btn-atv">{{ $row->num }} - {{$row->nome}} </button> -->
+                                    
+
+                                </li>
+                                
                             @endif
                         @endforeach
                     @endforeach
@@ -35,18 +48,13 @@
         </span>
         <button id="toggleButton" class="sidebar-btn"><i id="list" class="bi bi-list"></i></button>
 </div>
-@if($conteudo)
-    <div id="lateral-bg" class="box size" name = "texto" >
-            <pre>
-                <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
-                
 
-                    <pre id="code">{{ $conteudo }}</pre>
-                </code>
-            </pre> 
-        
-    </div>
-@endif
+<iframe src="{{ asset('users.boxcode') }}" name="iframeResultado" id="iframeResultado" style="border:none;">
+
+</iframe>
+
+    
+
 
 
 

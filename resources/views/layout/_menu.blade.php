@@ -23,6 +23,7 @@
         <!-- INSERCAO CSS -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}"  media="screen and (max-width: 767px) and (orientation: portrait)" >   
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- CSS para telas maiores (acima de 768px) -->
          <link rel="stylesheet" href="{{ asset('css/stylelarge.css') }}" media="only screen and (min-width: 769px)">   
     
