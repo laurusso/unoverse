@@ -1,24 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<div id="lateral-bg" class="box size" name = "texto" >
 
+
+<link rel="stylesheet" href="{{ asset('css/teste.css') }} " type="text/css">
+
+<div class="pag-atvs" id="content">
 <pre>
     <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
     
-     @if(isset($conteudo))
+     
             <div class="alert alert-success">
-              <pre id="code">  {{ $conteudo }} </pre>
+              <pre id="code">  {{ session('conteudo') }} </pre>
             </div>
-        @endif
+       
        
     </code>
 </pre> 
 </div>
-</body>
-</html>
+
+
+<div class="" id="content">
+        <span >
+                <span >X Fechar</span>
+                <iframe id="arquivo" class="iframe-lateral" src="{{ session('arq') }}" width="500px"></iframe>
+                              
+        </span>
+        <iframe id="arquivo" class="iframe-lateral" src="{!! asset(session('arq')) !!}" width="500px"></iframe>         
+       
+</div>
+
+<script src="{{ asset('js/prism.js') }}"></script> 
+
+<script src="{{ asset('js/vizu.js') }}"></script> 

@@ -94,8 +94,10 @@ Route::get('/users/professor/teste', [ConteudoController::class, 'listar'])->nam
 Route::get('/users/perfil', [PessoaController::class, 'perfil'])->name('login.perfil');
 
 // Route::get('/users/atividade/{codigo}', [PessoaController::class, 'lercode'])->name('code.ler');
-Route::post('/users/atividade/', [PessoaController::class, 'lercode'])->name('code.ler');
-Route::get('/users/boxcode', [PessoaController::class, 'boxcode']);
+Route::get('/users/mostra/', [PessoaController::class, 'atividade']);
+Route::get('/users/boxcode/{num}', [PessoaController::class, 'lercode'])->name('code.ler');
+
+//Route::get('/users/boxcode', [PessoaController::class, 'boxcode']);
 //rota ADM  !!!dps  do login é necessário agrupar
 
 

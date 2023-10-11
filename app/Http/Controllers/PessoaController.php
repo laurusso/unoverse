@@ -68,8 +68,8 @@ class PessoaController extends Controller
     }
     public function atividade(){
         $atvs = Atividade::all();
-        $arq = Arquivo::all();
-        return view('users.atividade',compact('atvs','arq'));   
+        //$arq = Arquivo::all();
+        return view('users.mostra',compact('atvs'));   
     }  
    
     public function perfil(){
@@ -145,13 +145,17 @@ class PessoaController extends Controller
     {
         return view('users.boxcode');
     }
-    public function lercode(Request $req)
+    public function lercode($num)
     {
+        $caminhoArquivo = Atividade::where('num', $num)->value('codigo');
+       // $atv = Atividade::where('num',$num)->first();
+        $arq = Arquivo::where('fk_num',$num)->value('upload');;
         //$num = 21;
         // Caminho para o arquivo de texto
        // $caminhoArquivo = $req;
-        $caminhoArquivo =  $req['code'];
-      // dd($caminhoArquivo);
+
+       // $caminhoArquivo =  $atv['codigo'];
+       //dd($arq);
         // Verifique se o arquivo existe
         if (file_exists($caminhoArquivo)) {
             // Leia o conteúdo do arquivo
@@ -159,14 +163,16 @@ class PessoaController extends Controller
 
             // Retorne a vista com o conteúdo 
             // return redirect()->route('users.boxcode')->with('conteudo', $conteudo);
-            
-            return view('users.boxcode', compact('conteudo'));
+            return redirect()->back()->with(['conteudo' => $conteudo, 'arq' => $arq]);
+            // return redirect()->route('code.ler')->with(['conteudo' => $conteudo, 'arq' => $arq]);
+            //return  redirect()->view('users.boxcode', compact('conteudo','arq'));
   
         } else {  
             // Arquivo não encontrado 
           
             $conteudo = "semcode";
-            return view('users.boxcode', compact('conteudo'));
+            return redirect()->back()->with(['conteudo' => $conteudo, 'arq' => $arq]);
+            // return redirect()->route('code.ler')->with(['conteudo' => $conteudo, 'arq' => $arq]);
             // return redirect()->route('users.boxcode')->with('conteudo', $conteudo);
             
         }
