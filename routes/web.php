@@ -128,7 +128,7 @@ Route::get('/adm/trem',['as'=>'adm.tren','uses'=>'App\Http\Controllers\adm\Ativi
 // Route::get('/adm/trem/{num}', [AtividadeController::class, 'ler'])->name('adm.ler');
 // Route::get('/adm/trem/{code}', [AtividadeController::class, 'ler'])->name('adm.ler');
 
-Route::get('/users/atividade',['as'=>'users.atividade','uses'=>'App\Http\Controllers\PessoaController@atividade']);   
+Route::get('/users/atividade',['as'=>'users.atividade','uses'=>'App\Http\Controllers\PessoaController@atividades']);   
 
 Route::get('/users/logadaCurioso', [PessoaController::class, 'logadoCurioso'])->name('log.curioso');
 Route::get('/users/logadaAluno', [PessoaController::class, 'logadoAluno'])->name('log.aluno');

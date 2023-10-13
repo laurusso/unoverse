@@ -1,32 +1,28 @@
 
 
 <link rel="stylesheet" href="{{ asset('css/teste.css') }} " type="text/css">
+<div class="cont-atv">
+        @if(session('arq'))
+        <div class="iframe-block" id="">
+                
+                        
+                        <iframe   src="{{ asset(session('arq')) }}" width="500px"></iframe>
+        
+        </div>
+        @endif
 
-<div class="pag-atvs" id="content">
-<pre>
-    <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
-    
-     
-            <div class="alert alert-success">
-              <pre id="code">  {{ session('conteudo') }} </pre>
-            </div>
+        @if(session('conteudo'))
+
+        <div class="box size" name = "texto" >
+        <pre>
+            <code class="language-c line-numbers" id="texto" data-prismjs-copy="copiar">
+                {{ session('conteudo') }}
+
+            </code>
+        </pre> 
+      
        
-       
-    </code>
-</pre> 
+    </div>
+
+        @endif
 </div>
-
-
-<div class="" id="content">
-        <span >
-                <span >X Fechar</span>
-                <iframe id="arquivo" class="iframe-lateral" src="{{ session('arq') }}" width="500px"></iframe>
-                              
-        </span>
-        <iframe id="arquivo" class="iframe-lateral" src="{!! asset(session('arq')) !!}" width="500px"></iframe>         
-       
-</div>
-
-<script src="{{ asset('js/prism.js') }}"></script> 
-
-<script src="{{ asset('js/vizu.js') }}"></script> 

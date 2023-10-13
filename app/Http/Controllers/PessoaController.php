@@ -148,21 +148,13 @@ class PessoaController extends Controller
     public function lercode($num)
     {
         $caminhoArquivo = Atividade::where('num', $num)->value('codigo');
-       // $atv = Atividade::where('num',$num)->first();
         $arq = Arquivo::where('fk_num',$num)->value('upload');;
-        //$num = 21;
-        // Caminho para o arquivo de texto
-       // $caminhoArquivo = $req;
-
-       // $caminhoArquivo =  $atv['codigo'];
-       //dd($arq);
-        // Verifique se o arquivo existe
         if (file_exists($caminhoArquivo)) {
             // Leia o conteúdo do arquivo
             $conteudo = file_get_contents($caminhoArquivo);
 
             // Retorne a vista com o conteúdo 
-            // return redirect()->route('users.boxcode')->with('conteudo', $conteudo);
+           
             return redirect()->back()->with(['conteudo' => $conteudo, 'arq' => $arq]);
             // return redirect()->route('code.ler')->with(['conteudo' => $conteudo, 'arq' => $arq]);
             //return  redirect()->view('users.boxcode', compact('conteudo','arq'));
@@ -170,10 +162,9 @@ class PessoaController extends Controller
         } else {  
             // Arquivo não encontrado 
           
-            $conteudo = "semcode";
+            $conteudo = "";
             return redirect()->back()->with(['conteudo' => $conteudo, 'arq' => $arq]);
-            // return redirect()->route('code.ler')->with(['conteudo' => $conteudo, 'arq' => $arq]);
-            // return redirect()->route('users.boxcode')->with('conteudo', $conteudo);
+            
             
         }
     }
@@ -189,5 +180,7 @@ class PessoaController extends Controller
     {
         return view('users.logadaProfessor');
     }
+
+
 
 }

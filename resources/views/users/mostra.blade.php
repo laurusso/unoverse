@@ -5,9 +5,13 @@
 <link rel="stylesheet" href="{{ asset('css/teste.css') }} " type="text/css">
 
 <!-- <div class="pag-atvs"> -->
-<div class="espaco">AAAAAAAAAAAAAAAAAAA
-        
-</div>
+<div class="body-atv">
+<div class="pag-atvs" >
+    
+<div class="content">
+        <!-- Your page content goes here -->
+        <button id="toggleButton" class="sidebar-btn"><i class="bi bi-three-dots"></i></button>
+    </div>
     <div class="engloba-atv" id="sidebar">
         <div class="blocado">
             <ul class="menu-atv">
@@ -21,16 +25,14 @@
                                     
                                 
                                 <li>
-                                <a class='btn-excluir' href="{{ route('code.ler',$row->num) }}"> {{ $row->num }} - {{$row->nome}} </a>
+                                <a class="btn-atv" href="{{ route('code.ler',$row->num) }}"> {{ $row->num }} - {{$row->nome}} </a>
                                 </li>
 
                            
                     @endforeach
 
-                    @include('users.boxcode')
-                <!-- </div>
-                <div class="eng-atv">  -->
-                    
+                   
+
                 </div>
                 
             </ul>
@@ -45,17 +47,20 @@
     
 
 
+   
 
-
-<!-- </div>     -->
+ </div> 
+ 
+>@include('users.boxcode')
+</div>
 <script src="{{ asset('js/vizu.js') }}"></script>   
 <script src="{{ asset('js/prism.js') }}"></script> 
 <script src="{{ asset('js/sidebar.js') }}"></script>
      
-@include('layout._footer') 
+
         
 
-  
+@include('layout._footer') 
 
 
 
