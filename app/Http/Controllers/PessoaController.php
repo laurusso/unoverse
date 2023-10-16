@@ -181,6 +181,100 @@ class PessoaController extends Controller
         return view('users.logadaProfessor');
     }
 
+    public function redirecionaAtv(){
+        $id = Auth::user()->id;
+            if( Aluno::where('id_aluno',$id)->first())
+              {  return view('users.logadaAluno');}
+            else if( Auth::user()->curioso == 1)            
+              {  return view('users.logadoCurioso');}
+            else if(Professor::where('id_prof',$id)->first() )
+                {return view('users.logadaProfessor');}
+            else{
+               return view('menu.home');
+            }
+    }
+    public function nivelAtvAluno($nivel){
 
+        
+        if($nivel == 'iniciante')
+        {
+            // $atvs = Atividade::where('modulo', $nivel)->get();
+            $atvs = Atividade::where('modulo', $nivel)
+            ->where('aluno', true) ->get();
+            //$arq = Arquivo::all();
+           
+           
+            return view('users.mostra',compact('atvs')); 
+        }
+        else if($nivel == 'intermediario')
+        {
+            $atvs = Atividade::where('modulo', $nivel)->get();
+            //$arq = Arquivo::all();
+            return view('users.mostra',compact('atvs')); 
+        }
+        else if($nivel == 'avancado')
+        {
+            $atvs = Atividade::where('modulo', $nivel)->get();
+            //$arq = Arquivo::all();
+            return view('users.mostra',compact('atvs')); 
+        }
+
+    }
+    public function nivelAtvCurioso($nivel){
+
+        
+        if($nivel == 'iniciante')
+        {
+            // $atvs = Atividade::where('modulo', $nivel)->get();
+            $atvs = Atividade::where('modulo', $nivel)
+            ->where('curioso', true)->get();
+            //$arq = Arquivo::all();
+           
+           
+            return view('users.mostra',compact('atvs')); 
+        }
+        else if($nivel == 'intermediario')
+        {
+            $atvs = Atividade::where('modulo', $nivel)->get();
+            //$arq = Arquivo::all();
+            return view('users.mostra',compact('atvs')); 
+        }
+        else if($nivel == 'avancado')
+        {
+            $atvs = Atividade::where('modulo', $nivel)->get();
+            //$arq = Arquivo::all();
+            return view('users.mostra',compact('atvs')); 
+        }
+
+    }
+    public function nivelAtvProfessor($nivel){
+
+        
+        if($nivel == 'iniciante')
+        {
+            // $atvs = Atividade::where('modulo', $nivel)->get();
+            $atvs = Atividade::where('modulo', $nivel)
+            ->where('aluno', false)
+            ->where('curioso', false)
+            ->get();
+            //$arq = Arquivo::all();
+           
+           
+            return view('users.mostra',compact('atvs')); 
+        }
+        else if($nivel == 'intermediario')
+        {
+            $atvs = Atividade::where('modulo', $nivel)->get();
+            //$arq = Arquivo::all();
+            return view('users.mostra',compact('atvs')); 
+        }
+        else if($nivel == 'avancado')
+        {
+            $atvs = Atividade::where('modulo', $nivel)->get();
+            //$arq = Arquivo::all();
+            return view('users.mostra',compact('atvs')); 
+        }
+
+    }
 
 }

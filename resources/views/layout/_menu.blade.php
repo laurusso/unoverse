@@ -75,6 +75,10 @@
 
 
           @if (auth()->check())
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('perfil.atividade')}}">Atividades</a>
+          </li>
+
            <li class="nav-item">
             <a class="nav-link" href="{{route('login.perfil')}}">Meu perfil</a>
           </li>

@@ -1,8 +1,8 @@
 @section('titulo', 'Perfil')
 @include('layout._menu') 
 
-    <div class="engloba-logada">
-        <h1>Bem vindo(a), $$$$chamar variavel nome$$$</h1>
+    <div class="engloba-logada espaco">
+        <h1>Bem vindo(a), {{ Auth::user()->nome }}!</h1>
         <div class="card-logada iniciante-curioso">
             <div class="img-log">   
             <img src="{!! asset('img/user/curioso-log.png') !!}" alt="ícone do curioso">
@@ -12,7 +12,7 @@
                 <p>Conceitos iniciais quanto ao uso do Arduino. As aulas serão guiadas pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons estudos!</p>
             </div>
             <div class="btn-continuar">
-                <button class="btn-curioso">Continuar</button>
+                <a href="{{ route('atvCurioso.nivel', ['nivel' => 'iniciante']) }}" class="btn-curioso">Continuar</a>
             </div>
         </div>
 
@@ -25,7 +25,7 @@
                 <p>Uma apresentação um pouco mais profunda sobre os conceitos do uso do Arduino. As aulas são guiados pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons aprendizados!</p>
             </div>
             <div class="btn-continuar">
-                <button class="btn-curioso" >Continuar</button>
+                <a href="{{ route('atvCurioso.nivel', ['nivel' => 'intermediario']) }}" class="btn-curioso" >Continuar</a>
             </div>
         </div>
 
@@ -39,7 +39,7 @@
                 <p>Uma aventura para quem já explorou a robótica antes e tem um conhecimento prévio! As aulas são guiaas pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons estudos!</p>
             </div>
             <div class="btn-continuar">
-                <button class="btn-curioso">Continuar</button>
+                <a href="{{ route('atvCurioso.nivel', ['nivel' => 'avancado']) }}" class="btn-curioso">Continuar</a>
             </div>
         </div>
         

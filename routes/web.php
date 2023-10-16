@@ -64,6 +64,12 @@ Route::get('/menu/menuCad',['as'=>'menu.menuCad','uses'=>'App\Http\Controllers\M
 Route::get('/users/professor/conteudo',['as'=>'menu.conteudo','uses'=>'App\Http\Controllers\MenuController@teste']);
 
 
+Route::get('/menu/', [PessoaController::class, 'redirecionaAtv'])->name('perfil.atividade');
+
+Route::get('/users/logadaAluno/{nivel}', [PessoaController::class, 'nivelAtvAluno'])->name('atvAluno.nivel');
+
+Route::get('/users/logadaCurioso/{nivel}', [PessoaController::class, 'nivelAtvCurioso'])->name('atvCurioso.nivel');
+Route::get('/users/logadaProfessor/{nivel}', [PessoaController::class, 'nivelAtvProfessor'])->name('atvProfessor.nivel');
 
 
 
@@ -94,8 +100,9 @@ Route::get('/users/professor/teste', [ConteudoController::class, 'listar'])->nam
 Route::get('/users/perfil', [PessoaController::class, 'perfil'])->name('login.perfil');
 
 // Route::get('/users/atividade/{codigo}', [PessoaController::class, 'lercode'])->name('code.ler');
-Route::get('/users/mostra/', [PessoaController::class, 'atividade']);
+// Route::get('/users/mostra/', [PessoaController::class, 'atividade']);
 Route::get('/users/boxcode/{num}', [PessoaController::class, 'lercode'])->name('code.ler');
+
 
 //Route::get('/users/boxcode', [PessoaController::class, 'boxcode']);
 //rota ADM  !!!dps  do login é necessário agrupar

@@ -10,22 +10,20 @@
     
 <div class="content">
         <!-- Your page content goes here -->
-        <button id="toggleButton" class="sidebar-btn"><i class="bi bi-three-dots"></i></button>
+        <button id="toggleButton" class="sidebar-btn"><i class="bi bi-list"></i></button>
     </div>
     <div class="engloba-atv" id="sidebar">
         <div class="blocado">
             <ul class="menu-atv">
                 <li class="titulo-bloc">Aulas</li>
                 <div class="eng-atv">
+
                     @foreach($atvs as $row)
-                     
-                           
-                                     <!-- Campos do formulário (se necessário) -->
-                                     
                                     
-                                
+                                     <!-- Campos do formulário (se necessário) -->
+
                                 <li>
-                                <a class="btn-atv" href="{{ route('code.ler',$row->num) }}"> {{ $row->num }} - {{$row->nome}} </a>
+                                <a class="btn-atv" href="{{ route('code.ler',$row->num) }}">{{ $row->num }} - {{$row->nome}} </a>
                                 </li>
 
                            
