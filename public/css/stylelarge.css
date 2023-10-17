@@ -1054,6 +1054,10 @@ background: #1789FC;
   text-align: center;
 }
 
+.botoes-escolha h1{
+  color: var(--cor-quaternaria);
+}
+
 .img-adm{
   width: 40%;
 }
@@ -1084,7 +1088,7 @@ background: #1789FC;
 /*Configuracao da tabela da listagem de dados*/
 
 .adm h3{
-  color: #000;
+  color: var(--cor-quaternaria);
   font-size: 41px;
   margin-bottom: -10vh;
   margin-left: 3vw;
@@ -1355,8 +1359,9 @@ background: #1789FC;
   margin-top:2%;
   margin-left:2%;
 }
+
 .adicionar_ativ{
-  margin-top: 10%;
+  margin-top: 4%;
   margin-left: 65%;
   background-color: #fff;
   color: #F96800;
@@ -1378,6 +1383,7 @@ background: #1789FC;
   width: 50vw;
   height: 130vh;
   border-radius:3vw;
+  margin-bottom: 5vh;
 }
 .conteudo_form_ativ{
   margin-top: 8%;
@@ -1397,9 +1403,44 @@ background: #1789FC;
   /* width: 43%;*/ 
   
 }
+textarea{
+  outline: none;
+}
 .caixa-cadAtv{
   float: left;
-  width: 20vw;
+  width: 30vw;
+}
+.caixa-cadAtv label{
+  display: flex;
+}
+.modulo-infos label{
+  display: flex;
+}
+.geral-atv{
+  padding: 1vh;
+}
+
+.geral-atv label, .geral-atv input{
+  color: #FFFFFF;
+}
+.descricao-atv textarea{
+  color: #FFFFFF;
+  background-color: #F97700;
+  font-size: 2vh;
+}
+.tamanho-nomeatv{
+  width: 100%;
+}
+.geral-atv input::placeholder{
+  color:#d3d3d3;
+}
+.bi-upload{
+  color:#FFFFFF;
+  transition: 0.4s;
+}
+.bi-upload:hover{
+  color:#D3D3D3;
+  transition: 0.4s;
 }
 .caixa-cadAtv input[type="file"]
 {
@@ -1424,11 +1465,6 @@ background: #1789FC;
   border-radius: 5px;
   cursor: pointer;
 } */
-
-
-
-
-
 .form_tipouser
 {
   font-size: 2vh;
@@ -1478,6 +1514,7 @@ background: #1789FC;
   margin: 13vh 3vw 3vw;
   text-align: center;
   padding-top: 2vh;
+
 
 }
 .imagem_cad{
@@ -1743,6 +1780,8 @@ background: #1789FC;
 }
 
 
+/* TELA LOGADA */
+
 .engloba-logada{
   font-family: 'Consolas';
   color: #FFFFFF;
@@ -1751,6 +1790,7 @@ background: #1789FC;
 
 
 .engloba-logada h1{
+  text-align: center;
   color: #E8AA14;
   margin-bottom: 6vw;
 }
@@ -1764,6 +1804,8 @@ background: #1789FC;
   display: flex;
   margin: 2vw;
   overflow: hidden;
+  margin-left: 15%;
+  
 }
 
 /*ESTUDANTE*/
@@ -1816,6 +1858,7 @@ background: #1789FC;
   color: #FFFFFF;
   padding: 0.5vw;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 
@@ -1868,6 +1911,7 @@ background: #1789FC;
   color: #FFFFFF;
   padding: 0.5vw;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 
@@ -1920,6 +1964,7 @@ background: #1789FC;
   color: #FFFFFF;
   padding: 0.5vw;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 /* GERAIS */

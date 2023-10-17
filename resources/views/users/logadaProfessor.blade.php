@@ -9,7 +9,7 @@
             </div>
             <div class="texto-log">
                 <h2>Curso de Arduino <span class="iniciante">Iniciante</span></h2>
-                <p>Conceitos iniciais quanto ao uso do Arduino. As aulas serão guiadas pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons estudos!</p>
+                <p>Conceitos iniciais quanto ao uso do Arduino. As aulas serão guiadas pelo uso do Arduino físico, então, é necessário os componentes em mãos. Bons estudos!</p>
             </div>
             <div class="btn-continuar">
                 <a href="{{ route('atvProfessor.nivel', ['nivel' => 'iniciante']) }}" class="btn-professor">Continuar</a>
@@ -22,7 +22,7 @@
             </div>
             <div class="texto-log">
                 <h2>Curso de Arduino <span class="intermediario-prof">Intermediário</span></h2>
-                <p>Uma apresentação um pouco mais profunda sobre os conceitos do uso do Arduino. As aulas são guiados pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons aprendizados!</p>
+                <p>Uma apresentação um pouco mais profunda sobre os conceitos do uso do Arduino. As aulas serão guiadas pelo uso do Arduino físico, então, é necessário os componentes em mãos. Bons aprendizados!</p>
             </div>
             <div class="btn-continuar">
                 <a href="{{ route('atvProfessor.nivel', ['nivel' => 'intermediario']) }}" class="btn-professor" >Continuar</a>
@@ -36,7 +36,7 @@
             </div>
             <div class="texto-log">
                 <h2>Curso de Arduino <span class="avancado">Avançado</span></h2>
-                <p>Uma aventura para quem já explorou a robótica antes e tem um conhecimento prévio! As aulas são guiaas pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons estudos!</p>
+                <p>Uma aventura para quem já explorou a robótica antes e tem um conhecimento prévio! As aulas serão guiadas pelo uso do Arduino físico, então, é necessário os componentes em mãos. Bons estudos!</p>
             </div>
             <div class="btn-continuar">
                 <a  href="{{ route('atvProfessor.nivel', ['nivel' => 'avancado']) }}" class="btn-professor">Continuar</a>

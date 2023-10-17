@@ -9,7 +9,7 @@
             </div>
             <div class="texto-log">
                 <h2>Curso de Arduino <span class="iniciante">Iniciante</span></h2>
-                <p>Conceitos iniciais quanto ao uso do Arduino. As aulas serão guiadas pelo uso do Tinkercad, então, não é necessário os componentes físicos em mãos. Bons estudos!</p>
+                <p>Conceitos iniciais quanto ao uso do Arduino. As aulas serão guiadas pelo uso do Arduino físico, então, é necessário os componentes físicos em mãos. Bons estudos!</p>
             </div>
             <div class="btn-continuar">
                 <a href="{{ route('atvAluno.nivel', ['nivel' => 'iniciante']) }}" class="btn-estudante">Continuar</a>

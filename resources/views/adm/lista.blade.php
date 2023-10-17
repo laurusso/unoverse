@@ -1,5 +1,8 @@
 <!--Lista os dados armazenados no Banco-->
+      @section("titulo",'Lista de Atividades')
       @include('adm.adm_menu') 
+
+      
 
         <div class='adm espaco'>
             <h3 class='adm '><b>Lista de atividades</b></h3>

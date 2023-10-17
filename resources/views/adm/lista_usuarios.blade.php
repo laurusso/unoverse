@@ -16,7 +16,6 @@
                     <th class="sobrenome">Sobrenome</th>
                     <th class="modulo">Módulo</th> <!--fazer dpsss-->
                     <th class="escola">Escola</th>
-                    <th class="btn-alterar">Alterar</th>
                     <th class="btn-desativar">Desativar</th>
                </tr>
             </thead>
@@ -27,14 +26,11 @@
                         <td class="email"> {{ $row->email }}</td>
                         <td class="nome">{{ $row->nome }}</td>
                         <td class="sobrenome">{{ $row->sobrenome }}</td>
-                        <td class="modulo">em teste</td>
+                        <td class="modulo">puxar</td>
                         <td class="escola">escola</td>
 
-                        <td class="btn"> <!-- COLUNA COM DESATIVAR -->
-                            <a class='btn-desativar item' href="{{ route('adm.excluir',$row->id) }}"><i class="bi bi-arrow-left-right"></i></a>
-                        </td>
                         <td>
-                            <a class='btn-alterar' href="#"><i class="bi bi-toggle-off desativa"></i></a>
+                            <a class='btn-desativar' href="#"><i class="bi bi-toggle-off desativa"></i></a>
                             
                         </td>
                     </tr>

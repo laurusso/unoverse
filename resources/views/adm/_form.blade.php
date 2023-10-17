@@ -3,12 +3,12 @@
    
 
     <div class="caixa-cadAtv">
-        <div class="" >
+        <div class="geral-atv" >
             <label>Nome da Atividade:</label>
-            <input type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
+            <input placeholder="insira o nome da atividade" class="tamanho-nomeatv" type="text" name="nome" value="{{isset($linha->nome) ? $linha->nome : ''}}"  required>
         </div>
             
-        <div class="">
+        <div class="modulo-infos geral-atv">
             <label>Módulo</label>   
    
                 <label>
@@ -19,7 +19,7 @@
                     <label>
                     <input type="radio" name="modulo" value="intermediario" {{isset($linha->modulo) && $linha->modulo == intermediario ? 'checked' : '' }}>
                         <!-- <input type="radio" name="aluno" value="pr"   {{ isset($linha->aluno) && $linha->aluno == 'pr' ? 'checked' : '' }} > -->    
-                        intermediario 
+                            Intermediario 
                     </label>
                     <label>
                     <input type="radio" name="modulo" value="avancado" {{isset($linha->modulo) && $linha->modulo == avancado ? 'checked' : '' }}>
@@ -29,36 +29,36 @@
             
         </div>
 
-        <div class="">
+        <div class="geral-atv">
             <label>Link aula</label>   
-            <input type="text"  name="link_aula" value="{{isset($linha->link_aula) ? $linha->link_aula : ''}}"  >
+            <input placeholder="insira o link do youtube" class="tamanho-nomeatv" type="text"  name="link_aula" value="{{isset($linha->link_aula) ? $linha->link_aula : ''}}"  >
         </div>
             
-        <div class="">
+        <div class="descricao-atv geral-atv">
             <label>Descrição:</label>  
-            <textarea id="descricao" name="descricao" rows="4" cols="50" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required ></textarea>  
+            <textarea placeholder="insira a descrição da aula" id="descricao" name="descricao" rows="4" cols="50" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required ></textarea>  
             <!-- <input type="text" name="descricao" value="{{isset($linha->descricao) ? $linha->descricao : ''}}"  required> -->
         </div>
     </div>
 
-    <div class="caixa-cadAtv">
+    <div class="caixa-cadAtv geral-atv">
       
                 <!-- <input type="nu"  min="0"  name="modulo" value="{{isset($linha->modulo) ? $linha->modulo : ''}}"  > -->
                 @if(isset($linha->codigo))
         
-                <div class="">
+                <div class="geral-atv">
                 
-                    <label >
-                        Codigo:
-                        <input  type="file" name="codigo" src="{{asset($linha->codigo)}}"/>
+                    <label>
+                        Código:
+                        <input   type="file" name="codigo" src="{{asset($linha->codigo)}}"/>
                         <i class="bi bi-upload"></i>
                     </label>
               </div>
                 @else
-                <div class="">
+                <div class="geral-atv">
                 
                     <label >
-                        Codigo: 
+                        Código: 
                     <input type="file" name="codigo"/>
                     <i class="bi bi-upload"></i>
                     </label>
@@ -67,7 +67,7 @@
             
 
             @if(isset($linha->upload))
-            <div>
+            <div class="geral-atv">
                 <label>Atividade
                     <input type="file" name="upload" src="{{asset($linha->upload)}}"/> 
                     <i class="bi bi-upload"></i>
@@ -84,7 +84,7 @@
             @endif 
     </div>
     
-    <div class="caixa-cadAtv">
+    <div class="caixa-cadAtv geral-atv">
                 <label>Conteudo destinado para?</label>
                 <br>
             

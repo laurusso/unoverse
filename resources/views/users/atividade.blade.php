@@ -1,8 +1,8 @@
 <!-- Essa visao tem como funcao a visualizacao das aulas do curso pelo usuario -->
 
-@section('titulo','Atividades') 
+
 @include('layout._menu')  
-<link rel="stylesheet" href="{{ asset('css/teste.css') }} " type="text/css">
+<link rel="stylesheet" href="{{ asset('css/atividade.css') }} " type="text/css">
 
 <div class="pag-atvs">
 <div class="content">

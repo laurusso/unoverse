@@ -50,7 +50,10 @@
             <a class="nav-link active" aria-current="page" href="{{route('adm.index')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('adm.lista')}}">Lista</a>
+            <a class="nav-link" href="{{route('adm.lista')}}">Lista de Atividades </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('lista.user')}}">Lista de Usuarios </a>
           </li>
           @if (auth()->check())
           <li class="nav-item">
