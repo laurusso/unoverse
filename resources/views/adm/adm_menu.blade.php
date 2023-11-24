@@ -37,7 +37,7 @@
     </button>
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Unoverse Menu</h5>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Unoverse Menu Administrador</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -50,14 +50,26 @@
             <a class="nav-link active" aria-current="page" href="{{route('adm.index')}}">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{route('adm.adicionar')}}">Cadastro de Atividades </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('adicionar.escola')}}">Cadastro de Escolas </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('adm.mostraDestino')}}">Cadastro de Questões </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{route('adm.lista')}}">Lista de Atividades </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('adm.lista.escola')}}">Lista de Escolas </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('lista.user')}}">Lista de Usuarios </a>
           </li>
           @if (auth()->check())
           <li class="nav-item">
-            <a class="nav-link" href="{{route('login.perfil')}}">Perfil</a>
+            <a class="nav-link" href="{{route('adm.perfil')}}">Perfil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('login.logout')}}">Sair <i class="bi bi-box-arrow-right"></i> </a>

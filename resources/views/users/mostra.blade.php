@@ -2,35 +2,41 @@
 
 @section('titulo','Atividades') 
 @include('layout._menu')  
-<link rel="stylesheet" href="{{ asset('css/teste.css') }} " type="text/css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ asset('css/atividade.css') }}"   media="only screen and (min-width: 769px)" >
+<link rel="stylesheet" href="{{ asset('css/app.css') }}"  media="screen and (max-width: 767px) and (orientation: portrait)" > 
+
 
 <!-- <div class="pag-atvs"> -->
-<div class="body-atv">
-<div class="pag-atvs" >
-    
+<div class="body-atv"> 
+   
+ 
+<div class="pagAtvs" id="pagsAtv">  
+       
 <div class="content">
         <!-- Your page content goes here -->
-        <button id="toggleButton" class="sidebar-btn"><i class="bi bi-list"></i></button>
-    </div>
+        <button id="toggleButton"   onclick="ajustarTamanhoDaDiv()" class="sidebar-btn"><i class="bi bi-justify"></i></button>
+       
+    </div>  
     <div class="engloba-atv" id="sidebar">
         <div class="blocado">
-            <ul class="menu-atv">
+            <ul class="menu-atv">  
                 <li class="titulo-bloc">Aulas</li>
-                <div class="eng-atv">
+                <div class="eng-atv"> 
 
-                    @foreach($atvs as $row)
+                    @foreach($atvs as $row) 
                                     
                                      <!-- Campos do formulário (se necessário) -->
 
                                 <li>
-                                <a class="btn-atv" href="{{ route('code.ler',$row->num) }}">{{ $row->num }} - {{$row->nome}} </a>
+                                <a class="btn-atv" href="{{ route('code.ler',$row->num) }}">{{$row->nome}} </a>
                                 </li>
-
-                           
-                    @endforeach
-
-                   
-
+ 
+                            
+                    @endforeach 
+             
+               
                 </div>
                 
             </ul>
@@ -40,7 +46,7 @@
     </div>
 
 
-
+    
 
     
 
@@ -49,16 +55,17 @@
 
  </div> 
  
->@include('users.boxcode')
-</div>
+@include('users.boxcode') 
+</div> 
 <script src="{{ asset('js/vizu.js') }}"></script>   
 <script src="{{ asset('js/prism.js') }}"></script> 
-<script src="{{ asset('js/sidebar.js') }}"></script>
-     
+<script src="{{ asset('js/sidebar.js') }}" ></script>
+
+<script src="{{ asset('js/ajustadiv.js') }}"></script>
+<script src="{{ asset('js/code.js') }}"></script>
 
         
 
-@include('layout._footer') 
 
 
 

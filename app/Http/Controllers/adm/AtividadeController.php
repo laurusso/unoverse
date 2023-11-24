@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Atividade;
 use App\Models\Arquivo;
+use App\Models\Escola;
 use App\Models\User;
+use App\Models\Exercicio;
+
 use Illuminate\Support\Facades\DB;
 //use Illuminate\Support\Facades\Atividades;
 
@@ -23,7 +26,10 @@ class AtividadeController extends Controller
     public function lista() {
         $linhas = Atividade::all(); 
         $imgs = Arquivo::all();
-        return view ('adm.lista',compact('linhas','imgs'));  
+        $exercicios = Exercicio::distinct()->pluck('fk_atividade');
+        //dd($colunaUnica);
+//$exercicios = Exercicio::all();
+        return view ('adm.lista',compact('linhas','imgs','exercicios'));  
     }
 
 
@@ -37,6 +43,8 @@ class AtividadeController extends Controller
         
         return view ('adm.trem',compact('dados'));  
     }  
+
+  
 
      
     public function ler($code)
@@ -65,19 +73,26 @@ class AtividadeController extends Controller
     public function adicionar() {
         return view('adm.adicionar'); 
     }
-  
+
     // CHAMA VISAO EDITAR
     public function editar($num) {
         
         $linha = Atividade::where('num',$num)->first();
         $linha['upload'] = Arquivo::where('fk_num',$num)->first();
+       // dd($linha['descricao']);
+        if($linha['curioso'] == true)
+        {
+          
+            $linha['aluno'] = 'curioso';
+        } 
+       
         // if($linha['aluno'] == 'true')
         // {
         //     $linha['aluno'] = 'al';
         // }
         // else if($linha['aluno'] == 'false')
         // {
-        //     $linha['aluno'] = 'pr';
+        //     $linha['aluno'] = 'pr'; 
         // }
        
         // carrega o registro (realiza um select e um fetch internamente)
@@ -89,14 +104,14 @@ class AtividadeController extends Controller
     public function atualizar(Request $req, $num)
     {
         $atualiza_atv = $req->only(['nome','modulo','descricao','aluno']);
-        if($dados_atv['aluno'] == "curioso")
+        if($atualiza_atv['aluno'] == "curioso")
         {
-            $dados_atv['curioso'] = true;
-            $dados_atv['aluno'] = false;
+            $atualiza_atv['curioso'] = true;
+            $atualiza_atv['aluno'] = false;
         } 
         else
         {
-            $dados_atv['curioso'] = false;
+            $atualiza_atv['curioso'] = false;
         }
         if($req->hasFile('upload')){
             $n = rand(1111,9999); // escolhe numero pra não repetir
@@ -200,8 +215,8 @@ class AtividadeController extends Controller
     
         return redirect()->route('adm.lista');//retorna para view lista
     }
-     
-    // CHAMA EXCLUSAO
+      
+
     public function excluir($num) {
         $arq_excluir = Arquivo::where('fk_num', $num)->value('upload');
            
@@ -216,4 +231,6 @@ class AtividadeController extends Controller
         return redirect()->route('adm.lista');
 
     }
-}
+
+   
+}   

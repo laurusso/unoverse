@@ -9,6 +9,6 @@ class Aluno extends Model
 {
     
     public $incrementing = false;
-    protected $fillable = ['id_aluno','email'];
+    protected $fillable = ['id_aluno','email','id_escola'];
 
 }

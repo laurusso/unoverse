@@ -1,0 +1,28 @@
+
+//programa de ligar LDR e LED juntos!	
+int led = 10; //indica que o LED está conectado na porta 10
+int ldr = A0; //indica que o LDR está conectado na porta A0
+int valorldr = 0; /*/atribui valor 0 a essa variável 
+					que será usada para indicar a luminosidade*/
+
+void setup() {
+  Serial.begin(9600); //inicializa o monitor serial
+  pinMode (led, OUTPUT); //indica LED como atuador
+  pinMode (ldr, INPUT);   //indica LDR como sensor
+}
+
+void loop() {
+   valorldr = analogRead (ldr); /*capturando o que o LDR lê 
+  								de luminosidade e atribuindo 
+                                a variável valorldr*/
+   Serial.println(valorldr); /*imprime qual o valor o 
+  								LDR capturou*/
+   
+  if((valorldr) < 100){ /*se o valor lido no LDR for menor que
+    					100 executa a acao*/
+    digitalWrite(led, HIGH); //a acao eh ligar o LED
+  }  
+  else{  /*se o valor lido nao for menor que 100 executa a acao*/
+    digitalWrite(led, LOW); //a acao eh desligar o LED
+  }
+}

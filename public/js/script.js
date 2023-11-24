@@ -1,39 +1,28 @@
-// javascript do site, contem configuracoes dinamicas e interativas do site
-const subMenus = document.querySelectorAll('.subMenu');
-
-subMenus.forEach(subMenu => {
-    const parentMenuItem = subMenu.previousElementSibling;
-    parentMenuItem.addEventListener('click', () => {
-        subMenu.classList.toggle('active');
-    });
-});
-
 //TROCA O SOL PELA LUA
-
-const trocando=document.getElementById('iconetema'); //const para icone sol e lua
+const trocando = document.getElementById('iconetema'); //const para icone sol e lua
 trocando.addEventListener('click', trocar); //evento que ocorre ao clicar no sol/lua (troca tema)
 
 //CONSTANTES DE COR PARA TROCA DE TEMA
-const primaria =  "#003F64";
-const secundaria =  "#FFFFFF";
-const terciaria =  "#001F32";
-const quaternaria =  "#000000";
-const quinquenaria =  "#003F64";
-const sexta =  "#FFFFFF";
-const setima =  "#CEE8FF";
-const oitava =  "#00468D";
+const primaria = "#003F64";
+const secundaria = "#FFFFFF";
+const terciaria = "#001F32";
+const quaternaria = "#000000";
+const quinquenaria = "#003F64";
+const sexta = "#FFFFFF";
+const setima = "#CEE8FF";
+const oitava = "#00468D";
 
 //FUNCAO DE TROCA DE TEMA
-function trocar(){
-    if(trocando.classList.contains('bi-sun-fill')){ //confere se o sol que esta na pagina
-       temaEscuro(defaultTransition);
+function trocar() {
+    if (trocando.classList.contains('bi-sun-fill')) { //confere se o sol que esta na pagina
+        temaEscuro(defaultTransition);
     }//fim do if
-    else if(trocando.classList.contains('bi-moon-fill')){ //confere se a lua esta na pagina 
+    else if (trocando.classList.contains('bi-moon-fill')) { //confere se a lua esta na pagina 
         temaClaro(defaultTransition);
     }//fim do else if
 }//fim da funcao trocar
 
-const temaClaro = (transicao) => {  
+const temaClaro = (transicao) => {
     document.documentElement.style.setProperty("--transicao", transicao); //transicao
     trocando.classList.remove('bi-moon-fill');
     trocando.classList.add('bi-sun-fill');
@@ -65,15 +54,16 @@ const setTemaCookie = (tema) => { //com parametro tema
 }; //fim da funcao setTemaCookie
 
 const getTemaCookie = () => {
-    const cookies = document.cookie.split(";");
+    const cookies = document.cookie.split(";").map(cookie => cookie.trim());
     for (let i = 0; i < cookies.length; i++) {
         const cookie = cookies[i].split("=");
         if (cookie[0] === "tema") {
             return cookie[1];
-        }  
+        }
     }
     return null;
-}; //fim da funcao getTemaCookie
+};
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const tema = getTemaCookie();
@@ -83,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (tema === "escuro") {
         temaEscuro(semTransicao);
     }
-    else{
+    else {
         temaClaro(semTransicao);
     }
 }); //fim da funcao DOMContentLoaded
@@ -99,7 +89,7 @@ const defaultTransition = `${transicao1} ${duracaoTransicao} ${tempoTransicao}, 
 const transicaoUpdate = () => {
     setTimeout(() => {
         document.documentElement.style.setProperty("--transicao", defaultTransition);
-    },0);
+    }, 0);
 }; //fim da funcao transicaoUpdate
 
 
@@ -113,46 +103,45 @@ const transicaoUpdate = () => {
 
 
 //CONFIGURAÇÃO DA JANELA MODAL
-function abrirModal_Placa_Uno()
-{
-    const modal=document.getElementById('janela-modal-placa-uno')
+function abrirModal_Placa_Uno() {
+    const modal = document.getElementById('janela-modal-placa-uno')
     modal.classList.add('abrir')
 
-    modal.addEventListener('click',(e) =>{
-        if(e.target.id == 'fechar-placa-uno' || e.target.id =='janela-modal-placa-uno')
-        {
+    modal.addEventListener('click', (e) => {
+        if (e.target.id == 'fechar1' || e.target.id == 'janela-modal-placa-uno') {
             modal.classList.remove('abrir')
         }
     })
-  
+
 }
 
-function abrirModal_Protoboard()
-{
-    const modal=document.getElementById('janela-modal-protoboard')
+function abrirModal_Protoboard() {
+    const modal = document.getElementById('janela-modal-protoboard')
     modal.classList.add('abrir')
 
-    modal.addEventListener('click',(e) =>{
-        if(e.target.id == 'fechar' || e.target.id =='janela-modal-protoboard')
-        {
+    modal.addEventListener('click', (e) => {
+        if (e.target.id == 'fechar2' || e.target.id == 'janela-modal-protoboard') {
             modal.classList.remove('abrir')
         }
     })
-  
+
 }
-function abrirModal_Jumpers()
-{
-    const modal=document.getElementById('janela-modal-jumpers')
+function abrirModal_Jumpers() {
+    const modal = document.getElementById('janela-modal-jumpers')
     modal.classList.add('abrir')
 
-    modal.addEventListener('click',(e) =>{
-        if(e.target.id == 'fechar' || e.target.id =='janela-modal-jumpers')
-        {
+    modal.addEventListener('click', (e) => {
+        if (e.target.id == 'fechar3' || e.target.id == 'janela-modal-jumpers') {
             modal.classList.remove('abrir')
         }
     })
-  
+
 }
+
+
+
+
+
 
 
 

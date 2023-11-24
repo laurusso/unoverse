@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; 
+    margin: 0; 
+    background-color: rgba(23, 137, 252, 0.6);
+    font-family: 'Consolas';
+}
+
+
+.engloba-conf{
+    color: #FFFFFF;
+    background-color: #003F64;
+    padding: 5vh;
+    border-radius: 5vh;
+}
+.engloba-conf input{
+    outline: none;
+}
+
+.codigo{
+    height: 3vh;
+    border-radius: 2vh;
+    border: none;
+}
+.enviar{
+    border-radius: 2vh;
+    height: 3vh;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background-color: #f08d2b;
+    color: #FFFFFF;
+    border: none;
+}
+.enviar:hover{
+    text-decoration: underline;
+}

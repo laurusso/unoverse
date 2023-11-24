@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
+use App\Models\Escola;
 
 class MenuController extends Controller
 {
@@ -17,7 +18,7 @@ class MenuController extends Controller
 
   
         
-    }
+    } 
 
     // acesso a modulos
     public function modulos() {
@@ -41,6 +42,21 @@ class MenuController extends Controller
         return view("menu.entrar");
         
     }
+    public function erro404() {
+        return view("menu.erro404");
+        
+    }
+    public function erro419() {
+        return view("menu.erro419");
+        
+    }
+    public function erro500() {
+        return view("menu.erro500");
+        
+    }
+    public function politica(){
+        return view("links.politica");
+    }
     //acesso a cadastro
     public function menuCad() {
         return view("menu.menuCad");
@@ -52,11 +68,15 @@ class MenuController extends Controller
             
         }
         public function cadEstudante() {
-            return view("links.cadEstudante");
+            
+            $escola = Escola::all();
+            // dd($escola);
+            return view("links.cadEstudante",compact('escola'));
             
         }
         public function cadProfessor() {
-            return view("links.cadProfessor");
+            $escola = Escola::all();
+            return view("links.cadProfessor",compact('escola'));
             
         }
 

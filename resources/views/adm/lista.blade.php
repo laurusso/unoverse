@@ -9,6 +9,8 @@
             <div class="btn-add"> <!-- BOTAO ADICIONAR -->
                      <a class=" btn-lista lista-add"  href="{{ route('adm.adicionar')}}">Adicionar atividades</a>
                 </div>
+
+         
             <div class='adm espaco'>
                 <table class="atv">
                     <thead>
@@ -19,6 +21,7 @@
                             <th class="modulo">Módulo</th>
                             <th class="descricao">Descrição</th>
                             <th class="arquivo">Arquivo</th>
+                            <th class="exercicio">Exercicio</th>
                             <th class="btn-alterar">Alterar</th>
                             <th class="btn-excluir">Excluir</th>
                        </tr>
@@ -38,6 +41,19 @@
                                         @endif
                                     @endforeach
                                 </td>
+
+                                <td class="exercicio">
+                                         @foreach($exercicios as $ex)
+                                            @if($ex == $row->num)
+                                            <a class="btn-exerc"  href="{{ route('adm.exercicio.lista',$row->num) }}">Exercicios</a>
+
+                                            @endif 
+
+                                        @endforeach
+                                        
+                                 
+                                </td>
+
                                 <div id="modal-bg">
                                        
                                         <span id="fechar-modal" onclick="fecharModal()">X Fechar</span>

@@ -8,11 +8,12 @@
     <div id="titulo_acoes">
         <div class="texto_acoes">
             <h1>Projetos sociais</h1>
-             </div>
+            <p>O Colégio Técnico Industrial “Prof. Isaac Portal Roldán” sempre busca expandir seus projetos para além da escola. Nossa equipe visitou diversas escolas públicas da cidade de Bauru para difundir o interesse pela robótica e programação e ensinar os alunos a compreender os componentes do Arduino. Confira abaixo algumas de nossas visitas! </p>
+        </div>
         <img src="{!! asset('img/Wave.svg') !!}" id="wave_acoes" alt="">
     </div>
 
-
+    
     <div class="envolve__slider">
         <section class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -28,7 +29,7 @@
                     <!-- <button class="card-btn">View More</button> -->
                 </div>
             </div>
-
+       
             <div class="card swiper-slide">
                 <div class="card__image">
                 <img src="{!! asset('img/social/ctifeira.jpg') !!}" alt=" Imagem de feira no CTI">

@@ -1,0 +1,13 @@
+
+int ldrPin = A0; //atribui  A0 a variavel ldrPin
+valorLdr = 0 //Declara a variavel valorLdr como inteiro e atribui o valor 0
+
+void setup () {
+    Serial.begin(9600); //Inicializa o monitor serial
+    pinMode(ldrPin, INPUT): //Define o sensor de luminosidade (pino analogico A0) como saida (input)
+}
+void loop() {
+    valorLdr = analogRead(ldrPin); //Le o valor do sensor de luminosidade e armazena na variavel valorLdr
+    Serial.println("Valor lido pelo LDR = "); //Imprime no monitor serial a mensagem valor lido pelo sensor de luminosidade
+    Serial.println(valorLdr); //Imprime no monitor serial os dados da variavel valorLdr
+}

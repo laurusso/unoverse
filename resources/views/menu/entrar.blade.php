@@ -4,6 +4,14 @@
  @section('titulo', 'Login')
 @include('layout._menu')
 
+@if(session('email_exists'))
+<script>
+    alert("{{ session('email_exists') }}");
+</script>
+@endif
+
+ 
+
 <div class="espaco">
     <!-- temporario messagem de error -->
   
@@ -68,6 +76,7 @@
                     <a href="{{route('menu.menuCad')}}" alt="Ir para cadastro">Cadastrar</a>
                 </div>
             </div>
+            <!-- <a href="{{ url('/auth/google') }}" class="btn btn-primary">Login com o Google</a> -->
         </form> @endif
     </div>
 </div>
@@ -75,7 +84,7 @@
    
    
 <script src="{{ asset('js/eye.js') }}"></script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
 
 
 

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+.card-politica{
+    background: linear-gradient(90deg, #9747FF -1.72%, #BA68C8 161.14%);
+    color: #fff;
+    width:40vw;
+    height: 80vh;
+    border-radius: 2%;
+    position:absolute;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    overflow: auto
+    
+    
+}
+.card-conteudo{
+    line-height: 2em;
+    margin: 2% 
+}
+.img-fundo{
+    width: 100%;
+    height: 80%;
+}
+.img-fundo img{
+    width: fit-content;
+    height: fit-content;
+}    
+.concordar{
+    color: #fff;
+    background-color: #FFAD5A;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0.5rem;
+    border-radius: 20vw;
+}
+.concordar:hover{
+    background-color: #E98828;
+    cursor: pointer;
+}
+   
+
+
+  

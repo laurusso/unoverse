@@ -1,0 +1,20 @@
+
+//programa de ligar e desligar o LED!
+int ledPin = 13; //variavel do tipo int global
+
+void setup()
+{
+  Serial.begin(9600); //inicializa o Monitor Serial
+  pinMode(ledPin,OUTPUT); //declarando o LED como atuador
+  
+}
+
+void loop()
+{
+  digitalWrite(ledPin,HIGH); //comando para ligar o LED
+  Serial.println("LED LIGADO!"); //indicando o estado do LED
+  delay(5000); //aguarda 1 segundo
+  digitalWrite(ledPin,LOW); //comando para desligar o LED
+  Serial.println("LED DESLIGADO!"); //indicando o estado do LED
+  delay(5000); //aguarda 1 segundo
+}

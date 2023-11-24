@@ -19,9 +19,9 @@
     <title>@yield('titulo')</title> <!-- TITULO DA PAGINA, PARA USA-LO EM OUTRAS PAGINAS, USAR O COMANDO DE CODIGO: 
                         @section('titulo', 'nome desejado')-->
     <!-- INSERCAO CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }} " type="text/css">
+    <!-- <link rel="stylesheet" href="{{ asset('css/style.css') }} " type="text/css"> -->
         <!-- INSERCAO CSS -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}"  media="screen and (max-width: 767px) and (orientation: portrait)" >   
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}"  media="screen and (max-width: 768px) and (orientation: portrait)" >   
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- CSS para telas maiores (acima de 768px) -->
@@ -40,11 +40,12 @@
     /> 
   </head>
 <body>  
- <div class="mae"> 
+ <div class="mae">  
+
   <!-- INICIO DO TOPO FIXO LATERAL (OFFCANVAS EXTRAIDO DO BOOTSTRAP) -->
  <nav class="navbar navbar-dark fixed-top fixada">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> <img src="{!! asset('img/logo.png') !!}" class="logomarca"></a> <!-- LOGO -->
+    <a class="navbar-brand" href="{{route('menu.home')}}"> <img src="{!! asset('img/logo.png') !!}" class="logomarca"></a> <!-- LOGO -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -61,9 +62,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('menu.home')}}">Home</a>
           </li>
+          @if(!Auth::check())
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.modulos')}}">Módulos</a>  
           </li>
+          @endif
           <li class="nav-item">
             <a class="nav-link" href="{{route('menu.devs')}}">Devs 2023</a>  
           </li>
@@ -85,29 +88,33 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('login.logout')}}">Sair <i class="bi bi-box-arrow-right"></i></a>
           </li>
+          <li class="nav-item">Olá {{ Auth::user()->nome }}!  </li>
+          
          
          
-           <p>Olá {{ Auth::user()->nome }}!  </p>
+          
          
             @else
 
           <li class="nav-item dropdown">
             <!-- PARA LOGAR, PODE ESCOLHER ENTRE JA CADASTRADO OU NAO CADASTRADO (DROPDOWN EXTRAIDO DO BOOTSTRAP) -->
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
               Logar
+              
             </a>
     
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="{{route('menu.menuCad')}}">Primeira vez</a></li> <!-- NAO CADASTRADO --> <!--Falta redirecionar o link-->
               <li><a class="dropdown-item" href="{{route('login.index')}}">Acessar sua conta</a></li> <!-- JA CADASTRADO -->
           </li>
-        </ul>
+          </ul>
         @endif
        
        
           </div>
     </div>
   </div>
+  
 </nav>
         <script src="{{ asset('js/script.js') }}"></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

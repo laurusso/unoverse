@@ -1,0 +1,16 @@
+
+int ledPin = 13; //vamos criar uma variavel para representar onde o LED está ligado na placa (porta digital 13)
+
+void setup () {
+  Serial.begin(9600); //Inicializa o monitor serial
+  pinMode(ledPin, OUTPUT); //setando O LED como atuador (saida)
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH); //aqui estamos ligando o LED da porta 13. outro modo de escrever -> digitalWrite(ledPin, 1);
+  Serial.println("LED LIGADO!!!");
+  delay(1000); //esperando um segundo
+  digitalWrite(ledPin, LOW); //desligando o LED da porta 13. outro modo de escrever -> digitalWrite (ledPin, 0);
+  Serial.println("LED DESLIGADO!!!");
+  delay(1000); //esperando um segundo
+}

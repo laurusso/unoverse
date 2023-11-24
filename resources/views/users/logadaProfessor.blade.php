@@ -44,5 +44,3 @@
         </div>
         
     </div>
-
-    @include('layout._footer') 

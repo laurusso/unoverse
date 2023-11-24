@@ -1,0 +1,18 @@
+// este eh um cometario de uma linha
+
+/*este eh um com mais linhas 
+consegue ver a diferença?
+espero que sim!*/
+void setup()
+{
+  Serial.begin(9600);
+  
+}
+
+void loop()
+{
+  Serial.println("Hello World!"); //pula linha
+  delay(1000); //espera 1 segundo
+  Serial.print("Ola Mundo!"); //nao pula linha
+  delay(1000); //espera 1 segundo
+}

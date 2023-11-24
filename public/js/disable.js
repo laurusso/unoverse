@@ -1,6 +1,7 @@
 const desativa = document.querySelectorAll('.desativa');
+const ativo = document.querySelectorAll('.ativo');
 
-desativa.forEach(desativa => {
+/*desativa.forEach(desativa => {
     desativa.addEventListener('click', () => {
         trocarDesativa(desativa);
     });
@@ -15,4 +16,4 @@ function trocarDesativa(desativa){
         desativa.classList.remove('bi-toggle-on');
         desativa.classList.add('bi-toggle-off');
     }//fim do else
-}//fim da funcao trocarDesativa
+}//fim da funcao trocarDesativa*/

@@ -1,0 +1,23 @@
+
+int ldrPin = A0;
+int ledPin = 13;
+int valorLdr = 0;
+
+void setup(){
+    Serial.begin(9600);
+    pinMode(ldrPin, INPUT);
+    pinMode(ledPin, OUTPUT);
+}
+
+void loop(){
+    delay(500);
+    valorLdr = analogRead(ldrPin);
+    Serial.println(valorLdr);
+    if(valorLdr > 612){
+        Serial.println("valor lido pelo sensor de luminosidade é maior que 612");
+        digitalWrite(ledPin, HIGH);
+    }
+    else{
+        Serial.println("valor lido pelo sensor de luminosidade é menor que 612");
+    }
+}
