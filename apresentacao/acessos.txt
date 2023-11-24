@@ -1,0 +1,51 @@
+ACESSOS
+
+
+____CURIOSO___________________________________________
+   email: evellyncipriano759@gmail.com
+   senha: 200531
+
+
+____ALUNO___________________________________________
+   email: evellyn.cipriano@unesp.br
+   senha: 200531
+
+____PROFESSOR___________________________________________
+   email: ciprianoevellyn319@gmail.com
+   senha: 200531
+
+____ADM_______________________________________________
+   email:  unoverse.2023@gmail.com
+   senha:  unoverse2023
+
+___REALIZAR_CADASTRO_________________________________
+   email: lr.russo@unesp.br
+
+
+
+___CADASTRO_ESCOLA________
+code: 35025331
+nome: BENEDITO GEBARA
+cidade: Duartina   
+UF: SP
+Tipo: PUBLICA
+
+__CADASTRO_ATIVIDADE__________
+Aula para curioso
+Arq. e code na pasta ATVTESTE
+
+__CADASTRO_EXERCICIO_
+aula: LED fading 
+nivel: intermediario
+
+Pergunta: O LED Fading é um…
+ALT correta:  Led na porta analógica ~PWM
+alt1: Led digital
+alt2: Led analógico 
+alt3: Led na porta digital ~PWM
+
+
+
+
+__Site CATALOGO ESCOLAS__________________________
+https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/inep-data/catalogo-de-escolas

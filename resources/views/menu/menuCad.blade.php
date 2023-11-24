@@ -1,5 +1,13 @@
 @section('titulo', 'Cadastrar')
         @include('layout._menu')
+
+
+@if(session('user_semCad'))
+<script>
+    alert("{{ session('user_semCad') }}");
+</script>
+@endif
+
 <div class="espaco escolha">
     <h1>Escolha sua categoria!</h1>
 </div>

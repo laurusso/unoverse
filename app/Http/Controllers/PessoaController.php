@@ -188,10 +188,13 @@ class PessoaController extends Controller
         $user = Pessoa::where('email', $req->input('email'))->first();
                                         //$credenciais = $req->only('email','senha');
                                     // $autenticado = Auth()->attempt($credenciais);
-       if($user['ativo'] == true) {                         
+       
         if(!$user){
-            return redirect()->route('login.index');
-        }
+            return redirect()->route('menu.menuCad')->with('user_semCad', 'Usuário não encontrado. Cadastre-se !');;
+        }                             
+        
+        else if($user['ativo'] == true) {                         
+       
       
         if(!(md5($req->input('senha')) == $user->senha))
         //if(!password_verify($req->input('senha'), $user->senha))

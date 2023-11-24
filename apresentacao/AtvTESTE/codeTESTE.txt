@@ -1,0 +1,19 @@
+
+void setup() {
+  // Defina o pino digital 13 como saída (OUTPUT)
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // Ligue o LED (definindo o pino em HIGH)
+  digitalWrite(13, HIGH);
+
+  // Aguarde um período (por exemplo, 1000 milissegundos ou 1 segundo)
+  delay(1000);
+
+  // Desligue o LED (definindo o pino em LOW)
+  digitalWrite(13, LOW);
+
+  // Aguarde novamente
+  delay(1000);
+}
