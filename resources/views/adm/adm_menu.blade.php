@@ -67,6 +67,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('lista.user')}}">Lista de Usuarios </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ asset('help/help_adm.pdf') }} " target="_blank">Help</a>
+          </li>
           @if (auth()->check())
           <li class="nav-item">
             <a class="nav-link" href="{{route('adm.perfil')}}">Perfil</a>

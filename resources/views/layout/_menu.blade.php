@@ -95,7 +95,9 @@
           
          
             @else
-
+            <li class="nav-item">
+            <a class="nav-link" href="{{ asset('help/help_usuarios.pdf') }} " target="_blank">Help</a>
+          </li>
           <li class="nav-item dropdown">
             <!-- PARA LOGAR, PODE ESCOLHER ENTRE JA CADASTRADO OU NAO CADASTRADO (DROPDOWN EXTRAIDO DO BOOTSTRAP) -->
             <a class="nav-link dropdown-toggle" href="#" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
