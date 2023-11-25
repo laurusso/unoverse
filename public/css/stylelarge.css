@@ -1495,7 +1495,7 @@ textarea{
 
 .tipo_escola
 {
-  display: block;
+  display: contents;
 }
 
 .geral-atv label, .geral-atv input{
