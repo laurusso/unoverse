@@ -199,7 +199,8 @@ class PessoaController extends Controller
         if(!(md5($req->input('senha')) == $user->senha))
         //if(!password_verify($req->input('senha'), $user->senha))
         {
-            return redirect()->route('login.index');
+            $validator = "Senha inválida"; 
+            return redirect()->back()->withErrors(['senha' => $validator])->withInput();
 
         }
       
